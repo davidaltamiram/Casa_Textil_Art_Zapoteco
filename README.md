@@ -1,13 +1,13 @@
 # Casa Textil Arte Zapoteco E-Commerce
 ## Proyecto Integrador de Equipo ==> Cohorte 27 Generation Mx.
 
--[@David_Altamira](https://github.com/davidaltamiram)
--[@Anyi_Jimenez](https://github.com/Anyi-Jimenez)
--[@Miguel_Kantun](https://github.com/MiguelKantunHuchin)
--[@Patricia_Piña](https://github.com/PatriciaSanchezP)
--[@Efrain_Hernandez](https://github.com/eehaiqm)
--[@Leslie_Flores](https://github.com/LesFB)
--[@Cristian_Amezcua](https://github.com/CGibAM)
+- [@David_Altamira](https://github.com/davidaltamiram)
+- [@Anyi_Jimenez](https://github.com/Anyi-Jimenez)
+- [@Miguel_Kantun](https://github.com/MiguelKantunHuchin)
+- [@Patricia_Piña](https://github.com/PatriciaSanchezP)
+- [@Efrain_Hernandez](https://github.com/eehaiqm)
+- [@Leslie_Flores](https://github.com/LesFB)
+- [@Cristian_Amezcua](https://github.com/CGibAM)
 
 
 
