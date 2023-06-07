@@ -1,0 +1,32 @@
+.margin-nav{
+    padding: 0px;
+}
+
+.color{
+    background-color: white!important;
+}
+
+.icon-size {
+    height: 35px;
+    padding-right: 10px;
+}
+
+.logo {
+    display: inline-flex;
+    margin: 11px auto auto auto;
+    padding-left: 100px;
+    
+}
+
+.up-text{
+    margin: auto;
+}
+
+.down-text{
+    text-align: center;
+    margin: -5px auto 10px;
+    font-size: 10px;
+}
+.form-brd{
+    border: white;
+}
