@@ -1,0 +1,117 @@
+div{
+		
+		color:white;
+		background-color: rgb(255, 255, 255);
+		font-size: 50px;
+		margin: 20px;
+   
+}
+
+#video{
+    height: 500px;
+}
+
+#subtitulo{
+		font-family: 'Raleway';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 19px;
+		text-align: center;
+		color: black;
+}
+
+ #parrafo{
+	font-family: 'Figtree';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 19px;
+	text-align: center;
+	color: black;
+ }
+
+/*Esta media query es para pantalla de tablet*/
+@media (min-width: 768px) and (max-width: 1199.98px) { 
+	#titulo{
+		font-family: 'Raleway';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 19px;
+		text-align: center;
+		color: rgb(0, 0, 0);
+		
+	}
+
+	#parrafo{
+		font-family: 'Figtree';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 19px;
+		text-align: center;
+		color: black;
+		
+	}
+
+ }
+
+
+
+ /*Esta media query es para pantalla de celular*/
+ @media (max-width: 767.98px) { 
+
+	#titulo{
+		font-family: 'Raleway';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 19px;
+		text-align: center;
+		color: black;
+		
+	}
+
+	#parrafo{
+		font-family: 'Figtree';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 19px;
+		text-align: center;
+		color: black;
+		
+	}
+
+	
+ }
+
+
+
+.quien{
+	left: 123px;
+	top: 800px;
+}
+
+.que{
+	color: black;
+	left: 50px;
+	top: 1073px;
+}
+
+.img-que{
+	left: 50px;
+	top: 1333px;
+}
+
+.img-como{
+	left: 730px;
+	top: 1028px;
+}
+
+.como{
+	left: 730px;
+	top: 1700px;
+}
+
