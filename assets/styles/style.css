@@ -1,10 +1,38 @@
-.margin-nav{
-    padding: 0px;
+.promo-link {align-self: center;}
+
+.promo-top{
+    height: 24px; 
+    background-color: #F07818; 
+    position: sticky;
 }
 
-.color{
-    background-color: white!important;
+.nav-btn-cross{
+    margin-top: -5px; 
+    padding: 0px; 
+    border: none;
 }
+
+.sticky-top {z-index: 1000;}
+
+.stcky {z-index: 1020;}
+
+.stcky-blw {top: 24px;}
+
+.nav-bar {border-bottom: 1px solid rgba(0, 0, 0, 0.408);}
+
+.navbar-dir{flex-direction: row !important;}
+
+.navbar-dir-store{margin: auto 10px auto 8px;}
+
+.navbar-dir-about{margin: auto 10px auto 6px;}
+
+.navbar-dir-contact{margin: auto 0px auto 6px;}
+
+.margin-nav {padding: 0px;}
+
+.togg-btn {border: none;}
+
+.color {background-color: white !important;}
 
 .icon-size {
     height: 35px;
@@ -13,20 +41,205 @@
 
 .logo {
     display: inline-flex;
-    margin: 11px auto auto auto;
-    padding-left: 100px;
-    
+    margin: 9px auto 1px auto;
 }
 
-.up-text{
-    margin: auto;
-}
+.rgt-elements{display: inline-flex;}
 
-.down-text{
+.up-text {margin: auto;}
+
+.down-text {
     text-align: center;
-    margin: -5px auto 10px;
+    margin: -5px auto 7px;
     font-size: 10px;
 }
-.form-brd{
-    border: white;
+
+.form-control{
+    padding: 1px; 
+    outline: none; 
+    height: 25px; 
+    margin: 4px 20px 4px auto; 
+    position: relative;
+}
+
+.nav-form-span{padding: 0px;}
+
+.nav-form-btn{
+    padding: 2px 12px 8px 12px; 
+    height: 20px; 
+    border: none;
+}
+
+.nav-form-svg{margin: -3px auto 10px auto;}
+
+.form-brd {border: white;}
+
+.fnt {font-family: 'Raleway', sans-serif;}
+
+.fnt-elements {font-size: 16px;}
+
+.fnt-t {font-size: 16px;}
+
+.fnt-sub {
+    font-family: 'Dancing Script', cursive !important;
+    font-size: 12px;
+}
+
+.fnt-input,
+.fnt-input::placeholder {
+    font-size: 13px;
+}
+
+.navbar-collapse {flex-grow: initial;}
+
+.nav-external-element {position: absolute;}
+
+.nav-search-link {
+    padding: 0px 4px; 
+    margin-top: 4px; 
+    border: none;
+}
+
+.inpt-elem {
+    outline: none;
+    width: 200px;
+    height: 21px;
+    padding-left: 10px;
+}
+
+.nav-shop-icon{margin-right: 5px;}
+
+.nav-user-icon{margin-right: 5px;}
+
+.nav-language{display: inline !important;}
+
+.nav-language-list{display: inline !important;}
+
+.nav-language-dropdown{display: inline !important;}
+
+.nav-language-icon{
+   display: inline !important; 
+   padding: 0px; 
+   position: relative;
+}
+
+.nav-language-dropdown-list{
+    margin-top: 8px; 
+    position: absolute;
+}
+
+.nav-external-element {
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: inset 0 0 5px #09090985;
+    width: 214px;
+    height: 589px;
+    box-sizing: border-box;
+    padding-left: 25px;
+    margin-left: -50px
+}
+
+.upper-external {margin-top: 40px;}
+
+.bottom-external {margin-top: 180px;}
+
+.nav-brd {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.float-logo{margin: 20px auto;}
+
+.float-logo-btn{
+    position: absolute; 
+    margin-left: 140px; 
+    margin-top: -10px; 
+    border: none;
+}
+
+.float-search{
+    padding: 1px; 
+    outline: none; 
+    height: 25px; 
+    margin: 20px 25px 4px auto; 
+    position: relative;
+}
+
+.float-search-input{
+    outline: none; 
+    width: 140px; 
+    height: 21px; 
+    padding-left: 10px;
+}
+
+.float-search-span{
+    padding: 0px !important; 
+    margin-left: -18px !important; 
+    width: 30px !important;
+}
+
+.float-search-btn{
+    padding: 3px 12px 8px 12px; 
+    height: 20px; 
+    border: none; 
+    width: 30px;
+}
+
+.float-search-svg{
+    margin-top: -13px; 
+    margin-left: -6px;
+}
+
+.float-elements-menu{
+    position: absolute; 
+    margin-left: 130px;  
+    border: none;
+}
+
+
+@media(min-width: 390px) and (max-width: 1203px) {
+
+    .nav-brd {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .nav-external-element {
+        margin-left: -25px
+    }
+}
+
+@media(min-width: 1200px) and (max-width: 1261px) {
+
+    .inpt-elem {
+        width: 150px !important;
+    }
+}
+
+@media(max-width: 532px) {
+
+    .search-icon,
+    .nav-shop-icon,
+    .nav-user-icon,
+    .nav-language-icon {
+        width: 22px !important;
+        height: 22px !important;
+    }
+}
+
+@media(max-width: 389px) {
+    .nav-brd {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .nav-external-element {
+        margin-left: -15px
+    }
+
+    .togg-btn {
+        width: 30 !important;
+        height: 30px !important;
+        ;
+    }
 }
