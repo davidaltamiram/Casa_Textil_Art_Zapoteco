@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css');
+/*tag body con background */
+
+body{
+    background-color: white;
+}
+
+#sidebar-nav {
+    width: 160px;
+}
+
+.contenedorcategorias{
+    font-family: 'Raleway', sans-serif;
+    background-color: rgb(255, 255, 255);
+    margin: 1px solid black;
+}
+
+.containerfiltro{
+    font-family: 'Raleway', sans-serif;
+    background-color: beige;
+    margin: 1px solid black;
+    color: black;
+}
+
+h1{
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.check{
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+}
+
+#title_check{
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+
+hr{
+    margin: .5rem;
+    border: 1px solid black;
+}
+
+#icon-filtro{
+    width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+
+.filtro-bton{
+    margin: .5rem;
+    border: 1px solid #78C0A8;
+    border-radius: 10px;
+    color: #78C0A8;
+    width: auto;
+    height: auto;
+    background-color: #ffffff;
+}
+ 
+img{
+    width: 100%;
+    max-height: 100%;
+    height: auto;
+}
