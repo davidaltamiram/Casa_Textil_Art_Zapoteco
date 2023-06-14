@@ -10,6 +10,16 @@
     color: white;
 }
 
+.formulario__input-error{
+    display: none;
+    margin-bottom: 0px;
+}
+
+.formulario__input-error-activo{
+    display: block;
+}
+
+
 
 @media(min-width:200px) {
 
