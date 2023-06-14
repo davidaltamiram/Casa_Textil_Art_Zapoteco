@@ -1,0 +1,36 @@
+@media (min-width: 995px) {
+  .lan-smaller-image {
+    width: 40%;
+    padding-right: 0px;
+  }
+
+  .lan-bigger-image {
+    width: 60%;
+  }
+}
+
+@media (min-width:995px) {
+.lan-smaller-image img,
+.lan-bigger-image img {
+  height: 510px !important;
+  width: 100% !important;
+}
+}
+
+@media (min-width: 450px) and (max-width:995px) {
+  .lan-smaller-image img,
+  .lan-bigger-image img {
+    height: 290px!important;
+    width: 100%!important;
+  }
+}
+
+.lan-smaller-image img,
+.lan-bigger-image img {
+  height: 190px;
+  width: 100%;
+}
+
+.lan-smaller-image{
+    margin-bottom: 10px;
+}
