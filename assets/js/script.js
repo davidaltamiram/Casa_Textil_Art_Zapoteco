@@ -11,6 +11,5 @@ bton.addEventListener("click", (e) => {
         filtro.style.display = "none";
     }
 });
-
 /*Fin de elementos de bton filtro en contenedor de productos*/
 
