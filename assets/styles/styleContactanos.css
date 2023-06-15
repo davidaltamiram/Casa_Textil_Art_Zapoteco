@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree&display=swap');
+
+.tituloContactanos {
+    font-family: 'Figtree', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.enviarBtn:hover{
+    color: white;
+}
+
+.formulario__input-error{
+    display: none;
+    margin-bottom: 0px;
+}
+
+.formulario__input-error-activo{
+    display: block;
+}
+
+.formulario__mensaje-exito {
+    display: none;
+}
+.formulario__mensaje-exito-activo {
+    display: block;
+}
+.formulario__mensaje {
+    display: none;
+}
+
+.formulario__mensaje-activo{
+    display: block;
+}
+
+@media(min-width:200px) {
+
+    .tituloContactanos {
+        font-size: 32px;
+        margin-top: 43px;
+    }
+
+    .clave {
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+        position: relative;
+        left: 15px;
+
+    }
+
+    .valor {
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+        position: relative;
+        left: 10px;
+
+    }
+
+    #telefono1 {
+        margin-top: 44px;
+        margin-bottom: 0px;
+    }
+
+    #telefono2 {
+        margin-top: 44px;
+        margin-bottom: 0px;
+    }
+
+    #direccion1{
+        margin-top: 25px;
+        margin-bottom: 0px;
+    }
+    #direccion2{
+        margin-top: 11px;
+        margin-bottom: 0px;
+    }
+    #horario1{
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+
+    #horario2{
+        margin-top: 11px;
+        margin-bottom: 0px;
+
+    }
+
+
+
+    .separador {
+        position: relative;
+        text-align: center;
+        margin-top: 25px;
+
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+    }
+
+    .separador::after,
+    .separador::before {
+        content: '';
+        position: absolute;
+        width: 40%;
+        height: 1px;
+        background-color: black;
+        top: .8em;
+
+    }
+
+    .separador::before {
+        left: 10px;
+    }
+
+    .separador::after {
+        right: 10px;
+    }
+
+    .requisitos{
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+        position: relative;
+        left: 15px;
+    }
+    .entradas{
+        box-sizing: border-box;
+        background: #FFFFFF;
+        border: 1px solid #5E412F;
+        border-radius: 10px;
+        margin-left: -90px;
+        width: 150%;
+        height: 29px;
+    }
+
+    #nombreLabel{
+        margin-bottom: 0px;
+    }
+    #emailLabel{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+
+    #telefonoLabel{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+    
+    #mensajeLabel{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+
+    #email{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+
+    #telefono{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+    #mensaje{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+
+    .enviarBtn {
+        box-sizing: border-box;
+
+        position: relative;
+        height: 42px;
+        width: 138px;
+        margin-top: 23px;
+        left: 32%;
+
+        background: #78C0A8;
+        border: 1px solid #78C0A8;
+        border-radius: 10px;
+    }
+}
+
+@media(min-width: 677px) {
+
+    .tituloContactanos {
+        font-size: 40px;
+        margin-top: 45px;
+    }
+
+    .clave {
+        font-family: 'Figtree', sans-serif;
+        font-size: 20px;
+        position: relative;
+        left: 56px;
+    }
+
+    .valor {
+        font-family: 'Figtree', sans-serif;
+        font-size: 20px;
+        position: relative;
+        left: 10px;
+
+    }
+
+    #telefono1 {
+        margin-top: 47px;
+        margin-bottom: 0px;
+    }
+
+    #telefono2 {
+        margin-top: 47px;
+        margin-bottom: 0px;
+    }
+    #direccion1{
+        margin-top: 51px;
+        margin-bottom: 0px;
+    }
+    #direccion2{
+        margin-top: 32px;
+        margin-bottom: 0px;
+    }
+
+    #horario1{
+        margin-top: 45px;
+        margin-bottom: 0px;
+    }
+
+    #horario2{
+        margin-top: 32px;
+        margin-bottom: 0px;
+
+    }
+    .separador {
+        position: relative;
+        text-align: center;
+        margin-top: 59px;
+
+        font-family: 'Figtree', sans-serif;
+        font-size: 20px;
+    }
+
+    .separador::after,
+    .separador::before {
+        content: '';
+        position: absolute;
+        width: 45%;
+        height: 1px;
+        background-color: black;
+        top: .8em;
+
+    }
+
+    .separador::before {
+        
+        left: 10px;
+    }
+
+    .separador::after {
+        right: 10px;
+    }
+
+    .requisitos{
+        font-family: 'Figtree', sans-serif;
+        font-size: 20px;
+        position: relative;
+        left: 56px;
+    }
+    .entradas{
+        box-sizing: border-box;
+        background: #FFFFFF;
+        border: 1px solid #5E412F;
+        border-radius: 10px;
+        margin-left: -150px;
+        width: 130%;
+        height: 41px;
+    }
+
+    #nombreLabel{
+        margin-top: 54px;
+        margin-bottom: 0px;
+    }
+    #emailLabel{
+        margin-top: 51px;
+        margin-bottom: 0px;
+    }
+
+    #telefonoLabel{
+        margin-top: 51px;
+        margin-bottom: 0px;
+    }
+    
+    #mensajeLabel{
+        margin-top: 51px;
+        margin-bottom: 0px;
+    }
+
+    #nombre{
+        margin-top: 44px;
+        margin-bottom: 0px;
+    }
+    #email{
+        margin-top: 34px;
+        margin-bottom: 0px;
+    }
+
+    #telefono{
+        margin-top: 34px;
+        margin-bottom: 0px;
+    }
+    #mensaje{
+        margin-top: 34px;
+        margin-bottom: 0px;
+    }
+
+    .enviarBtn {
+        box-sizing: border-box;
+
+        position: relative;
+        height: 52px;
+        width: 158px;
+        margin-top: 31px;
+        left: 40%;
+
+        background: #78C0A8;
+        border: 1px solid #78C0A8;
+        border-radius: 10px;
+    }
+
+
+    
+}
+
+@media(min-width: 960px) {
+
+    .tituloContactanos {
+        font-size: 64px;
+        margin-top: 22px;
+    }
+
+    .clave {
+        font-family: 'Figtree', sans-serif;
+        font-size: 24px;
+        position: relative;
+        left: 198px;
+    }
+
+    .valor {
+        font-family: 'Figtree', sans-serif;
+        font-size: 24px;
+        position: relative;
+        left: 10px;
+        
+
+    }
+
+    #telefono1 {
+        margin-top: 45px;
+        margin-bottom: 0px;
+    }
+
+    #telefono2 {
+        margin-top: 45px;
+        margin-bottom: 0px;
+    }
+    #direccion1{
+        margin-top: 48px;
+        margin-bottom: 0px;
+    }
+    #direccion2{
+        margin-top: 48px;
+        margin-bottom: 0px;
+    }
+
+    #horario1{
+        margin-top: 48px;
+        margin-bottom: 0px;
+    }
+
+    #horario2{
+        margin-top: 45px;
+        margin-bottom: 0px;
+
+    }
+
+    .separador {
+        position: relative;
+        text-align: center;
+        margin-top: 50px;
+
+        font-family: 'Figtree', sans-serif;
+        font-size: 24px;
+    }
+
+    .separador::after,
+    .separador::before {
+        content: '';
+        position: absolute;
+        width: 40%;
+        height: 1px;
+        background-color: black;
+        top: .8em;
+
+    }
+
+    .separador::before {
+        
+        left: 100px;
+    }
+
+    .separador::after {
+        right: 100px;
+    }
+
+    .requisitos{
+        font-family: 'Figtree', sans-serif;
+        font-size: 24px;
+        position: relative;
+        left: 198px;
+    }
+    .entradas{
+        box-sizing: border-box;
+        background: #FFFFFF;
+        border: 1px solid #5E412F;
+        border-radius: 10px;
+        margin-left: -200px;
+        width: 100%;
+        height: 40px;
+    }
+
+    #nombreLabel{
+        margin-top: 54px;
+        margin-bottom: 0px;
+    }
+    #emailLabel{
+        margin-top: 51px;
+        margin-bottom: 0px;
+    }
+
+    #telefonoLabel{
+        margin-top: 51px;
+        margin-bottom: 0px;
+    }
+    
+    #mensajeLabel{
+        margin-top: 51px;
+        margin-bottom: 0px;
+    }
+
+    #nombre{
+        margin-top: 44px;
+        margin-bottom: 0px;
+    }
+    #email{
+        margin-top: 34px;
+        margin-bottom: 0px;
+    }
+
+    #telefono{
+        margin-top: 34px;
+        margin-bottom: 0px;
+    }
+    #mensaje{
+        margin-top: 34px;
+        margin-bottom: 0px;
+    }
+
+    .enviarBtn {
+        box-sizing: border-box;
+
+        position: relative;
+        height: 52px;
+        width: 158px;
+        margin-top: 31px;
+        left: 45%;
+
+        background: #78C0A8;
+        border: 1px solid #78C0A8;
+        border-radius: 10px;
+    }
+
+}
