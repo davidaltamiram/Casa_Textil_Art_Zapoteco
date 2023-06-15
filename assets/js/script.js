@@ -11,6 +11,8 @@ bton.addEventListener("click", (e) => {
         filtro.style.display = "none";
     }
 });
+
+
 /*Fin de elementos de bton filtro en contenedor de productos*/
 
 $('.owl-carousel').owlCarousel({
@@ -28,7 +30,7 @@ $('.owl-carousel').owlCarousel({
             items:3
         }
     }
-})
+});
 
 
 
@@ -61,22 +63,24 @@ function imageButtons() {
 
             <div class="modal-body">
                 <div class="container">
+                <div class="row justify-content-end">
+                <button id="button_close_product_catalog" type="button"
+                    data-bs-dismiss="modal" aria-label="Close">
+                    <svg width="20"
+                        height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M19.7338 1.55191C20.0887 1.1969 20.0887 0.621295 19.7338 0.266277C19.3787 -0.0887591 18.8031 -0.0887591 18.448 0.266277L10 8.71435L1.55191 0.266277C1.1969 -0.0887591 0.621295 -0.0887591 0.266277 0.266277C-0.0887591 0.621295 -0.0887591 1.1969 0.266277 1.55191L8.71435 10L0.266277 18.448C-0.0887591 18.8031 -0.0887591 19.3787 0.266277 19.7338C0.621295 20.0887 1.1969 20.0887 1.55191 19.7338L10 11.2857L18.448 19.7338C18.8031 20.0887 19.3787 20.0887 19.7338 19.7338C20.0887 19.3787 20.0887 18.8031 19.7338 18.448L11.2857 10L19.7338 1.55191Z"
+                            fill="black" />
+                    </svg>
+                </button>
+            </div>
 
-                    <div class="row justify-content-end">
-                        <button id="button_close_product_catalog" type="button"
-                            data-bs-dismiss="modal" aria-label="Close"><svg width="20"
-                                height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M19.7338 1.55191C20.0887 1.1969 20.0887 0.621295 19.7338 0.266277C19.3787 -0.0887591 18.8031 -0.0887591 18.448 0.266277L10 8.71435L1.55191 0.266277C1.1969 -0.0887591 0.621295 -0.0887591 0.266277 0.266277C-0.0887591 0.621295 -0.0887591 1.1969 0.266277 1.55191L8.71435 10L0.266277 18.448C-0.0887591 18.8031 -0.0887591 19.3787 0.266277 19.7338C0.621295 20.0887 1.1969 20.0887 1.55191 19.7338L10 11.2857L18.448 19.7338C18.8031 20.0887 19.3787 20.0887 19.7338 19.7338C20.0887 19.3787 20.0887 18.8031 19.7338 18.448L11.2857 10L19.7338 1.55191Z"
-                                    fill="black" />
-                            </svg>
-                        </button>
-                    </div>
                     <div class="row">
                         <div class="col-lg-7">
                             <img class="img-fluid"  src="./assets/ImagenesComprar/Comprar Cojín Algodón amarillo y blanco.jpg"
                                 alt="Producto">
                         </div>
+
                         <div class="col-lg-5" class="container ">
 
                             <br>
@@ -148,3 +152,43 @@ function imageButtons() {
 
 //Creamos el botón de escucha
 imageProductButton.addEventListener("click", imageButtons);
+
+
+
+//plantilla HTML
+
+
+const divProductos = document.querySelector("#productos");
+
+
+function addProducto (){
+
+    let productos = {
+            id: 1,
+            imagen: "./assets/imagenes/producto_1.jpg",
+            precio: 600,
+        };
+
+  var jsonProductos = Object.assign({}, productos);
+
+var productCard = document.createElement("div");
+productCard.classList = "col-sm-6 col-md-4 col-lg-4";
+
+productCard.innerHTML = `
+<div class="card card-body ">
+    <button id="imageButton" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <img src="${productos.imagen}" alt="Producto">
+    </button>
+  <br>
+    $ ${productos.precio}
+    <div class="container" id="product_image_modal"></div>
+</div>
+`;
+
+divProductos.appendChild(productCard);
+
+}
+
+addProducto();
+addProducto();
+
