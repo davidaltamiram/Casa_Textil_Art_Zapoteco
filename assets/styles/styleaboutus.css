@@ -1,0 +1,150 @@
+
+
+#subtitulo{
+		font-family: 'Raleway', sans-serif;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 19px;
+		text-align: center;
+		color: black;
+}
+
+ #parrafo{
+	font-family: 'Figtree', sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 24px;
+	line-height: 19px;
+	text-align: center;
+	color: black;
+ }
+
+ .container-des{
+	margin-top:100px
+}
+
+.car{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+/*Esta media query es para pantalla de tablet*/
+@media (min-width: 768px) and (max-width: 1199.98px) { 
+	#subtitulo{
+		font-family: 'Raleway', sans-serif;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 19px;
+		text-align: center;
+		color: rgb(0, 0, 0);
+		
+	}
+
+	#parrafo{
+		font-family: 'Figtree', sans-serif;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 20px;
+		line-height: 19px;
+		text-align: center;
+		color: black;
+		
+	}
+
+ }
+
+
+
+ /*Esta media query es para pantalla de celular*/
+ @media (max-width: 767.98px) { 
+
+	#subtitulo{
+		font-family: 'Raleway', sans-serif;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 19px;
+		text-align: center;
+		color: black;
+		
+	}
+
+	#parrafo{
+		font-family: 'Figtree', sans-serif;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 19px;
+		text-align: center;
+		color: black;
+		
+	}
+
+	.row{
+		margin-top: 40px;
+	}
+
+	.container-des{
+		margin-top:40px;
+	}
+
+	.car{
+		margin-top: 0px;
+		margin-bottom: 30px;
+	}
+
+
+ }
+
+
+
+.quien{
+	margin-top: 33px;
+	height: 131px;
+	left: 123px;
+	/*top: 200px;*/
+	color: black;
+}
+
+.que{
+	color: black;
+	margin-top: 66px;
+	left: 50px;
+	/*top: 1073px;*/
+}
+
+.img-que{
+	margin-top: 100px;
+	left: 50px;
+	/*top: 1333px;*/
+}
+
+.img-como{
+	margin-top: 10px;
+	left: 730px;
+	/*top: 1028px;*/
+}
+
+.como{
+	color: black;
+	margin-top: 66px;
+	left: 730px;
+	/*top: 1700px;*/
+}
+
+.que-bloque2{
+	color: black;
+	margin-top: 120px;
+	left: 730px;
+}
+
+.img-como-bloque2{
+	color: black;
+	margin-top: 250px;
+	left: 730px;
+}
+
+
+

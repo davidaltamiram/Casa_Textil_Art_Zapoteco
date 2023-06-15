@@ -1,0 +1,173 @@
+/* Para pantalla de compu */
+
+#img {
+    width: 126.32px;
+    height: 182.51px;
+    margin-left: 39.84px;
+    margin-right: 39.84px;
+    margin-top: 12.77px;
+}
+
+
+#carta {
+    margin-left: 70px;
+    width: 206px;
+    height: 274px;
+    background-color: rgba(120, 192, 168, 0.63);
+    align-items: center;
+}
+
+#texto {
+    margin-top: 4.09px;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+    color: #000000;
+
+}
+
+
+#boton {
+    background-color: #5E412F;
+    width: 130px;
+    height: 25px;
+    margin-top: -4px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#icono {
+    width: 29.15px;
+    height: 29.46px;
+    margin-top: -30px;
+    margin-left: 30px;
+}
+
+
+
+
+
+
+/*Esta media query es para pantalla de tablet*/
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    #img {
+        width: 113.82px;
+        height: 140px;
+        margin-left: 40px;
+        margin-top: 11px;
+    }
+
+
+    #carta {
+        margin-left: 33px;
+        width: 150px;
+        height: 240px;
+        background-color: rgba(120, 192, 168, 0.63);
+        align-items: center;
+    }
+
+    #texto {
+        margin-top: 4.09px;
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        text-align: center;
+
+        color: #000000;
+
+    }
+
+
+    #icono {
+        width: 24.28px;
+        height: 23.54px;
+        margin-left: 25px;
+        margin-top: -40px;
+    }
+
+    #boton {
+        background-color: #5E412F;
+        width: 104px;
+        height: 20px;
+        margin-top: -10px;
+        border-radius: 10px;
+        font-size: 10px;
+        font-family: 'Raleway', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    
+}
+
+/*Esta media query es para pantalla de celular*/
+@media (max-width: 767.98px) {
+    #img {
+        width: 61.32px;
+        height: 88.6px;
+        margin-left: 40px;
+        margin-top: 11px;
+    }
+
+
+    #carta {
+        margin-left: 34px;
+        width: 100px;
+        height: 156px;
+        background-color: rgba(120, 192, 168, 0.63);
+
+    }
+
+    #texto {
+        margin-top: 4.09px;
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 19px;
+        text-align: center;
+
+        color: #000000;
+
+    }
+
+
+    #icono {
+        width: 14.15px;
+        height: 14.3px;
+        margin-left: 20px;
+        margin-top: -50px;
+    }
+
+    #boton {
+        background-color: #5E412F;
+        width: 75px;
+        height: 16px;
+        margin-top: -23px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 8px;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    
+
+}
+
+
+
