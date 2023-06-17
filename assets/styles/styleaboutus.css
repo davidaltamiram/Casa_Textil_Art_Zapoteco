@@ -1,36 +1,35 @@
-
-
-#subtitulo{
+@media (min-width:993px){
+	#subtitulo{
 		font-family: 'Raleway', sans-serif;
 		font-style: normal;
 		font-weight: 700;
 		font-size: 24px;
 		line-height: 19px;
 		text-align: center;
-		color: black;
-}
+		
+	}
 
- #parrafo{
-	font-family: 'Figtree', sans-serif;
-	font-style: normal;
-	font-weight: 300;
-	font-size: 24px;
-	line-height: 19px;
-	text-align: center;
-	color: black;
- }
+ 	#parrafo{
+		font-family: 'Figtree', sans-serif;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 24px;
+		line-height: 19px;
+		text-align: center;
+		
+ 	}	
 
- .container-des{
-	margin-top:100px
-}
+	.txt{
+		margin-top: 20%;
+	}
 
-.car{
-	margin-top: 50px;
-	margin-bottom: 50px;
+	.txt1{
+		margin-top: 8%;
+	}
 }
 
 /*Esta media query es para pantalla de tablet*/
-@media (min-width: 768px) and (max-width: 1199.98px) { 
+@media (min-width: 767px) and (max-width: 992px) { 
 	#subtitulo{
 		font-family: 'Raleway', sans-serif;
 		font-style: normal;
@@ -38,7 +37,7 @@
 		font-size: 20px;
 		line-height: 19px;
 		text-align: center;
-		color: rgb(0, 0, 0);
+		
 		
 	}
 
@@ -46,19 +45,28 @@
 		font-family: 'Figtree', sans-serif;
 		font-style: normal;
 		font-weight: 300;
-		font-size: 20px;
+		font-size: 16px;
 		line-height: 19px;
 		text-align: center;
-		color: black;
+		
 		
 	}
+
+	.txt{
+		margin-top:10%;
+	}
+
+	.txt1{
+		margin-top:2%;
+	}
+	
 
  }
 
 
 
  /*Esta media query es para pantalla de celular*/
- @media (max-width: 767.98px) { 
+ @media (max-width: 766px) { 
 
 	#subtitulo{
 		font-family: 'Raleway', sans-serif;
@@ -67,7 +75,7 @@
 		font-size: 16px;
 		line-height: 19px;
 		text-align: center;
-		color: black;
+		
 		
 	}
 
@@ -78,12 +86,13 @@
 		font-size: 16px;
 		line-height: 19px;
 		text-align: center;
-		color: black;
+		
 		
 	}
 
-	.row{
-		margin-top: 40px;
+	.betw{
+		
+		padding-top: 44px;
 	}
 
 	.container-des{
@@ -99,52 +108,23 @@
  }
 
 
+ .container-des{
+	margin-top:50px
+}	
 
 .quien{
 	margin-top: 33px;
 	height: 131px;
 	left: 123px;
-	/*top: 200px;*/
-	color: black;
+	
 }
 
-.que{
-	color: black;
-	margin-top: 66px;
-	left: 50px;
-	/*top: 1073px;*/
+.fila{
+	padding-top: 50px;
 }
 
-.img-que{
-	margin-top: 100px;
-	left: 50px;
-	/*top: 1333px;*/
+.car{
+	margin-top: 50px;
+	margin-bottom: 50px;
 }
-
-.img-como{
-	margin-top: 10px;
-	left: 730px;
-	/*top: 1028px;*/
-}
-
-.como{
-	color: black;
-	margin-top: 66px;
-	left: 730px;
-	/*top: 1700px;*/
-}
-
-.que-bloque2{
-	color: black;
-	margin-top: 120px;
-	left: 730px;
-}
-
-.img-como-bloque2{
-	color: black;
-	margin-top: 250px;
-	left: 730px;
-}
-
-
 
