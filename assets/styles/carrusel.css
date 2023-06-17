@@ -1,19 +1,20 @@
-/* Para pantalla de compu */
+
 
 #img {
-    width: 126.32px;
-    height: 182.51px;
+    width: 200px;
+    height: 350px;
     margin-left: 39.84px;
     margin-right: 39.84px;
-    margin-top: 12.77px;
+    margin-top: 8px;
+    border-radius: 5px;
 }
 
 
 #carta {
-    margin-left: 70px;
-    width: 206px;
-    height: 274px;
-    background-color: rgba(120, 192, 168, 0.63);
+    margin-left: 75px;
+    width: 218px;
+    height: 365px;
+    background-color: rgba(120, 192, 168, 0.55);
     align-items: center;
 }
 
@@ -33,11 +34,10 @@
 
 #boton {
     background-color: #5E412F;
-    width: 130px;
-    height: 25px;
-    margin-top: -4px;
+    width: 175px;
+    height: 30px;
     border-radius: 10px;
-    font-size: 12px;
+    font-size: 14px;
     font-family: 'Raleway', sans-serif;
     display: flex;
     align-items: center;
@@ -46,32 +46,38 @@
 
 
 #icono {
-    width: 29.15px;
-    height: 29.46px;
+    width: 40px;
+    height: 40px;
     margin-top: -30px;
-    margin-left: 30px;
+    margin-left: 40px;
+}
+
+.carousel-control-prev-icon{
+    margin-left: -150px;
+}
+
+.carousel-control-next{
+    margin-right: -90px;
 }
 
 
 
 
-
-
 /*Esta media query es para pantalla de tablet*/
-@media (min-width: 768px) and (max-width: 1199.98px) {
+@media (min-width: 768px) and (max-width: 992px) {
     #img {
-        width: 113.82px;
-        height: 140px;
-        margin-left: 40px;
-        margin-top: 11px;
+        width: 150px;
+        height: 270px;
+        margin-top: 8px;
+        border-radius: 5px;
     }
 
 
     #carta {
-        margin-left: 33px;
-        width: 150px;
-        height: 240px;
-        background-color: rgba(120, 192, 168, 0.63);
+        margin-left: 17px;
+        width: 170px;
+        height: 285px;
+        background-color: rgba(120, 192, 168, 0.55);
         align-items: center;
     }
 
@@ -88,21 +94,30 @@
 
     }
 
+    .carousel-control-prev-icon{
+        margin-left: -120px;
+    }
+
+    .carousel-control-next{
+        margin-right: -60px;
+    }
+ 
+
 
     #icono {
-        width: 24.28px;
-        height: 23.54px;
-        margin-left: 25px;
+        width: 30px;
+        height: 30px;
+        margin-left: 29px;
         margin-top: -40px;
     }
 
     #boton {
         background-color: #5E412F;
-        width: 104px;
+        width: 125px;
         height: 20px;
-        margin-top: -10px;
+        margin-top: -5px;
         border-radius: 10px;
-        font-size: 10px;
+        font-size: 12px;
         font-family: 'Raleway', sans-serif;
         display: flex;
         align-items: center;
@@ -115,23 +130,31 @@
 /*Esta media query es para pantalla de celular*/
 @media (max-width: 767.98px) {
     #img {
-        width: 61.32px;
-        height: 88.6px;
+        width: 117px;
+        height: 214px;
         margin-left: 40px;
-        margin-top: 11px;
+        margin-top: 5px;
     }
 
 
     #carta {
-        margin-left: 34px;
-        width: 100px;
-        height: 156px;
-        background-color: rgba(120, 192, 168, 0.63);
+        margin-left: 20px;
+        width: 130px;
+        height: 220px;
+        background-color: rgba(120, 192, 168, 0.55);
+        align-items: center;
 
     }
 
+    .carousel-control-prev-icon{
+        margin-left: -30px;
+    }
+
+    .carousel-control-next{
+        margin-right: -15px;
+    }
+
     #texto {
-        margin-top: 4.09px;
         font-family: 'Raleway', sans-serif;
         font-style: normal;
         font-weight: 400;
@@ -145,23 +168,23 @@
 
 
     #icono {
-        width: 14.15px;
-        height: 14.3px;
-        margin-left: 20px;
-        margin-top: -50px;
+        width: 20px;
+        height: 20px;
+        margin-left: 23px;
+        margin-top: -55px;
     }
 
     #boton {
         background-color: #5E412F;
-        width: 75px;
-        height: 16px;
-        margin-top: -23px;
+        width: 92px;
+        height: 20px;
+        margin-top: -25px;
         border-radius: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
-        font-size: 8px;
+        font-size: 10px;
         font-family: 'Raleway', sans-serif;
     }
 
