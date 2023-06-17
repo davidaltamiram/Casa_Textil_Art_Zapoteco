@@ -366,45 +366,45 @@
                 <div class="col">
                     <label class="requisitos" id="nombreLabel" for="nombre">Nombre</label>
                 </div>
-                <div class="col">
+                <div class="col colEntradas">
                     <input type="text" class="entradas" id="nombre" name="nombre" placeholder="Ingrese su nombre">
-                    <p class="formulario__input-error">Ingresa un nombre válido</p>
-                </div>
+                    <p class="formulario__input-error mensajeError">Ingresa un nombre válido.</p>
+                </div>             
 
             </div>
             <div class="row" id="grupo_email">
                 <div class="col">
                     <label class="requisitos" id="emailLabel" for="email">Email</label>
                 </div>
-                <div class="col">
+                <div class="col colEntradas">
                     <input type="email" class="entradas" id="email" name="email" placeholder="Ingrese su email">
-                    <p class="formulario__input-error">Ingresa un email válido</p>
+                    <p class="formulario__input-error mensajeError">Ingresa un email válido.</p>
                 </div>
             </div>
             <div class="row" id="grupo_telefono">
                 <div class="col">
                     <label class="requisitos" id="telefonoLabel" for="telefono">Teléfono</label>
                 </div>
-                <div class="col">
+                <div class="col colEntradas">
                     <input type="tel" class="entradas" id="telefono" name="telefono" placeholder="Ingrese su número">
-                    <p class="formulario__input-error">Ingresa un número válido</p>
+                    <p class="formulario__input-error mensajeError">Ingresa un número válido de 7 a 14 dígitos.</p>
                 </div>
             </div>
             <div class="row" id="grupo_mensaje">
                 <div class="col">
                     <label class="requisitos" id="mensajeLabel" for="mensaje">Mensaje</label>
                 </div>
-                <div class="col">
+                <div class="col colEntradas">
                     <input type="text" class="entradas" id="mensaje" name="mensaje" placeholder="Ingrese su mensaje">
-                    <p class="formulario__input-error">Favor de ingresar un mensaje de 10 a 500 caracteres.</p>
+                    <p class="formulario__input-error mensajeError">Favor de ingresar un mensaje de 10 a 500 caracteres.</p>
                 </div>
             </div>
             <div class="row">
-                <div class="col">
+                <div class="col colBtn">
                     <button class="enviarBtn" type="submit">Enviar</button>
-                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Se ha registrado la información
+                    <p class="formulario__mensaje-exito mensajeBoton" id="formulario__mensaje-exito">Se ha enviado la información
                     </p>
-                    <p class="formulario__mensaje" id="formulario__mensaje">Favor de llenar todos los campos</p>
+                    <p class="formulario__mensaje mensajeBoton" id="formulario__mensaje">Favor de llenar todos los campos</p>
 
                 </div>
             </div>
