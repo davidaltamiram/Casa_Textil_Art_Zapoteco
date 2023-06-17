@@ -25,3 +25,12 @@ function toggleContent() {
 crossButton.addEventListener("click", toggleContent);
 window.addEventListener("load", checkScreenWidth);//Finalmente llamamos la funcion checkScreenWidth cuando cargue la pagina 
 window.addEventListener("resize", checkScreenWidth); //Y llamamos la funcion siempre que la pantalla cambie de tamaño para monitorear de manera continua el cambio de longuitud de la pantalla y actuar de acuerdo a la funcion checkScreenWidth
+
+
+//Lógica para desactivar el banner de promocion
+const promoButton = document.querySelector("#promoButton");
+const promoContainer = document.querySelector("#promo");
+const navbar = document.querySelector("#nav-bar");
+
+promoButton.addEventListener("click", function(){promoContainer.classList.add("d-none");
+navbar.classList.toggle("stcky-blw");});
