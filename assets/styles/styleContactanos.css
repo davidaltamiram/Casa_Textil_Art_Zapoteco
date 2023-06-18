@@ -33,9 +33,9 @@
     display: block;
 }
 
-/*Aquí empiezan las media query para la responsividad*/
+/*Aquí empiezan las media query para la responsividad para celular*/
 
-@media(min-width:200px) {
+@media(max-width: 767.98px) {
 
 
 
@@ -171,9 +171,11 @@
         margin-bottom: 0px;
     }
     .colBtn{
-        padding-right: 10%;
-        
+        padding: 50px;
+        align-items:center;
+
     }
+
     .enviarBtn {
         box-sizing: border-box;
 
@@ -181,7 +183,7 @@
         height: 42px;
         width: 138px;
         margin-top: 23px;
-        left: 35%;
+        margin-left: 28%;
 
         font-family: 'Figtree', sans-serif;
         font-size: 16px;
@@ -215,7 +217,8 @@
     }
 }
 
-@media(min-width: 650px) {
+/* Para tablet */
+@media (min-width: 768px) and (max-width: 992px) {
 
     .tituloContactanos {
         font-size: 40px;
@@ -351,9 +354,11 @@
         margin-bottom: 0px;
     }
     .colBtn{
-        padding-right: 10%;
-        
+        padding: 50px;
+        align-items:center;
+
     }
+
     .enviarBtn {
         box-sizing: border-box;
 
@@ -361,7 +366,7 @@
         height: 52px;
         width: 158px;
         margin-top: 31px;
-        left: 45%;
+        margin-left: 39%;
 
         font-family: 'Figtree', sans-serif;
         font-size: 20px;
@@ -395,6 +400,8 @@
     }
     
 }
+
+/* Para compu */
 
 @media(min-width: 960px) {
 
@@ -534,9 +541,11 @@
     }
 
     .colBtn{
-        padding-right: 10%;
-        
+        padding: 50px;
+        align-items:center;
+
     }
+
 
     .enviarBtn {
         box-sizing: border-box;
@@ -545,7 +554,7 @@
         height: 52px;
         width: 158px;
         margin-top: 31px;
-        left: 50%;
+        margin-left: 43.7%;
 
         font-family: 'Figtree', sans-serif;
         font-size: 24px;
