@@ -1,3 +1,7 @@
+@import url('https://fonts.cdnfonts.com/css/snell-roundhand');
+@import url('https://fonts.cdnfonts.com/css/athelas');
+
+
 .promo-link {
     align-self: center !important;
 }
@@ -121,11 +125,12 @@
 }
 
 .fnt-t {
-    font-size: 16px !important;
+    font-size: 18px !important;
+    font-family: 'Snell Roundhand', sans-serif !important;
 }
 
 .fnt-sub {
-    font-family: 'Dancing Script', cursive !important;
+    font-family: 'Athelas', sans-serif   !important;
     font-size: 12px !important;
 }
 
