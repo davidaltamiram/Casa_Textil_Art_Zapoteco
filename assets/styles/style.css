@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 @import url('https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css');
+
+
+
 /*tag body con background */
+
+
 
 body{
     background-color: white;
+    
 }
 
 
@@ -11,6 +17,8 @@ body{
     font-family: 'Raleway', sans-serif;
     background-color: rgb(255, 255, 255);
     margin: 1px solid black;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
 }
 
 h1{
@@ -20,9 +28,19 @@ h1{
 
 .containerfiltro{
     font-family: 'Raleway', sans-serif;
+    font-size: 22px;
     background-color: beige;
     margin: 1px solid black;
     color: black;
+}
+
+.categoria_producto{
+    margin-left: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+    font-weight: lighter;
+
+    
 }
 
 
@@ -32,14 +50,17 @@ h1{
 }
 
 #title_check{
-    font-size: 16px;
+    font-size: 18px;
     font-family: 'Raleway', sans-serif;
-    font-weight: bold;
+    font-weight: normal;
 }
 
-hr{
-    margin: .5rem;
+#borde-filtro{
+    margin-top: 0.5rem;
+    margin-right: 0px;
     border: 1px solid black;
+    width: 190px;
+  
 }
 
 #icon-filtro{
@@ -58,17 +79,49 @@ hr{
     background-color: #ffffff;
 }
  
-.img{
-    width: 100%;
-    max-height: 100%;
-    height: auto;
+
+
+#card-gallery{
+    margin: 0px;
+    width: 120%;
+    
 }
 
-/*Clases de style de carrusel y modal*/
-#title_product_catalog{
-    font-size: 26px;
+hr{
+    margin-top: 3rem;
+    color:#5E412F ;
+
+}
+
+.card-text{
+    text-align: left;
+    padding: 0%;
+    font-size: 16px;
     font-family: 'Raleway', sans-serif;
-    font-weight: normal;
+    
+}
+
+.card-body{
+   padding: 2%;
+}
+
+
+.card:hover{
+    box-shadow: 20px 20px 80px -44px;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+
+/*Clases de style de carrusel y modal*/
+#subtituloCarousel{
+    margin-top: 4rem;
+    font-size: 50px;
+    font-family: 'Raleway', sans-serif;
+    font-weight:normal;
+    text-align: center;
+    align-items: center;
+    
 }
 
 p{
@@ -79,20 +132,24 @@ p{
 
 
 #imageButton{
-    
+    width: auto;
     box-sizing: none;
     vertical-align: middle;
     border: none;
     background-color: white;
+    height: auto;
+    margin: 2rem;
   
    
 }
 
 #button_close_product_catalog{
-    width: 10px;
-    height: 10px;
+    width: auto;
+    height: auto;
     border: none;
     background-color: white;
+    margin-right: 10px;
+    padding-left: 10px;
  
 
 }
@@ -112,6 +169,15 @@ p{
 #text_content_modal{
     float: left;
     height: 50%;
+    
 
     
 }
+
+#text_content_modal{
+    font-size: 28px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+
+}
+
