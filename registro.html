@@ -99,16 +99,17 @@
             <!-- Aqui inicia el logo en el nav-bar -->
             <div class="col-4 d-flex justify-content-center">
 
-                <div class="logo">
-                    <div class="d-none d-md-block logo-img">
-                        <img class="icon-size icon" src="./assets/icons/logo.png"></img>
+                <a href="./paginaprincipal.html" class="no-link-styles">
+                    <div class="logo">
+                        <div class="d-none d-md-block logo-img">
+                            <img class="icon-size icon" src="./assets/icons/logo.png" alt="Logo"></img>
+                        </div>
+                        <div class="text-logo">
+                            <p class="up-text fnt-t">Arte Zapoteco</p>
+                            <p class="down-text fnt-sub">CASA TEXTIL</p>
+                        </div>
                     </div>
-                    <div class="text-logo">
-                        <p class="up-text fnt-t">Arte Zapoteco</p>
-                        <p class="down-text fnt-sub">CASA TEXTIL</p>
-                    </div>
-
-                </div>
+                </a>
             </div>
 
             <!-- Aqui termina el logo en el nav-bar -->
@@ -152,7 +153,7 @@
                             </svg>
                         </a>
 
-                        <a title="shop" href="./carritocompras.html" class="shop">
+                        <a title="Shop" href="./carritocompras.html" class="shop">
                             <svg class="nav-shop-icon" width="27" height="27" viewBox="0 0 27 27" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -166,7 +167,7 @@
                                     stroke="#5E412F" stroke-linecap="round" stroke-linejoin="round" />
                             </svg></a>
 
-                        <a title="user" href="./registro.html" class="user">
+                        <a title="User" href="./login.html" class="user">
                             <svg class="nav-user-icon" width="27" height="27" viewBox="0 0 27 27" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -241,7 +242,9 @@
                     </svg>
 
                 </button>
-                <img class="icon-size icon" src="./assets/icons/logo.png" alt="">
+                <a href="./paginaprincipal.html" class="no-link-styles">
+                    <img class="icon-size icon" src="./assets/icons/logo.png" alt="Logo">
+                </a>
             </div>
 
             <form class="d-flex ms-auto search" role="search">
@@ -320,38 +323,38 @@
                     <h1 class="tituloRegistro">Registro</h1>
                     <!--Aquí empieza el formulario-->
                     <form>
-                    <div class="form-floating mb-3" id="form">
-                        <input type="text" class="form-control" id="floatingName" placeholder="nombre" required>
-                        <label class="label" for="floatingName" id="nombre">Nombre completo</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="tel" class="form-control" id="floatingTel" placeholder="numero de teléfono"
-                            required>
-                        <label class="label" for="floatingTel">Número de teléfono</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
-                            required>
-                        <label class="label" for="floatingInput">Email</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
-                            required>
-                        <label class="label" for="floatingPassword">Contraseña</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="floatingConfirm"
-                            placeholder="Confirme su contraseña" required>
-                        <label class="label" for="floatingConfirm">Confirmar contraseña</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck" required>
-                        <label class="form-check-label" id="marcador" for="gridCheck" required>
-                            Acepto los términos y condiciones
-                        </label>
-                    </div>
-                    <button type="submit" id="boton">Crear cuenta</button>
-                </form>
+                        <div class="form-floating mb-3" id="form">
+                            <input type="text" class="form-control" id="floatingName" placeholder="nombre" required>
+                            <label class="label" for="floatingName" id="nombre">Nombre completo</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="tel" class="form-control" id="floatingTel" placeholder="numero de teléfono"
+                                required>
+                            <label class="label" for="floatingTel">Número de teléfono</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
+                                required>
+                            <label class="label" for="floatingInput">Email</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
+                                required>
+                            <label class="label" for="floatingPassword">Contraseña</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="floatingConfirm"
+                                placeholder="Confirme su contraseña" required>
+                            <label class="label" for="floatingConfirm">Confirmar contraseña</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck" required>
+                            <label class="form-check-label" id="marcador" for="gridCheck" required>
+                                Acepto los términos y condiciones
+                            </label>
+                        </div>
+                        <button type="submit" id="boton">Crear cuenta</button>
+                    </form>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 d-none d-md-block">

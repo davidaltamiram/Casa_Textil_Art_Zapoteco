@@ -5,12 +5,22 @@
   background-size: cover;
 }
 
+.btn-buy{
+  font-family: 'Raleway', sans-serif !important;
+  font-size: 20px;
+}
+
+.btn-login{
+  font-family: 'Raleway', sans-serif !important;
+  font-size: 20px;
+}
+
 .lan-landing-container {
   margin-bottom: 20px !important;
 }
 
 .lan-img {
-  border-radius: 10% !important;
+  border-radius: 15% !important;
 
 }
 
