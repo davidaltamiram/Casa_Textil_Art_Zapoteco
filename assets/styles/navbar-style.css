@@ -2,6 +2,11 @@
     align-self: center !important;
 }
 
+.no-link-styles {
+    text-decoration: none;
+    color: black !important;
+  }
+
 .promo-top {
     height: 24px !important;
     background-color: #F07818 !important;
@@ -298,7 +303,7 @@
 @media(max-width: 1199px) {
 
     .inpt-elem {
-        width: 130px !important;
+        width: 125px !important;
     }
 }
 
