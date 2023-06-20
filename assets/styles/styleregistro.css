@@ -241,12 +241,12 @@ form{
 }
 
 /* Media query para celular */
-@media (max-width: 767.98px) {
+@media (min-width: 700px) and (max-width: 767.98px) {
     body {
         background-image: url('../img/login.PNG'); /* Ruta de la imagen de fondo para dispositivos móviles */
         background-repeat: no-repeat;
         background-size: cover;
-        height: 665px;
+        height: 808px;
       }
 
       .tituloRegistro {
@@ -319,7 +319,7 @@ form{
         height: 42px;
         width: 138px;
         margin-top: 23px;
-        margin-left: 27.9%;
+        margin-left: 39%;
 
         font-family: 'Figtree', sans-serif;
         font-size: 16px;
@@ -330,3 +330,456 @@ form{
 
     }
 }
+
+/* Media query para celular 2*/
+@media (min-width: 618px) and (max-width: 700px) {
+    body {
+        background-image: url('../img/login.PNG'); /* Ruta de la imagen de fondo para dispositivos móviles */
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 795px;
+      }
+
+      .tituloRegistro {
+        padding-top: 20px;
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 56px;
+        text-align: center;
+
+        color: black;
+    }
+
+    .form-check-label {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+    }
+
+    .label {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    #floatingName {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    #floatingTel {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+    }
+
+    #floatingInput {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    #floatingPassword {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    #floatingConfirm {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+
+
+    #boton {
+        box-sizing: border-box;
+
+        position: relative;
+        height: 42px;
+        width: 138px;
+        margin-top: 23px;
+        margin-left: 37.9%;
+
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+
+        background: #78C0A8;
+        border: 1px solid #78C0A8;
+        border-radius: 10px;
+
+    }
+}
+
+
+/* Media query para celular 3 */
+
+@media (min-width: 500px) and (max-width: 618px) {
+    body {
+        background-image: url('../img/login.PNG'); /* Ruta de la imagen de fondo para dispositivos móviles */
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 685px;
+      }
+
+      .tituloRegistro {
+        padding-top: 20px;
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 56px;
+        text-align: center;
+
+        color: black;
+    }
+
+    .form-check-label {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+    }
+
+    .label {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    #floatingName {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    #floatingTel {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+    }
+
+    #floatingInput {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    #floatingPassword {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    #floatingConfirm {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    #boton {
+        box-sizing: border-box;
+
+        position: relative;
+        height: 42px;
+        width: 138px;
+        margin-top: 23px;
+        margin-left: 34%;
+
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+
+        background: #78C0A8;
+        border: 1px solid #78C0A8;
+        border-radius: 10px;
+
+    }
+}
+
+/* Media query para celular 4 */
+
+@media (min-width: 450px) and (max-width: 500px) {
+    body {
+        background-image: url('../img/login.PNG'); /* Ruta de la imagen de fondo para dispositivos móviles */
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 675px;
+      }
+
+      .tituloRegistro {
+        padding-top: 20px;
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 56px;
+        text-align: center;
+
+        color: black;
+    }
+
+    .form-check-label {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+    }
+
+    .label {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    #floatingName {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    #floatingTel {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+    }
+
+    #floatingInput {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    #floatingPassword {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    #floatingConfirm {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    #boton {
+        box-sizing: border-box;
+
+        position: relative;
+        height: 42px;
+        width: 138px;
+        margin-top: 23px;
+        margin-left: 31%;
+
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+
+        background: #78C0A8;
+        border: 1px solid #78C0A8;
+        border-radius: 10px;
+
+    }
+}
+
+/* Media query para celular 5 */
+
+@media (min-width: 400px) and (max-width: 450px) {
+    body {
+        background-image: url('../img/login.PNG'); /* Ruta de la imagen de fondo para dispositivos móviles */
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 668px;
+      }
+
+      .tituloRegistro {
+        padding-top: 20px;
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 56px;
+        text-align: center;
+
+        color: black;
+    }
+
+    .form-check-label {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+    }
+
+    .label {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    #floatingName {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    #floatingTel {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+    }
+
+    #floatingInput {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    #floatingPassword {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    #floatingConfirm {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    #boton {
+        box-sizing: border-box;
+
+        position: relative;
+        height: 42px;
+        width: 138px;
+        margin-top: 23px;
+        margin-left: 29%;
+
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+
+        background: #78C0A8;
+        border: 1px solid #78C0A8;
+        border-radius: 10px;
+
+    }
+}
+
+/* Media query para celular 6 */
+
+@media (max-width: 400px){
+    body {
+        background-image: url('../img/login.PNG'); /* Ruta de la imagen de fondo para dispositivos móviles */
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 665px;
+      }
+
+      .tituloRegistro {
+        padding-top: 20px;
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 56px;
+        text-align: center;
+
+        color: black;
+    }
+
+    .form-check-label {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+    }
+
+    .label {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    #floatingName {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    #floatingTel {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+    }
+
+    #floatingInput {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    #floatingPassword {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    #floatingConfirm {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    #boton {
+        box-sizing: border-box;
+
+        position: relative;
+        height: 42px;
+        width: 138px;
+        margin-top: 23px;
+        margin-left: 25%;
+
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+
+        background: #78C0A8;
+        border: 1px solid #78C0A8;
+        border-radius: 10px;
+
+    }
+}
+
