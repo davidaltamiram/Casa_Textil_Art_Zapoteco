@@ -11,6 +11,15 @@
 }
 
 */
+.formulario__input-error{
+    display: none;
+
+}
+
+.formulario__input-error-activo{
+    display: block
+
+}
 
 #contenedor {
     padding-left: 50px;
@@ -41,7 +50,7 @@ form{
     color: #000000;
 }
 
-#form {
+#grupo_nombre {
     margin-top: 10%;
 }
 
