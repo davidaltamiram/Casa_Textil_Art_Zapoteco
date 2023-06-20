@@ -33,11 +33,9 @@
     display: block;
 }
 
-/*Aquí empiezan las media query para la responsividad*/
+/*Aquí empiezan las media query para la responsividad para celular*/
 
-@media(min-width:200px) {
-
-
+@media(min-width: 700px) and (max-width: 767.98px) {
 
     .tituloContactanos {
         font-size: 32px;
@@ -171,9 +169,11 @@
         margin-bottom: 0px;
     }
     .colBtn{
-        padding-right: 10%;
-        
+        padding: 50px;
+        align-items:center;
+
     }
+
     .enviarBtn {
         box-sizing: border-box;
 
@@ -181,7 +181,7 @@
         height: 42px;
         width: 138px;
         margin-top: 23px;
-        left: 35%;
+        margin-left: 40%;
 
         font-family: 'Figtree', sans-serif;
         font-size: 16px;
@@ -207,7 +207,7 @@
 
     ::placeholder{
         font-family: 'Figtree', sans-serif;
-        font-size: 10px;
+        font-size: 14px;
         position: absolute;
         left: 10%;
         top: 7px;
@@ -215,7 +215,917 @@
     }
 }
 
-@media(min-width: 650px) {
+
+/* Media query para celular 2*/
+@media (min-width: 618px) and (max-width: 700px) {
+    .tituloContactanos {
+        font-size: 32px;
+        margin-top: 43px;
+    }
+
+    .clave {
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+        position: relative;
+        left: 15px;
+
+    }
+
+    .valor {
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+        position: relative;
+        left: 10px;
+
+    }
+
+    #telefono1 {
+        margin-top: 44px;
+        margin-bottom: 0px;
+    }
+
+    #telefono2 {
+        margin-top: 44px;
+        margin-bottom: 0px;
+    }
+
+    #direccion1{
+        margin-top: 25px;
+        margin-bottom: 0px;
+    }
+    #direccion2{
+        margin-top: 11px;
+        margin-bottom: 0px;
+    }
+    #horario1{
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+
+    #horario2{
+        margin-top: 11px;
+        margin-bottom: 0px;
+
+    }
+
+
+
+    .separador {
+        position: relative;
+        text-align: center;
+        margin-top: 25px;
+
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+    }
+
+    .separador::after,
+    .separador::before {
+        content: '';
+        position: absolute;
+        width: 40%;
+        height: 1px;
+        background-color: black;
+        top: .8em;
+
+    }
+
+    .separador::before {
+        left: 10px;
+    }
+
+    .separador::after {
+        right: 10px;
+    }
+
+    .requisitos{
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+        position: relative;
+        left: 15px;
+    }
+
+    .colEntradas{
+       margin-left: -40%; 
+    }
+    .entradas{
+        box-sizing: border-box;
+        background: #FFFFFF;
+        border: 1px solid #5E412F;
+        border-radius: 10px;
+        height: 29px;
+        width: 100%;
+         
+    }
+
+    #nombreLabel{
+        margin-bottom: 0px;
+    }
+    #emailLabel{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+
+    #telefonoLabel{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+    
+    #mensajeLabel{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+
+    #email{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+
+    #telefono{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+    #mensaje{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+    .colBtn{
+        padding: 50px;
+        align-items:center;
+
+    }
+
+    .enviarBtn {
+        box-sizing: border-box;
+
+        position: relative;
+        height: 42px;
+        width: 138px;
+        margin-top: 23px;
+        margin-left: 37.9%;
+
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+
+        background: #78C0A8;
+        border: 1px solid #78C0A8;
+        border-radius: 10px;
+    }
+    .mensajeError{
+        font-family: 'Figtree', sans-serif;
+        font-size: 14px;
+        text-align: initial;
+        margin-bottom: 0px;
+    }
+    .mensajeBoton{
+        font-family: 'Figtree', sans-serif;
+        font-size: 14px;
+        text-align: center;
+        margin-left: 10%;
+        margin-top: 15px;
+        margin-bottom: 0px;
+    }
+
+    ::placeholder{
+        font-family: 'Figtree', sans-serif;
+        font-size: 14px;
+        position: absolute;
+        left: 10%;
+        top: 7px;
+
+    } 
+}
+
+
+/* Media query para celular 3 */
+
+@media (min-width: 500px) and (max-width: 618px) {
+    .tituloContactanos {
+        font-size: 32px;
+        margin-top: 43px;
+    }
+
+    .clave {
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+        position: relative;
+        left: 15px;
+
+    }
+
+    .valor {
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+        position: relative;
+        left: 10px;
+
+    }
+
+    #telefono1 {
+        margin-top: 44px;
+        margin-bottom: 0px;
+    }
+
+    #telefono2 {
+        margin-top: 44px;
+        margin-bottom: 0px;
+    }
+
+    #direccion1{
+        margin-top: 25px;
+        margin-bottom: 0px;
+    }
+    #direccion2{
+        margin-top: 11px;
+        margin-bottom: 0px;
+    }
+    #horario1{
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+
+    #horario2{
+        margin-top: 11px;
+        margin-bottom: 0px;
+
+    }
+
+
+
+    .separador {
+        position: relative;
+        text-align: center;
+        margin-top: 25px;
+
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+    }
+
+    .separador::after,
+    .separador::before {
+        content: '';
+        position: absolute;
+        width: 40%;
+        height: 1px;
+        background-color: black;
+        top: .8em;
+
+    }
+
+    .separador::before {
+        left: 10px;
+    }
+
+    .separador::after {
+        right: 10px;
+    }
+
+    .requisitos{
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+        position: relative;
+        left: 15px;
+    }
+
+    .colEntradas{
+       margin-left: -40%; 
+    }
+    .entradas{
+        box-sizing: border-box;
+        background: #FFFFFF;
+        border: 1px solid #5E412F;
+        border-radius: 10px;
+        height: 29px;
+        width: 100%;
+         
+    }
+
+    #nombreLabel{
+        margin-bottom: 0px;
+    }
+    #emailLabel{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+
+    #telefonoLabel{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+    
+    #mensajeLabel{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+
+    #email{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+
+    #telefono{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+    #mensaje{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+    .colBtn{
+        padding: 50px;
+        align-items:center;
+
+    }
+
+    .enviarBtn {
+        box-sizing: border-box;
+
+        position: relative;
+        height: 42px;
+        width: 138px;
+        margin-top: 23px;
+        margin-left: 34%;
+
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+
+        background: #78C0A8;
+        border: 1px solid #78C0A8;
+        border-radius: 10px;
+    }
+    .mensajeError{
+        font-family: 'Figtree', sans-serif;
+        font-size: 14px;
+        text-align: initial;
+        margin-bottom: 0px;
+    }
+    .mensajeBoton{
+        font-family: 'Figtree', sans-serif;
+        font-size: 14px;
+        text-align: center;
+        margin-left: 10%;
+        margin-top: 15px;
+        margin-bottom: 0px;
+    }
+
+    ::placeholder{
+        font-family: 'Figtree', sans-serif;
+        font-size: 14px;
+        position: absolute;
+        left: 10%;
+        top: 7px;
+
+    } 
+
+}
+
+/* Media query para celular 4 */
+
+@media (min-width: 450px) and (max-width: 500px) {
+    .tituloContactanos {
+        font-size: 32px;
+        margin-top: 43px;
+    }
+
+    .clave {
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+        position: relative;
+        left: 15px;
+
+    }
+
+    .valor {
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+        position: relative;
+        left: 10px;
+
+    }
+
+    #telefono1 {
+        margin-top: 44px;
+        margin-bottom: 0px;
+    }
+
+    #telefono2 {
+        margin-top: 44px;
+        margin-bottom: 0px;
+    }
+
+    #direccion1{
+        margin-top: 25px;
+        margin-bottom: 0px;
+    }
+    #direccion2{
+        margin-top: 11px;
+        margin-bottom: 0px;
+    }
+    #horario1{
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+
+    #horario2{
+        margin-top: 11px;
+        margin-bottom: 0px;
+
+    }
+
+
+
+    .separador {
+        position: relative;
+        text-align: center;
+        margin-top: 25px;
+
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+    }
+
+    .separador::after,
+    .separador::before {
+        content: '';
+        position: absolute;
+        width: 40%;
+        height: 1px;
+        background-color: black;
+        top: .8em;
+
+    }
+
+    .separador::before {
+        left: 10px;
+    }
+
+    .separador::after {
+        right: 10px;
+    }
+
+    .requisitos{
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+        position: relative;
+        left: 15px;
+    }
+
+    .colEntradas{
+       margin-left: -40%; 
+    }
+    .entradas{
+        box-sizing: border-box;
+        background: #FFFFFF;
+        border: 1px solid #5E412F;
+        border-radius: 10px;
+        height: 29px;
+        width: 100%;
+         
+    }
+
+    #nombreLabel{
+        margin-bottom: 0px;
+    }
+    #emailLabel{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+
+    #telefonoLabel{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+    
+    #mensajeLabel{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+
+    #email{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+
+    #telefono{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+    #mensaje{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+    .colBtn{
+        padding: 50px;
+        align-items:center;
+
+    }
+
+    .enviarBtn {
+        box-sizing: border-box;
+
+        position: relative;
+        height: 42px;
+        width: 138px;
+        margin-top: 23px;
+        margin-left: 31%;
+
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+
+        background: #78C0A8;
+        border: 1px solid #78C0A8;
+        border-radius: 10px;
+    }
+    .mensajeError{
+        font-family: 'Figtree', sans-serif;
+        font-size: 14px;
+        text-align: initial;
+        margin-bottom: 0px;
+    }
+    .mensajeBoton{
+        font-family: 'Figtree', sans-serif;
+        font-size: 14px;
+        text-align: center;
+        margin-left: 10%;
+        margin-top: 15px;
+        margin-bottom: 0px;
+    }
+
+    ::placeholder{
+        font-family: 'Figtree', sans-serif;
+        font-size: 14px;
+        position: absolute;
+        left: 10%;
+        top: 7px;
+
+    } 
+}
+
+
+/* Media query para celular 5 */
+
+@media (min-width: 400px) and (max-width: 450px) {
+    .tituloContactanos {
+        font-size: 32px;
+        margin-top: 43px;
+    }
+
+    .clave {
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+        position: relative;
+        left: 15px;
+
+    }
+
+    .valor {
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+        position: relative;
+        left: 10px;
+
+    }
+
+    #telefono1 {
+        margin-top: 44px;
+        margin-bottom: 0px;
+    }
+
+    #telefono2 {
+        margin-top: 44px;
+        margin-bottom: 0px;
+    }
+
+    #direccion1{
+        margin-top: 25px;
+        margin-bottom: 0px;
+    }
+    #direccion2{
+        margin-top: 11px;
+        margin-bottom: 0px;
+    }
+    #horario1{
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+
+    #horario2{
+        margin-top: 11px;
+        margin-bottom: 0px;
+
+    }
+
+
+
+    .separador {
+        position: relative;
+        text-align: center;
+        margin-top: 25px;
+
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+    }
+
+    .separador::after,
+    .separador::before {
+        content: '';
+        position: absolute;
+        width: 40%;
+        height: 1px;
+        background-color: black;
+        top: .8em;
+
+    }
+
+    .separador::before {
+        left: 10px;
+    }
+
+    .separador::after {
+        right: 10px;
+    }
+
+    .requisitos{
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+        position: relative;
+        left: 15px;
+    }
+
+    .colEntradas{
+       margin-left: -40%; 
+    }
+    .entradas{
+        box-sizing: border-box;
+        background: #FFFFFF;
+        border: 1px solid #5E412F;
+        border-radius: 10px;
+        height: 29px;
+        width: 100%;
+         
+    }
+
+    #nombreLabel{
+        margin-bottom: 0px;
+    }
+    #emailLabel{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+
+    #telefonoLabel{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+    
+    #mensajeLabel{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+
+    #email{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+
+    #telefono{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+    #mensaje{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+    .colBtn{
+        padding: 50px;
+        align-items:center;
+
+    }
+
+    .enviarBtn {
+        box-sizing: border-box;
+
+        position: relative;
+        height: 42px;
+        width: 138px;
+        margin-top: 23px;
+        margin-left: 29%;
+
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+
+        background: #78C0A8;
+        border: 1px solid #78C0A8;
+        border-radius: 10px;
+    }
+    .mensajeError{
+        font-family: 'Figtree', sans-serif;
+        font-size: 14px;
+        text-align: initial;
+        margin-bottom: 0px;
+    }
+    .mensajeBoton{
+        font-family: 'Figtree', sans-serif;
+        font-size: 14px;
+        text-align: center;
+        margin-left: 10%;
+        margin-top: 15px;
+        margin-bottom: 0px;
+    }
+
+    ::placeholder{
+        font-family: 'Figtree', sans-serif;
+        font-size: 14px;
+        position: absolute;
+        left: 10%;
+        top: 7px;
+
+    } 
+}
+
+/* Media query para celular 6 */
+
+@media (max-width: 400px){
+    .tituloContactanos {
+        font-size: 32px;
+        margin-top: 43px;
+    }
+
+    .clave {
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+        position: relative;
+        left: 15px;
+
+    }
+
+    .valor {
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+        position: relative;
+        left: 10px;
+
+    }
+
+    #telefono1 {
+        margin-top: 44px;
+        margin-bottom: 0px;
+    }
+
+    #telefono2 {
+        margin-top: 44px;
+        margin-bottom: 0px;
+    }
+
+    #direccion1{
+        margin-top: 25px;
+        margin-bottom: 0px;
+    }
+    #direccion2{
+        margin-top: 11px;
+        margin-bottom: 0px;
+    }
+    #horario1{
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+
+    #horario2{
+        margin-top: 11px;
+        margin-bottom: 0px;
+
+    }
+
+
+
+    .separador {
+        position: relative;
+        text-align: center;
+        margin-top: 25px;
+
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+    }
+
+    .separador::after,
+    .separador::before {
+        content: '';
+        position: absolute;
+        width: 40%;
+        height: 1px;
+        background-color: black;
+        top: .8em;
+
+    }
+
+    .separador::before {
+        left: 10px;
+    }
+
+    .separador::after {
+        right: 10px;
+    }
+
+    .requisitos{
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+        position: relative;
+        left: 15px;
+    }
+
+    .colEntradas{
+       margin-left: -40%; 
+    }
+    .entradas{
+        box-sizing: border-box;
+        background: #FFFFFF;
+        border: 1px solid #5E412F;
+        border-radius: 10px;
+        height: 29px;
+        width: 100%;
+         
+    }
+
+    #nombreLabel{
+        margin-bottom: 0px;
+    }
+    #emailLabel{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+
+    #telefonoLabel{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+    
+    #mensajeLabel{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+
+    #email{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+
+    #telefono{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+    #mensaje{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+    .colBtn{
+        padding: 50px;
+        align-items:center;
+
+    }
+
+    .enviarBtn {
+        box-sizing: border-box;
+
+        position: relative;
+        height: 42px;
+        width: 138px;
+        margin-top: 23px;
+        margin-left: 25%;
+
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+
+        background: #78C0A8;
+        border: 1px solid #78C0A8;
+        border-radius: 10px;
+    }
+    .mensajeError{
+        font-family: 'Figtree', sans-serif;
+        font-size: 14px;
+        text-align: initial;
+        margin-bottom: 0px;
+    }
+    .mensajeBoton{
+        font-family: 'Figtree', sans-serif;
+        font-size: 14px;
+        text-align: center;
+        margin-left: 10%;
+        margin-top: 15px;
+        margin-bottom: 0px;
+    }
+
+    ::placeholder{
+        font-family: 'Figtree', sans-serif;
+        font-size: 14px;
+        position: absolute;
+        left: 10%;
+        top: 7px;
+
+    } 
+}
+
+
+/* Para tablet */
+@media (min-width: 768px) and (max-width: 992px) {
 
     .tituloContactanos {
         font-size: 40px;
@@ -351,9 +1261,11 @@
         margin-bottom: 0px;
     }
     .colBtn{
-        padding-right: 10%;
-        
+        padding: 50px;
+        align-items:center;
+
     }
+
     .enviarBtn {
         box-sizing: border-box;
 
@@ -361,7 +1273,7 @@
         height: 52px;
         width: 158px;
         margin-top: 31px;
-        left: 45%;
+        margin-left: 39%;
 
         font-family: 'Figtree', sans-serif;
         font-size: 20px;
@@ -395,6 +1307,8 @@
     }
     
 }
+
+/* Para compu */
 
 @media(min-width: 960px) {
 
@@ -534,9 +1448,11 @@
     }
 
     .colBtn{
-        padding-right: 10%;
-        
+        padding: 50px;
+        align-items:center;
+
     }
+
 
     .enviarBtn {
         box-sizing: border-box;
@@ -545,7 +1461,7 @@
         height: 52px;
         width: 158px;
         margin-top: 31px;
-        left: 50%;
+        margin-left: 43.7%;
 
         font-family: 'Figtree', sans-serif;
         font-size: 24px;
