@@ -1,0 +1,248 @@
+.contenido {
+    background-image: url('../img/login2.PNG'); /* Ruta de la imagen de fondo para dispositivos móviles */
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: -16px !important;
+    height: 600px;
+    justify-content: center;
+  }
+
+.tituloLogin{
+    padding-top: 39px;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 56px;
+    text-align: center;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.form-floating{
+    margin-bottom: 80px;
+}
+
+.contenedorFormulario{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#floatingInput:focus {
+    box-shadow: 0 0 0 0.2rem lightcoral;
+    border-color: lightcoral;
+
+}
+
+#floatingPassword:focus {
+    box-shadow: 0 0 0 0.2rem lightcoral;
+    border-color: lightcoral;
+}
+ 
+.label {
+    font-family: 'Figtree', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+#floatingInput {
+    font-family: 'Figtree', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 19.5px;
+}
+
+#floatingPassword {
+    font-family: 'Figtree', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 19.5px;
+}
+
+.form-floating label {
+    transition: transform 0.15s ease-out, top 0.15s ease-out;
+}
+
+.form-floating input:focus~label,
+.form-floating input:not(:placeholder-shown)~label {
+    font-size: 0.8rem;
+    padding: 3px;
+    position: absolute;
+    z-index: 1;
+    /* Espaciado adicional de la etiqueta al escribir */
+}
+
+#boton:hover {
+    color: white;
+}
+
+#boton {
+    box-sizing: border-box;
+
+    position: relative;
+    height: 52px;
+    width: 158px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-family: 'Figtree', sans-serif;
+    font-size: 24px;
+
+    background: #78C0A8;
+    border: 1px solid #78C0A8;
+    border-radius: 10px;
+}
+
+.registro{
+    font-family: 'Figtree', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+}
+/*
+.recuperarContraseña{
+    font-family: 'Figtree', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: -70px;
+
+}
+*/
+
+/*Esta media query es para pantalla de tablet*/
+@media (min-width: 768px) and (max-width: 992px) {
+    .tituloLogin {
+        padding-top: 20px;
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 50px;
+        line-height: 56px;
+        text-align: center;
+
+        color: #000000;
+    }
+
+    #boton {
+        box-sizing: border-box;
+
+        position: relative;
+        height: 52px;
+        width: 158px;
+        margin-top: 31px;
+
+        font-family: 'Figtree', sans-serif;
+        font-size: 20px;
+
+        background: #78C0A8;
+        border: 1px solid #78C0A8;
+        border-radius: 10px;
+
+    }
+
+    #floatingInput {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+    }
+
+    #floatingPassword {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+    }
+
+
+}
+
+/* Media query para celular */
+@media (max-width: 767.98px) {
+    .contenido {
+        background-image: url('../img/login.PNG'); /* Ruta de la imagen de fondo para dispositivos móviles */
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: -16px !important;
+        height: 600px;
+        justify-content: center;
+      }
+
+      .tituloLogin {
+        padding-top: 20px;
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 56px;
+        text-align: center;
+
+        color: black;
+    }
+
+    #floatingInput {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    #floatingPassword {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    .form-floating{
+        margin-bottom: 20%;
+    }
+
+    .label {
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    #boton {
+        box-sizing: border-box;
+
+        position: relative;
+        height: 42px;
+        width: 138px;
+        margin-top: 23%;
+        margin-bottom: 20%;
+
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+
+        background: #78C0A8;
+        border: 1px solid #78C0A8;
+        border-radius: 10px;
+
+    }
+
+    .registro{
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    /*
+    .recuperarContraseña/{
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        margin-top: -30px;
+    }
+    */
+
+}
+
