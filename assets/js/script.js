@@ -1,3 +1,28 @@
+const catalogo = [{
+    id: "prod-coj-01",
+    producto: "Funda para cojin",
+    categoria: "cojines",
+    precio: 250,
+    color: "Azul",
+    tamaño: "50x50 cm",
+    material:"algodon",
+    composicion: "100% natural",
+    consecutivo: 1,
+    img: "./assets/productos/prod-coj-01.jpg",
+},
+{
+    id: "prod-coj-02",
+    producto: "Funda para cojin",
+    categoria: "cojines",
+    precio: 250,
+    color: "Azul",
+    tamaño: "50x50 cm",
+    material:"algodon",
+    composicion: "100% natural",
+    consecutivo: 2,
+    img: "./assets/productos/prod-coj-02.jpg",
+}];
+
 
 /*Inicio de elementos y evento de bton filtro en contenedor de productos*/
 var bton = document.getElementById("bton-filtro");
@@ -50,7 +75,7 @@ function imageButtons() {
     
 //Guardo los valores de mis inputs
 
-
+catalogo.forEach(function(objeto) {
 
     //1Creo el elemento
 
@@ -77,7 +102,7 @@ function imageButtons() {
 
                     <div class="row">
                         <div class="col-lg-7">
-                            <img class="img-fluid"  src="./assets/ImagenesComprar/Comprar Cojín Algodón amarillo y blanco.jpg"
+                            <img class="img-fluid" src="${objeto.img}"
                                 alt="Producto">
                         </div>
 
@@ -89,12 +114,12 @@ function imageButtons() {
                                 <div class="container-fluid " id="text_content_modal">
 
                                     <div id="title_product_catalog">
-                                        Funda para cojín
+                                        ${objeto.producto}
                                     </div>
                                     <br>
                                     <div class="text_product_modal"
                                         id="price_product_catalog">
-                                        $####
+                                        ${objeto.precio}
                                     </div>
                                     <div class="text_product_modal"
                                         id="color_product_catalog">
@@ -147,7 +172,7 @@ function imageButtons() {
 
 </div>`;
 
-
+});
 }
 
 //Creamos el botón de escucha
@@ -163,32 +188,30 @@ const divProductos = document.querySelector("#productos");
 
 function addProducto (){
 
-    let productos = {
-            id: 1,
-            imagen: "./assets/imagenes/producto_1.jpg",
-            precio: 600,
-        };
-
-  var jsonProductos = Object.assign({}, productos);
+    catalogo.forEach(function(objeto) {
+        console.log(objeto.img);
+        console.log(objeto.precio);
+    
 
 var productCard = document.createElement("div");
-productCard.classList = "col-sm-6 col-md-4 col-lg-4";
+productCard.classList = "col-sm-6 col-md-4 col-lg-4 align-items-center";
 
 productCard.innerHTML = `
-<div class="card card-body ">
-    <button id="imageButton" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  <img src="${productos.imagen}" alt="Producto">
-    </button>
-  <br>
-    $ ${productos.precio}
-    <div class="container" id="product_image_modal"></div>
-</div>
+<button id="imageButton" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+  <div class="card" id="card-gallery" ">
+    <img class="card-img-top" src="${objeto.img}" alt="Producto">
+    <div class="card-body">
+      <p class="card-text">$${objeto.precio} MXN</p>
+    </div>
+  </div>
+</button>
+<div class="container" id="product_image_modal"></div>
 `;
 
 divProductos.appendChild(productCard);
-
+});
 }
 
-addProducto();
+
 addProducto();
 
