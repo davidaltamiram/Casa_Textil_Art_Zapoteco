@@ -11,13 +11,32 @@
 }
 
 */
-.formulario__input-error{
+.formulario__input-error {
     display: none;
 
 }
 
-.formulario__input-error-activo{
+.formulario__input-error-activo {
     display: block
+}
+
+.formulario__mensaje-exito {
+    display: none;
+
+}
+
+.formulario__mensaje-exito-activo {
+    display: block;
+
+}
+
+.formulario__mensaje {
+    display: none;
+
+}
+
+.formulario__mensaje-activo {
+    display: block;
 
 }
 
@@ -26,7 +45,7 @@
     padding-right: 50px;
 }
 
-form{
+form {
     justify-content: center;
 }
 
@@ -252,13 +271,14 @@ form{
 /* Media query para celular */
 @media (min-width: 700px) and (max-width: 767.98px) {
     body {
-        background-image: url('../img/login.PNG'); /* Ruta de la imagen de fondo para dispositivos móviles */
+        background-image: url('../img/login.PNG');
+        /* Ruta de la imagen de fondo para dispositivos móviles */
         background-repeat: no-repeat;
         background-size: cover;
         height: 808px;
-      }
+    }
 
-      .tituloRegistro {
+    .tituloRegistro {
         padding-top: 20px;
         font-family: 'Raleway', sans-serif;
         font-style: normal;
@@ -343,13 +363,14 @@ form{
 /* Media query para celular 2*/
 @media (min-width: 618px) and (max-width: 700px) {
     body {
-        background-image: url('../img/login.PNG'); /* Ruta de la imagen de fondo para dispositivos móviles */
+        background-image: url('../img/login.PNG');
+        /* Ruta de la imagen de fondo para dispositivos móviles */
         background-repeat: no-repeat;
         background-size: cover;
         height: 795px;
-      }
+    }
 
-      .tituloRegistro {
+    .tituloRegistro {
         padding-top: 20px;
         font-family: 'Raleway', sans-serif;
         font-style: normal;
@@ -436,13 +457,14 @@ form{
 
 @media (min-width: 500px) and (max-width: 618px) {
     body {
-        background-image: url('../img/login.PNG'); /* Ruta de la imagen de fondo para dispositivos móviles */
+        background-image: url('../img/login.PNG');
+        /* Ruta de la imagen de fondo para dispositivos móviles */
         background-repeat: no-repeat;
         background-size: cover;
         height: 685px;
-      }
+    }
 
-      .tituloRegistro {
+    .tituloRegistro {
         padding-top: 20px;
         font-family: 'Raleway', sans-serif;
         font-style: normal;
@@ -526,13 +548,14 @@ form{
 
 @media (min-width: 450px) and (max-width: 500px) {
     body {
-        background-image: url('../img/login.PNG'); /* Ruta de la imagen de fondo para dispositivos móviles */
+        background-image: url('../img/login.PNG');
+        /* Ruta de la imagen de fondo para dispositivos móviles */
         background-repeat: no-repeat;
         background-size: cover;
         height: 675px;
-      }
+    }
 
-      .tituloRegistro {
+    .tituloRegistro {
         padding-top: 20px;
         font-family: 'Raleway', sans-serif;
         font-style: normal;
@@ -616,13 +639,14 @@ form{
 
 @media (min-width: 400px) and (max-width: 450px) {
     body {
-        background-image: url('../img/login.PNG'); /* Ruta de la imagen de fondo para dispositivos móviles */
+        background-image: url('../img/login.PNG');
+        /* Ruta de la imagen de fondo para dispositivos móviles */
         background-repeat: no-repeat;
         background-size: cover;
         height: 668px;
-      }
+    }
 
-      .tituloRegistro {
+    .tituloRegistro {
         padding-top: 20px;
         font-family: 'Raleway', sans-serif;
         font-style: normal;
@@ -704,15 +728,16 @@ form{
 
 /* Media query para celular 6 */
 
-@media (max-width: 400px){
+@media (max-width: 400px) {
     body {
-        background-image: url('../img/login.PNG'); /* Ruta de la imagen de fondo para dispositivos móviles */
+        background-image: url('../img/login.PNG');
+        /* Ruta de la imagen de fondo para dispositivos móviles */
         background-repeat: no-repeat;
         background-size: cover;
         height: 665px;
-      }
+    }
 
-      .tituloRegistro {
+    .tituloRegistro {
         padding-top: 20px;
         font-family: 'Raleway', sans-serif;
         font-style: normal;
@@ -791,4 +816,3 @@ form{
 
     }
 }
-
