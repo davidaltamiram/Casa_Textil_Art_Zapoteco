@@ -3,17 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Página Principal</title>
     <link rel="icon" type="icon" href="./assets/icons/logo.png">
     <!--Link de bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <!--Link de css de estilos de la página-->
-    <link href="./assets/styles/styleregistro.css" rel="stylesheet">
+    <link href="./assets/styles/stylepagprincipal.css" rel="stylesheet">
     <!--Link de css para el footer-->
     <link href="./assets/styles/stylefooter.css" rel="stylesheet">
-
+    <!---Link para carrousel-->
+    <link rel="stylesheet" href="./assets/styles/carrusel.css">
 
     <!-----------LINKS de gibran-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -25,12 +27,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+    <!--link animacion-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!--link carrusel top vendidos-->
+
+    <!--1. OWL CAROUSEL MIN.CSS-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--2. Owl Carousel Theme Min.css-->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body style="margin: 0;">
-
-    <!--------------------------Aquí inicia el navbar---------------------------------->
-
+    <!-- Aqui inician las promos -->
     <div class="container-fluid nav-brd fnt promo-top sticky-top stcky" id="promo">
         <div class="row text-center">
 
@@ -240,6 +259,7 @@
                         <!--Aquí terminan las modificaciones-->
 
 
+
                         <div class="collapse navbar-collapse nav-language" id="navbarDropdown">
 
                             <ul class="navbar-nav nav-language-list">
@@ -292,7 +312,6 @@
         <div class="nav-external-element d-none" id="external">
 
             <div class="external-logo d-flex justify-content-center float-logo">
-
                 <button id="crossButton" class="btn bg-white float-logo-btn" type="button">
                     <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 0H17V15.3652H0V0Z" fill="white" fill-opacity="0.01" />
@@ -340,15 +359,15 @@
                                     </svg>
                                 </button>
                             </a>
-                            <a class="nav-link active" href="productos.html">Tienda</a>
+                            <a class="nav-link active" href="./productos">Tienda</a>
                         </li>
                     </div>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="acercadenosotros.html">Acerca de
+                        <a class="nav-link active" aria-current="page" href="./acercadenosotros.html">Acerca de
                             nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="contactanos.html">Contáctanos</a>
+                        <a class="nav-link active" href="./contactanos.html">Contáctanos</a>
                     </li>
                 </ul>
             </div>
@@ -368,109 +387,225 @@
         </div>
         <!-- Fin de la barra lateral -->
 
+    </div>
+    <!-- Aui termina el nav-bar -->
+
+
+
+    <div class="container-fluid l1"> <!--EMPIEZA IMAGEN BACKGROUND-->
+        <h1 class="animate__animated animate__fadeInLeftBig bienvenido">Bienvenido a Casa Textil Arte Zapoteco</h1>
+        <p class=" animate__animated animate__fadeInLeftBig animate__delay-1s" id="tradicion">Tradición y estilo para
+            cada uno de tus espacios</p>
+
+    </div><!--AQUI TERMINA LA IMAGEN-->
+
+
+    <div class="titulo text-center">No son simples textiles, es arte zapoteco.</div><!--AQUI TERMINA EL TITULO-->
+
+
+
+
+    <!--EMPIEZA CATEGORIAS-->
+    <!--PARTE DESKTOP-->
+    <div class="container categorias d-none d-lg-block">
+        <div class="row ">
+
+            <div class="col ">
+                <div class="container pic">
+                    <img class="imgcat img-fluid" src="./assets/img/cojines.jpeg">
+                    <span class="imgtext">
+                        <h1 id="cojines">Cojines</h1>
+                    </span>
+                </div>
+
+            </div>
+            <div class="col">
+                <div class="container pic">
+                    <img class="imgcat img-fluid" src="./assets/img/colchas.jpeg">
+                    <span class="imgtext">
+                        <h1 id="colchas">Colchas</h1>
+                    </span>
+                </div>
+
+            </div>
+            <div class="col">
+                <div class="container pic">
+                    <img class="imgcat img-fluid" src="./assets/img/tapetes.jpeg">
+                    <span class="imgtext">
+                        <h1 id="colchas">Tapetes</h1>
+                    </span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="container pic">
+                    <img class="imgcat img-fluid" src="./assets/img/manteles.jpeg">
+                    <span class="imgtext">
+                        <h1 class="titulo-cat">Manteles</h1>
+                    </span>
+                </div>
+            </div>
+        </div>
 
     </div>
-    <!-- Aqui termina el nav-bar -->
 
-    <!---------------------------Aquí inicia la página de registro------------------------------>
+    <!--PARTE TABLET Y CEL-->
+    <div class="container d-lg-none">
+        <div id="carouselExample2" class="carousel slide">
+            <div class="carousel-inner align-items-center">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row ">
+                            <div class="col fila-cat">
+                                <div class="container pic ">
+                                    <img class="imgcat img-fluid" src="./assets/img/cojines.jpeg">
+                                    <span class="imgtext">
+                                        <h1 id="cojines">Cojines</h1>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="container pic">
+                                    <img class="imgcat img-fluid" src="./assets/img/colchas.jpeg">
+                                    <span class="imgtext">
+                                        <h1 id="colchas">Colchas</h1>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="container pic">
+                                    <img class="imgcat img-fluid" src="./assets/img/tapetes.jpeg">
+                                    <span class="imgtext">
+                                        <h1 id="tapetes">Tapetes</h1>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="container pic">
+                                    <img class="imgcat img-fluid" src="./assets/img/manteles.jpeg">
+                                    <span class="imgtext">
+                                        <h1 class="titulo-cat">Manteles</h1>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-    <!--<div class="verticalLine"></div>-->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" id="flecha" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" id="flecha" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
 
-    <!--Aquí empieza el título-->
-    <div class="container-fluid" id="contenedor">
+            </div>
+        </div>
+    </div>
+
+    <!--AQUI TERMINA CATEGORIAS-->
+
+
+
+
+
+
+    <div class="titulo text-center">Los más vendidos</div>
+
+    <div class="container topVentas">
+        <div class="owl-carousel">
+            <div class="container">
+                <img class="imgcat" src="./assets/imagenes/producto_1.jpg">
+            </div>
+            <div class="container">
+                <img class="imgcat" src="./assets/imagenes/producto_2.jpg">
+            </div>
+            <div class="container">
+                <img class="imgcat" src="./assets/imagenes/producto_1.jpg">
+            </div>
+            <div class="container">
+                <img class="imgcat" src="./assets/imagenes/producto_3.jpg">
+            </div>
+            <div class="container">
+                <img class="imgcat" src="./assets/imagenes/producto_1.jpg">
+            </div>
+            <div class="container">
+                <img class="imgcat" src="./assets/imagenes/producto_3.jpg">
+            </div>
+            <div class="container">
+                <img class="imgcat" src="./assets/imagenes/producto_4.jpg">
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="container" id="sec-acerca">
+
         <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="contenedorFormulario">
-                    <h1 class="tituloRegistro">Registro</h1>
-                    <!--Aquí empieza el formulario-->
-
-                    <form id="formulario">
-                        <div class="form-floating mb-3" id="grupo_nombre">
-                            <input type="text" class="form-control" id="floatingName" placeholder="nombre"
-                                name="nombre">
-                            <label class="label" for="floatingName" id="nombre">Nombre completo</label>
-                            <p class="formulario__input-error">Ingresa un nombre válido.</p>
-                        </div>
-                        <div class="form-floating mb-3" id="grupo_telefono">
-                            <input type="tel" class="form-control" id="floatingTel" placeholder="numero de teléfono"
-                                name="telefono">
-                            <label class="label" for="floatingTel">Número de teléfono</label>
-                            <p class="formulario__input-error">Ingresa un número válido de 7 a 14 dígitos.</p>
-                        </div>
-                        <div class="form-floating mb-3" id="grupo_email">
-                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
-                                name="email">
-                            <label class="label" for="floatingInput">Email</label>
-                            <p class="formulario__input-error">Ingresa un email válido.</p>
-                        </div>
-                        <div class="form-floating mb-3" id="grupo_password">
-                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
-                                name="password">
-                            <label class="label" for="floatingPassword">Contraseña</label>
-                            <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
-                        </div>
-                        <div class="form-floating mb-3" id="grupo_password2">
-                            <input type="password" class="form-control" id="floatingConfirm" name="password2"
-                                placeholder="Confirme su contraseña">
-                            <label class="label" for="floatingConfirm">Confirmar contraseña</label>
-                            <p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck">
-                            <label class="form-check-label" id="marcador" for="gridCheck">
-                                Acepto los términos y condiciones
-                            </label>
-                        </div>
-                        <button type="submit" id="boton">Crear cuenta</button>
-                        <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Usuario registrado
-                            exitosamente.</p>
-                        <p class="formulario__mensaje" id="formulario__mensaje">Favor de llenar todos los campos.</p>
-                    </form>
-                </div>
+            <div class="col-6 div1">
+                <div class="titulo-acerca text-center">Somos una cooperativa familiar dedicada a la producción de
+                    textiles elaborados a mano con técnicas ancestrales.</div>
             </div>
-            <div class="col-lg-6 col-md-6 d-none d-md-block">
-                <div class="imagen">
-                    <img id="foto" src="./assets/img/registro.PNG" alt="Imagen de una artesanía">
+            <div class="col-6 div2">
+                <div class="container">
+                    <a href="./acercadenosotros.html"><button class="boton-con-borde titulo-boton">Acerca de
+                            Nosotros</button> </a>
+
                 </div>
             </div>
         </div>
+
     </div>
-    <!--Aquí termina el formulario-->
-    <!--Pantalla celular-->
-
-    <!--
-    <div class="container d-sm-block d-md-none">
-        <div class="bg-image">
-            <style>
-                .bg-image {
-                  background-image: url('./assets/img/registro.PNG');
-                  background-size: cover;
-                  background-position: center center;
-                }
-              </style>
-        </div>
-    </div>
--->
 
 
 
-    <!----1-->
+
+
     <div id="footer"></div>
 
-    <!--Script de bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+
+
+
+    <!--Este script es para el carrusel-->
+    <!-- 0. Jquery cdn-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- 1. Owl Carousel Min.js-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
-    <!--Script para los pop overs-->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="./assets/js/paginaprincipal.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="./assets/js/popover.js"></script>
 
-    <!--Link de js para el footer-->
-    <!----1-->
-    <script src="./assets/js/footer.js"></script>
+
     <script src="./assets/js/nav-bar.js"></script>
-    <script src="assets/js/registro.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+
+    <script src="./assets/js/footer.js"></script>
 </body>
 
 </html>
