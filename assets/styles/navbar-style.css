@@ -168,10 +168,63 @@
 .nav-shop-icon {
     margin-right: 5px !important;
 }
-
+/*
 .nav-user-icon {
     margin-right: 5px !important;
+}*/
+
+/*Pruebas*/
+
+.nav-user {
+    display: inline !important;
 }
+
+.nav-user-list {
+    display: inline !important;
+}
+
+.nav-user-dropdown {
+    display: inline !important;
+}
+
+
+.nav-user-icon {
+    display: inline;
+    padding: 0px !important;
+    position: relative !important;
+}
+
+.nav-user-dropdown-list {
+    margin-top: 8px !important;
+    position: absolute !important;
+}
+
+/* Active */
+.nav-useractive {
+    display: inline !important;
+}
+
+.nav-useractive-list {
+    display: inline !important;
+}
+
+.nav-useractive-dropdown {
+    display: inline !important;
+}
+
+
+.nav-useractive-icon {
+    display: inline;
+    padding: 0px !important;
+    position: relative !important;
+}
+
+.nav-useractive-dropdown-list {
+    margin-top: 8px !important;
+    position: absolute !important;
+}
+
+/*Terminan las pruebas*/
 
 .nav-language {
     display: inline !important;
@@ -184,6 +237,7 @@
 .nav-language-dropdown {
     display: inline !important;
 }
+
 
 .nav-language-icon {
     display: inline !important;
@@ -319,7 +373,8 @@
 
     .search-icon,
     .nav-shop-icon,
-    .nav-user-icon,
+    .nav-user-icon, 
+    .nav-useractive-icon,
     .nav-language-icon {
         width: 22px !important;
         height: 22px !important;
@@ -334,6 +389,7 @@
     .search-icon,
     .nav-shop-icon,
     .nav-user-icon,
+    .nav-useractive-icon,
     .nav-language-icon {
         width: 20px !important;
         height: 20px !important;
@@ -353,6 +409,7 @@
     .search-icon,
     .nav-shop-icon,
     .nav-user-icon,
+    .nav-useractive-icon,
     .nav-language-icon {
         width: 19px !important;
         height: 19px !important;
@@ -379,6 +436,7 @@
     .search-icon,
     .nav-shop-icon,
     .nav-user-icon,
+    .nav-useractive-icon,
     .nav-language-icon {
         width: 17px !important;
         height: 17px !important;
@@ -407,6 +465,7 @@
     .search-icon,
     .nav-shop-icon,
     .nav-user-icon,
+    .nav-useractive-icon,
     .nav-language-icon {
         width: 17px !important;
         height: 17px !important;
@@ -432,6 +491,7 @@
     .search-icon,
     .nav-shop-icon,
     .nav-user-icon,
+    .nav-useractive-icon,
     .nav-language-icon {
         width: 17px !important;
         height: 17px !important;
@@ -459,6 +519,7 @@
     .search-icon,
     .nav-shop-icon,
     .nav-user-icon,
+    .nav-useractive-icon,
     .nav-language-icon {
         width: 14px !important;
         height: 14px !important;
@@ -486,6 +547,7 @@
     .search-icon,
     .nav-shop-icon,
     .nav-user-icon,
+    .nav-useractive-icon,
     .nav-language-icon {
         width: 12px !important;
         height: 12px !important;
@@ -526,6 +588,7 @@
     .search-icon,
     .nav-shop-icon,
     .nav-user-icon,
+    .nav-useractive-icon,
     .nav-language-icon {
         width: 10px !important;
         height: 10px !important;
