@@ -322,39 +322,47 @@
                 <div class="contenedorFormulario">
                     <h1 class="tituloRegistro">Registro</h1>
                     <!--Aquí empieza el formulario-->
-                    <form>
-                        <div class="form-floating mb-3" id="form">
-                            <input type="text" class="form-control" id="floatingName" placeholder="nombre" required>
-                            <label class="label" for="floatingName" id="nombre">Nombre completo</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="tel" class="form-control" id="floatingTel" placeholder="numero de teléfono"
-                                required>
-                            <label class="label" for="floatingTel">Número de teléfono</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
-                                required>
-                            <label class="label" for="floatingInput">Email</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
-                                required>
-                            <label class="label" for="floatingPassword">Contraseña</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="password" class="form-control" id="floatingConfirm"
-                                placeholder="Confirme su contraseña" required>
-                            <label class="label" for="floatingConfirm">Confirmar contraseña</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck" required>
-                            <label class="form-check-label" id="marcador" for="gridCheck" required>
-                                Acepto los términos y condiciones
-                            </label>
-                        </div>
-                        <button type="submit" id="boton">Crear cuenta</button>
-                    </form>
+
+                    <form id="formulario">
+                    <div class="form-floating mb-3" id="grupo_nombre">
+                        <input type="text" class="form-control" id="floatingName" placeholder="nombre" name="nombre">
+                        <label class="label" for="floatingName" id="nombre">Nombre completo</label>
+                        <p class="formulario__input-error">Ingresa un nombre válido.</p>
+                    </div>
+                    <div class="form-floating mb-3" id="grupo_telefono">
+                        <input type="tel" class="form-control" id="floatingTel" placeholder="numero de teléfono"
+                         name="telefono">
+                        <label class="label" for="floatingTel">Número de teléfono</label>
+                        <p class="formulario__input-error">Ingresa un número válido de 7 a 14 dígitos.</p>
+                    </div>
+                    <div class="form-floating mb-3" id="grupo_email">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
+                           name="email">
+                        <label class="label" for="floatingInput">Email</label>
+                        <p class="formulario__input-error">Ingresa un email válido.</p>
+                    </div>
+                    <div class="form-floating mb-3" id="grupo_password">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
+                            name="password">
+                        <label class="label" for="floatingPassword">Contraseña</label>
+                        <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+                    </div>
+                    <div class="form-floating mb-3" id="grupo_password2">
+                        <input type="password" class="form-control" id="floatingConfirm"
+                         name="password2"   placeholder="Confirme su contraseña">
+                        <label class="label" for="floatingConfirm">Confirmar contraseña</label>
+                        <p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" id="marcador" for="gridCheck">
+                            Acepto los términos y condiciones
+                        </label>
+                    </div>
+                    <button type="submit" id="boton">Crear cuenta</button>
+                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Usuario registrado exitosamente.</p>
+                    <p class="formulario__mensaje" id="formulario__mensaje">Favor de llenar todos los campos.</p>
+                </form>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 d-none d-md-block">
@@ -394,12 +402,12 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./assets/js/popover.js"></script>
-    <!--Link de js para el footer-->
-    <script src="./assets/js/navBar.js"></script>
+    
     <!--Link de js para el footer-->
     <!----1-->
     <script src="./assets/js/footer.js"></script>
     <script src="./assets/js/nav-bar.js"></script>
+    <script src="assets/js/registro.js"></script>
 </body>
 
 </html>
