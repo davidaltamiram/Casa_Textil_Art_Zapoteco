@@ -25,25 +25,25 @@ const validarFormulario = (e) => {
 	switch (e.target.name) {
 		case "nombre":
 			validarCampo(expresiones.nombre, e.target, 'nombre');
-		break;
+			break;
 		case "password":
 			validarCampo(expresiones.password, e.target, 'password');
 			validarPassword2();
-		break;
+			break;
 		case "password2":
 			validarPassword2();
-		break;
+			break;
 		case "email":
 			validarCampo(expresiones.correo, e.target, 'email');
-		break;
+			break;
 		case "telefono":
 			validarCampo(expresiones.telefono, e.target, 'telefono');
-		break;
+			break;
 	}
 }
 
 const validarCampo = (expresion, input, campo) => {
-	if(expresion.test(input.value)){
+	if (expresion.test(input.value)) {
 
 		document.querySelector(`#grupo_${campo} .formulario__input-error`).classList.remove('formulario__input-error-activo');
 		campos[campo] = true;
@@ -58,7 +58,7 @@ const validarPassword2 = () => {
 	const inputPassword1 = document.getElementById('floatingPassword');
 	const inputPassword2 = document.getElementById('floatingConfirm');
 
-	if(inputPassword1.value !== inputPassword2.value){
+	if (inputPassword1.value !== inputPassword2.value) {
 		document.querySelector(`#grupo_password2 .formulario__input-error`).classList.add('formulario__input-error-activo');
 		campos['password'] = false;
 	} else {
@@ -75,8 +75,8 @@ inputs.forEach((input) => {
 formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 
-	const terminos = document.getElementById('gridCheck');
-	if(campos.nombre && campos.password && campos.email && campos.telefono && terminos.checked ){
+	var terminos = document.getElementById('gridCheck');
+	if (campos.nombre && campos.password && campos.email && campos.telefono && terminos.checked) {
 		formulario.reset();
 
 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
@@ -89,6 +89,7 @@ formulario.addEventListener('submit', (e) => {
 		setTimeout(() => {
 			document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
 		}, 2000);
+
 	}
 });
 
@@ -102,15 +103,61 @@ var passwordUsuario = document.getElementById("floatingPassword");
 
 const botonEnviar = document.getElementById("boton")
 
-function guardarUsuario(){
 
-	console.log("Esta funcionando la funcion");
+//En este array se almacenarán los usuarios registrados
+let usuariosRegistrados =[];
 
 
+//Creamos nuestra clase usuario que nos servirá para instanciar los objetos
+class usuario {
 
-	console.log(usuario1);
+	//atributos
+	nombre ="";
+	telefono="";
+	email="";
+	password="";
+
+
+	//constructor
+	constructor(nombre,telefono,email,password){
+
+		this.nombre = nombre;
+		this.telefono = telefono;
+		this.email = email;
+		this.password = password;		
+
+	}
+
 
 }
 
+//con esta funcion se hace la magia
+function guardarUsuario() {
 
-botonEnviar.addEventListener("click", guardarUsuario);
+//Primero se instancia el objeto usuarioRegistrado utilizando los .value de cada elemento obtenido del HTML
+ let usuarioRegistrado = new usuario(nombreUsuario.value,telefonoUsuario.value,emailUsuario.value,passwordUsuario.value)
+
+ //Luego se agrega ese objeto al arreglo usuariosRegistrados con el metodo push
+ usuariosRegistrados.push(usuarioRegistrado);
+ 
+//Finalmente se almacena en el localStorage, siendo la key usuarios y el value todo el arreglo de objetos en formato JSON
+  localStorage.setItem('usuarios', JSON.stringify(usuariosRegistrados));
+
+  
+//Esta función se repite cada que se active el eventListener
+
+	}
+
+
+//Este EventListener en forma de funcion flecha hace que se ejecute la función guardarUsuario siempre y cuando todos los campos hayan sido llenados (estén en true), con el fin de evitar crear usuarios con atributos vacíos.
+botonEnviar.addEventListener("click",e => {
+	e.preventDefault
+
+	const terminos2 = document.getElementById('gridCheck');
+	if (campos.nombre && campos.password && campos.email && campos.telefono && terminos2.checked){
+
+		guardarUsuario();
+
+	}
+
+});
