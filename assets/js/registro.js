@@ -35,6 +35,13 @@ const validarFormulario = (e) => {
 			break;
 		case "email":
 			validarCampo(expresiones.correo, e.target, 'email');
+			guardado2.forEach(users => {
+
+				if(users.email.toLowerCase() === emailUsuario.value.toLowerCase()){
+			
+					console.log("este email está registrado")		
+				}
+			});
 			break;
 		case "telefono":
 			validarCampo(expresiones.telefono, e.target, 'telefono');
@@ -101,7 +108,7 @@ var telefonoUsuario = document.getElementById("floatingTel");
 var emailUsuario = document.getElementById("floatingInput");
 var passwordUsuario = document.getElementById("floatingPassword");
 
-const botonEnviar = document.getElementById("boton")
+const botonEnviar = document.getElementById("boton");
 
 
 //En este array se almacenarán los usuarios registrados
@@ -127,11 +134,13 @@ class usuario {
 		this.password = password;		
 
 	}
-
-
 }
 
-//con esta funcion se hace la magia
+
+
+
+
+//Esta función guarda el usuario
 function guardarUsuario() {
 
 //Primero se instancia el objeto usuarioRegistrado utilizando los .value de cada elemento obtenido del HTML
@@ -140,6 +149,7 @@ function guardarUsuario() {
  //Luego se agrega ese objeto al arreglo usuariosRegistrados con el metodo push
  usuariosRegistrados.push(usuarioRegistrado);
  
+
 //Finalmente se almacena en el localStorage, siendo la key usuarios y el value todo el arreglo de objetos en formato JSON
   localStorage.setItem('usuarios', JSON.stringify(usuariosRegistrados));
 
@@ -147,6 +157,15 @@ function guardarUsuario() {
 //Esta función se repite cada que se active el eventListener
 
 	}
+
+
+
+var guardado = localStorage.getItem('usuarios');
+
+var guardado2 = JSON.parse(guardado);
+
+console.log(guardado2);
+
 
 
 //Este EventListener en forma de funcion flecha hace que se ejecute la función guardarUsuario siempre y cuando todos los campos hayan sido llenados (estén en true), con el fin de evitar crear usuarios con atributos vacíos.
