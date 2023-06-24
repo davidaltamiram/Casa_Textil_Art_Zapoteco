@@ -16,7 +16,8 @@ const campos = {
 	nombre: false,
 	password: false,
 	email: false,
-	telefono: false
+	telefono: false,
+	emailNuevo: false
 }
 
 
@@ -35,6 +36,30 @@ const validarFormulario = (e) => {
 			break;
 		case "email":
 			validarCampo(expresiones.correo, e.target, 'email');
+
+			if (guardado2.length === 0) {
+				console.log("no hay nada")
+				campos.emailNuevo = true;
+				console.log(campos.emailNuevo)
+
+			} else {
+
+				for (let users of guardado2) {
+					if (users.email.toLowerCase() === emailUsuario.value.toLowerCase()) {
+						console.log("Este email está registrado");
+						document.querySelector(`#grupo_email .formulario__email-error`).classList.add('formulario__email-error-activo');
+						campos.emailNuevo = false;
+						console.log(campos.emailNuevo);
+						break;
+					} else {
+						console.log("email disponible");
+						campos.emailNuevo = true;
+						console.log(campos.emailNuevo);
+						document.querySelector(`#grupo_email .formulario__email-error`).classList.remove('formulario__email-error-activo');
+					}
+				}
+			}
+
 			break;
 		case "telefono":
 			validarCampo(expresiones.telefono, e.target, 'telefono');
@@ -76,7 +101,7 @@ formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 
 	var terminos = document.getElementById('gridCheck');
-	if (campos.nombre && campos.password && campos.email && campos.telefono && terminos.checked) {
+	if (campos.nombre && campos.password && campos.email && campos.telefono && terminos.checked && campos.emailNuevo) {
 		formulario.reset();
 
 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
@@ -101,60 +126,71 @@ var telefonoUsuario = document.getElementById("floatingTel");
 var emailUsuario = document.getElementById("floatingInput");
 var passwordUsuario = document.getElementById("floatingPassword");
 
-const botonEnviar = document.getElementById("boton")
+const botonEnviar = document.getElementById("boton");
 
 
 //En este array se almacenarán los usuarios registrados
-let usuariosRegistrados =[];
+let usuariosRegistrados = [];
 
 
 //Creamos nuestra clase usuario que nos servirá para instanciar los objetos
 class usuario {
 
 	//atributos
-	nombre ="";
-	telefono="";
-	email="";
-	password="";
+	nombre = "";
+	telefono = "";
+	email = "";
+	password = "";
 
 
 	//constructor
-	constructor(nombre,telefono,email,password){
+	constructor(nombre, telefono, email, password) {
 
 		this.nombre = nombre;
 		this.telefono = telefono;
 		this.email = email;
-		this.password = password;		
+		this.password = password;
 
 	}
+}
+
+
+
+
+
+//Esta función guarda el usuario
+function guardarUsuario() {
+
+	//Primero se instancia el objeto usuarioRegistrado utilizando los .value de cada elemento obtenido del HTML
+	let usuarioRegistrado = new usuario(nombreUsuario.value, telefonoUsuario.value, emailUsuario.value, passwordUsuario.value)
+
+	//Luego se agrega ese objeto al arreglo usuariosRegistrados con el metodo push
+	usuariosRegistrados.push(usuarioRegistrado);
+
+
+	//Finalmente se almacena en el localStorage, siendo la key usuarios y el value todo el arreglo de objetos en formato JSON
+	localStorage.setItem('usuarios', JSON.stringify(usuariosRegistrados));
+
+
+	//Esta función se repite cada que se active el eventListener
 
 
 }
 
-//con esta funcion se hace la magia
-function guardarUsuario() {
+var guardado = localStorage.getItem('usuarios');
+var guardado2 = JSON.parse(guardado);
+console.log(guardado2);
 
-//Primero se instancia el objeto usuarioRegistrado utilizando los .value de cada elemento obtenido del HTML
- let usuarioRegistrado = new usuario(nombreUsuario.value,telefonoUsuario.value,emailUsuario.value,passwordUsuario.value)
+// console.log(guardado2);
 
- //Luego se agrega ese objeto al arreglo usuariosRegistrados con el metodo push
- usuariosRegistrados.push(usuarioRegistrado);
- 
-//Finalmente se almacena en el localStorage, siendo la key usuarios y el value todo el arreglo de objetos en formato JSON
-  localStorage.setItem('usuarios', JSON.stringify(usuariosRegistrados));
-
-  
-//Esta función se repite cada que se active el eventListener
-
-	}
 
 
 //Este EventListener en forma de funcion flecha hace que se ejecute la función guardarUsuario siempre y cuando todos los campos hayan sido llenados (estén en true), con el fin de evitar crear usuarios con atributos vacíos.
-botonEnviar.addEventListener("click",e => {
+botonEnviar.addEventListener("click", e => {
 	e.preventDefault
 
 	const terminos2 = document.getElementById('gridCheck');
-	if (campos.nombre && campos.password && campos.email && campos.telefono && terminos2.checked){
+	if (campos.nombre && campos.password && campos.email && campos.telefono && terminos2.checked && campos.emailNuevo) {
 
 		guardarUsuario();
 
