@@ -47,7 +47,7 @@ const validarFormulario = (e) => {
 				for (let users of guardado2) {
 					if (users.email.toLowerCase() === emailUsuario.value.toLowerCase()) {
 						console.log("Este email está registrado");
-						// document.querySelector(`#grupo_email .formulario__input-error`).classList.add('formulario__input-error-activo');
+						document.querySelector(`#grupo_email .formulario__email-error`).classList.add('formulario__email-error-activo');
 						campos.emailNuevo = false;
 						console.log(campos.emailNuevo);
 						break;
@@ -55,6 +55,7 @@ const validarFormulario = (e) => {
 						console.log("email disponible");
 						campos.emailNuevo = true;
 						console.log(campos.emailNuevo);
+						document.querySelector(`#grupo_email .formulario__email-error`).classList.remove('formulario__email-error-activo');
 					}
 				}
 			}
