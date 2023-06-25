@@ -330,7 +330,7 @@
                 <div class="col-6">
             <h1 class="tituloLogin">Iniciar sesión</h1>
             <!--Aquí empieza el formulario-->
-            <form>
+            <form id="log-form">
                 <div class="form-floating">
                     <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
                     <label class="label" for="floatingInput">Email</label>
@@ -338,6 +338,7 @@
                 <div class="form-floating">
                     <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
                     <label class="label" for="floatingPassword">Contraseña</label>
+                    <span class="d-none" id="login-failed" style="position: absolute; right: 155px; color: beige; font-size: 20px; top: 85px;">Los datos ingresados son incorrectos</span>
                 </div>
                 <!--
                 <p class="recuperarContraseña">¿Olvidaste tu contraseña? <a href="./recuperarcontraseña.html" style="color:   lightyellow;">Recuperar contraseña</a></p>
@@ -356,10 +357,10 @@
     <div id="footer"></div>
     <script src="./assets/js/nav-bar.js"></script>
     <script src="./assets/js/footer.js"></script>
-    <script src="./assets/js/contactanos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
 </body>
 
 </html>
+<script src="./assets/js/auth.service.js"></script>
