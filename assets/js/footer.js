@@ -24,7 +24,7 @@ footer.innerHTML = `
 <div class="container d-none d-lg-block"><!--Esta etiqueta d-none d-lg-block es la que hace la responsividad para este bloque-->
 <div class="container-fondo">
     <div class="terminos">
-        Términos y condiciones
+    <a href="./terminosycondiciones.html">Términos y condiciones</a>
     </div>
     <div class="derechos"> 
     ® Casa Textil Arte Zapoteco. Todos los derechos reservados  
