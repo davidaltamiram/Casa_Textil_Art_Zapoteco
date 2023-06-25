@@ -1,0 +1,125 @@
+.terminosycondiciones{
+text-align: justify;
+justify-content: center;
+}
+
+.titulo{
+    padding-top: 35px;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 56px;
+    text-align: center;
+    color: #000000;
+    padding-bottom: 5%;
+}
+
+.subtitulo{
+    font-family: 'Figtree', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+.subsubtitulo{
+    font-family: 'Figtree', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: justify;
+    padding-bottom: 2%;
+}
+
+.parrafo{
+    font-family: 'Figtree', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    padding-bottom: 3%;
+}
+
+/*Esta media query es para pantalla de tablet*/
+@media (min-width: 768px) and (max-width: 992px) {
+    .titulo{
+        padding-top: 30px;
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 56px;
+        text-align: center;
+        color: #000000;
+        padding-bottom: 4%;
+    }
+    
+    .subtitulo{
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        text-align: center;
+        padding-bottom: 5%;
+    }
+    
+    .subsubtitulo{
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        text-align: justify;
+        padding-bottom: 2%;
+    }
+    
+    .parrafo{
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        padding-bottom: 3%;
+    }
+
+}
+
+/* Media query para celular */
+@media (max-width: 767.98px) {
+    .titulo{
+        padding-top: 25px;
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 56px;
+        text-align: center;
+        color: #000000;
+        padding-bottom: 4%;
+    }
+    
+    .subtitulo{
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        text-align: center;
+        padding-bottom: 5%;
+    }
+    
+    .subsubtitulo{
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        text-align: justify;
+        padding-bottom: 2%;
+    }
+    
+    .parrafo{
+        font-family: 'Figtree', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 12px;
+        padding-bottom: 3%;
+    }
+}
