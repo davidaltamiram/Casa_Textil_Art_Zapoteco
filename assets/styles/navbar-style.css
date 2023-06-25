@@ -9,7 +9,7 @@
 .no-link-styles {
     text-decoration: none;
     color: black !important;
-  }
+}
 
 .promo-top {
     height: 24px !important;
@@ -135,7 +135,7 @@
 }
 
 .fnt-sub {
-    font-family: 'Athelas', sans-serif   !important;
+    font-family: 'Athelas', sans-serif !important;
     font-size: 12px !important;
 }
 
@@ -168,25 +168,20 @@
 .nav-shop-icon {
     margin-right: 5px !important;
 }
-/*
-.nav-user-icon {
-    margin-right: 5px !important;
-}*/
 
-/*Pruebas*/
+/*Inactive*/
 
-.nav-user {
-    display: inline !important;
-}
+.collapse:not(.show) {display: inline;}
 
-.nav-user-list {
-    display: inline !important;
-}
+.nav-user {display: inline;}
+
+.nav-user-list {display: inline !important;}
 
 .nav-user-dropdown {
     display: inline !important;
 }
 
+.user-style{background-color: #FCEBB6;}
 
 .nav-user-icon {
     display: inline;
@@ -200,17 +195,11 @@
 }
 
 /* Active */
-.nav-useractive {
-    display: inline !important;
-}
+.nav-useractive {display: inline;}
 
-.nav-useractive-list {
-    display: inline !important;
-}
+.nav-useractive-list {display: inline !important;}
 
-.nav-useractive-dropdown {
-    display: inline !important;
-}
+.nav-useractive-dropdown {display: inline !important;}
 
 
 .nav-useractive-icon {
@@ -224,19 +213,11 @@
     position: absolute !important;
 }
 
-/*Terminan las pruebas*/
+.nav-language {display: inline !important;}
 
-.nav-language {
-    display: inline !important;
-}
+.nav-language-list {display: inline !important;}
 
-.nav-language-list {
-    display: inline !important;
-}
-
-.nav-language-dropdown {
-    display: inline !important;
-}
+.nav-language-dropdown {display: inline !important;}
 
 
 .nav-language-icon {
@@ -373,7 +354,7 @@
 
     .search-icon,
     .nav-shop-icon,
-    .nav-user-icon, 
+    .nav-user-icon,
     .nav-useractive-icon,
     .nav-language-icon {
         width: 22px !important;

@@ -36,25 +36,21 @@ const validarFormulario = (e) => {
 			break;
 		case "email":
 			validarCampo(expresiones.correo, e.target, 'email');
+			var checkStorage = localStorage.getItem('usuarios');
 
-			if (guardado2.length === 0) {
-				console.log("no hay nada")
+			if (checkStorage === null) {
 				campos.emailNuevo = true;
-				console.log(campos.emailNuevo)
 
 			} else {
 
-				for (let users of guardado2) {
+				var checkStorage = JSON.parse(checkStorage);
+				for (let users of checkStorage) {
 					if (users.email.toLowerCase() === emailUsuario.value.toLowerCase()) {
-						console.log("Este email está registrado");
 						document.querySelector(`#grupo_email .formulario__email-error`).classList.add('formulario__email-error-activo');
 						campos.emailNuevo = false;
-						console.log(campos.emailNuevo);
 						break;
 					} else {
-						console.log("email disponible");
 						campos.emailNuevo = true;
-						console.log(campos.emailNuevo);
 						document.querySelector(`#grupo_email .formulario__email-error`).classList.remove('formulario__email-error-activo');
 					}
 				}
@@ -176,12 +172,6 @@ function guardarUsuario() {
 
 
 }
-
-var guardado = localStorage.getItem('usuarios');
-var guardado2 = JSON.parse(guardado);
-console.log(guardado2);
-
-// console.log(guardado2);
 
 
 
