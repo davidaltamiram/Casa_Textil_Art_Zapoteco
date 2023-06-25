@@ -90,7 +90,7 @@
             <!-- Aqui inicia el logo en el nav-bar -->
             <div class="col-4 d-flex justify-content-center">
 
-                <a href="./paginaprincipal.html" class="no-link-styles">
+                <a href="./pagprincipal.html" class="no-link-styles">
                     <div class="logo">
                         <div class="d-none d-md-block logo-img">
                             <img class="icon-size icon" src="./assets/icons/logo.png" alt="Logo"></img>
@@ -158,16 +158,78 @@
                                     stroke="#5E412F" stroke-linecap="round" stroke-linejoin="round" />
                             </svg></a>
 
-                        <a title="User" href="./login.html" class="user">
-                            <svg class="nav-user-icon" width="27" height="27" viewBox="0 0 27 27" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M1 26V24.4375C1 18.3969 6.59645 13.5 13.5 13.5C20.4036 13.5 26 18.3969 26 24.4375V26"
-                                    stroke="#5E412F" stroke-linecap="round" stroke-linejoin="round" />
-                                <path
-                                    d="M13.4998 13.5C17.4446 13.5 20.6426 10.7017 20.6426 7.25C20.6426 3.79822 17.4446 1 13.4998 1C9.5549 1 6.35693 3.79822 6.35693 7.25C6.35693 10.7017 9.5549 13.5 13.4998 13.5Z"
-                                    stroke="#5E412F" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg></a>
+                        <!--Aquí inician modificaciones-->
+                        <div class="collapse navbar-collapse nav-user" id="navbarDropdown">
+
+                            <ul class="navbar-nav nav-user-list">
+
+                                <li class="nav-item dropdown nav-user-dropdown">
+
+
+                                    <svg class="nav-user-icon d-none" width="27" height="27" viewBox="0 0 27 27"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-link dropdown-toggle"
+                                        id="navbarDarkDropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"
+                                        role="button">
+                                        <path
+                                            d="M1 26V24.4375C1 18.3969 6.59645 13.5 13.5 13.5C20.4036 13.5 26 18.3969 26 24.4375V26"
+                                            stroke="#5E412F" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M13.4998 13.5C17.4446 13.5 20.6426 10.7017 20.6426 7.25C20.6426 3.79822 17.4446 1 13.4998 1C9.5549 1 6.35693 3.79822 6.35693 7.25C6.35693 10.7017 9.5549 13.5 13.4998 13.5Z"
+                                            stroke="#5E412F" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                    <ul class="dropdown-menu dropdown-menu-end nav-user-dropdown-list"
+                                        aria-labelledby="navbarDarkDropdownMenuLink">
+                                        <li><a class="dropdown-item" href="./login.html">Iniciar sesión</a></li>
+                                        <li><a class="dropdown-item" href="./registro.html">Registrarse</a></li>
+                                    </ul>
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                        <!--Para usuario activo-->
+
+                        <div class="collapse navbar-collapse nav-useractive" id="navbarDropdown">
+
+                            <ul class="navbar-nav nav-useractive-list">
+
+                                <li class="nav-item dropdown nav-useractive-dropdown">
+
+
+                                    <svg class="nav-useractive-icon" width="27" height="27" viewBox="0 0 27 27"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-link dropdown-toggle"
+                                        id="navbarDarkDropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"
+                                        role="button">
+                                        <path
+                                            d="M1 27.637V25.9722C1 19.5362 6.81315 14.3188 13.984 14.3188C21.1549 14.3188 26.968 19.5362 26.968 25.9722V27.637"
+                                            stroke="#5E412F" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M13.9839 14.3182C18.0814 14.3182 21.4033 11.3367 21.4033 7.65908C21.4033 3.98137 18.0814 1 13.9839 1C9.88623 1 6.56445 3.98137 6.56445 7.65908C6.56445 11.3367 9.88623 14.3182 13.9839 14.3182Z"
+                                            stroke="#5E412F" stroke-linecap="round" stroke-linejoin="round" />
+                                        <ellipse cx="23.9149" cy="24.4953" rx="4.08527" ry="3.50481" fill="#78C0A8" />
+                                    </svg>
+
+
+
+                                    <ul class="dropdown-menu dropdown-menu-end nav-useractive-dropdown-list"
+                                        aria-labelledby="navbarDarkDropdownMenuLink">
+                                        <li class="dropdown-item">Bienvenido <span class="nombre"></span></li>
+                                        <li><a class="dropdown-item" href="">Mi cuenta</a></li>
+                                        <li><a class="dropdown-item" href="">Cerrar sesión</a></li>
+                                    </ul>
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+
+                        <!--Aquí terminan las modificaciones-->
+
 
 
                         <div class="collapse navbar-collapse nav-language" id="navbarDropdown">
@@ -232,7 +294,7 @@
                     </svg>
 
                 </button>
-                <a href="./paginaprincipal.html" class="no-link-styles">
+                <a href="./pagprincipal.html" class="no-link-styles">
                     <img class="icon-size icon" src="./assets/icons/logo.png" alt="Logo">
                 </a>
 
