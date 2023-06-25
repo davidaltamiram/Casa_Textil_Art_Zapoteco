@@ -3,23 +3,29 @@ const boton = document.getElementById("boton");
 const email = document.getElementById('floatingInput');
 const password = document.getElementById('floatingPassword');
 const loginfailed = document.getElementById('login-failed');
+const mainPage = document.getElementById("redirect");
 
-function validateUser(users) {
 
-  var usersArray = JSON.parse(users);
+function validateUser() {
+  var users = localStorage.getItem("usuarios");
+
   var loginEmail = email.value;
   var loginPassword = password.value;
 
   var succeslogin = false;
-  // if (localStorage.getItem("usuarios").length === 0")
+
+  if (users === null || users.length === 0) {
+    return succeslogin;
+  }
+
+  var usersArray = JSON.parse(users);
+
   usersArray.forEach(user => {
 
     if (user.email.toLowerCase() === loginEmail.toLowerCase() && user.password === loginPassword) {
       localStorage.setItem("usuarioActivo", true);
       localStorage.setItem('usuario', JSON.stringify(user));
-
       succeslogin = true;
-      return succeslogin;
     }
 
   });
@@ -29,40 +35,42 @@ function validateUser(users) {
 
 
 
-function checkLogin() {
+async function checkLogin() {
 
-  var users = localStorage.getItem("usuarios");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+  });
 
-  if (users === null || users.length === 0) {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      loginfailed.classList.toggle("d-none");
-    });
+  var succeslogin = validateUser();
+
+  if (succeslogin) {
+
+    // submitFormDataToServer().then(() => {
+      window.location.href = "./pagprincipal.html";
+    // });
 
   } else {
-
-    var succeslogin = validateUser(users);
-    
-
-    if (succeslogin) {
-
-      window.location = "./paginaprincipal.html";
-
-    } else {
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        loginfailed.classList.toggle("d-none");
-      });
-
-    }
+    loginfailed.classList.remove("d-none");
   }
+
 };
 
 function hideLoginError() {
   loginfailed.classList.add("d-none");
 };
 
-window.addEventListener("load", hideLoginError);
 
+window.addEventListener("load", hideLoginError);
 boton.addEventListener("click", checkLogin);
 
+// submitFormDataToServer(){ //Funcion pendiente para enviar el submit al servidor 
+// return new Promise((resolve, reject) => {
+//    Implementar logica para mandar el email y contraseña al servidor
+      
+//     Una vez resuelto el envio de datos al servidor, resolver la promesa
+//     resolve();
+      
+//     Si existe un error en el submit, rechazar la promesa
+//     reject();
+//   });
+// }}

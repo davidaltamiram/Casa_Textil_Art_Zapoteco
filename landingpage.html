@@ -159,14 +159,14 @@
                             </svg></a>
 
                         <!--Aquí inician modificaciones-->
-                        <div class="collapse navbar-collapse nav-user" id="navbarDropdown">
+                        <div class="collapse navbar-collapse nav-user" id="inactive-user">
 
                             <ul class="navbar-nav nav-user-list">
 
                                 <li class="nav-item dropdown nav-user-dropdown">
 
 
-                                    <svg class="nav-user-icon d-none" width="27" height="27" viewBox="0 0 27 27"
+                                    <svg class="nav-user-icon" width="27" height="27" viewBox="0 0 27 27"
                                         fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-link dropdown-toggle"
                                         id="navbarDarkDropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"
                                         role="button">
@@ -192,33 +192,25 @@
 
                         <!--Para usuario activo-->
 
-                        <div class="collapse navbar-collapse nav-useractive" id="navbarDropdown">
+                        <div class="collapse navbar-collapse nav-useractive d-none" id="active-user">
 
                             <ul class="navbar-nav nav-useractive-list">
 
                                 <li class="nav-item dropdown nav-useractive-dropdown">
 
-
-                                    <svg class="nav-useractive-icon" width="27" height="27" viewBox="0 0 27 27"
-                                        fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-link dropdown-toggle"
-                                        id="navbarDarkDropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"
-                                        role="button">
-                                        <path
-                                            d="M1 27.637V25.9722C1 19.5362 6.81315 14.3188 13.984 14.3188C21.1549 14.3188 26.968 19.5362 26.968 25.9722V27.637"
-                                            stroke="#5E412F" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path
-                                            d="M13.9839 14.3182C18.0814 14.3182 21.4033 11.3367 21.4033 7.65908C21.4033 3.98137 18.0814 1 13.9839 1C9.88623 1 6.56445 3.98137 6.56445 7.65908C6.56445 11.3367 9.88623 14.3182 13.9839 14.3182Z"
-                                            stroke="#5E412F" stroke-linecap="round" stroke-linejoin="round" />
-                                        <ellipse cx="23.9149" cy="24.4953" rx="4.08527" ry="3.50481" fill="#78C0A8" />
-                                    </svg>
-
-
+                                    <svg class="nav-useractive-icon" width="27" height="27" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-link dropdown-toggle"
+                                    id="navbarDarkDropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"
+                                    role="button">
+                                        <path d="M1.15527 20.0002V18.8127C1.15527 14.2218 4.71266 10.5002 9.10091 10.5002C13.4892 10.5002 17.0465 14.2218 17.0465 18.8127V20.0002" stroke="#5E412F" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M9.10089 10.4999C11.6084 10.4999 13.6412 8.37325 13.6412 5.74996C13.6412 3.12663 11.6084 1 9.10089 1C6.59333 1 4.56055 3.12663 4.56055 5.74996C4.56055 8.37325 6.59333 10.4999 9.10089 10.4999Z" stroke="#5E412F" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <ellipse cx="15.5" cy="16" rx="5.5" ry="5" fill="#78C0A8"/>
+                                        </svg>
 
                                     <ul class="dropdown-menu dropdown-menu-end nav-useractive-dropdown-list"
                                         aria-labelledby="navbarDarkDropdownMenuLink">
-                                        <li class="dropdown-item">Bienvenido <span class="nombre"></span></li>
+                                        <li class="dropdown-item user-style">Bienvenido <span id="name"></span></li>
                                         <li><a class="dropdown-item" href="">Mi cuenta</a></li>
-                                        <li><a class="dropdown-item" href="">Cerrar sesión</a></li>
+                                        <li><a id="logout" class="dropdown-item" href="">Cerrar sesión</a></li>
                                     </ul>
 
                                 </li>
@@ -229,8 +221,6 @@
 
 
                         <!--Aquí terminan las modificaciones-->
-
-
 
                         <div class="collapse navbar-collapse nav-language" id="navbarDropdown">
 
@@ -297,7 +287,6 @@
                 <a href="./pagprincipal.html" class="no-link-styles">
                     <img class="icon-size icon" src="./assets/icons/logo.png" alt="Logo">
                 </a>
-
             </div>
 
             <form class="d-flex ms-auto search" role="search">
@@ -332,14 +321,15 @@
                                     </svg>
                                 </button>
                             </a>
-                            <a class="nav-link active" href="#">Tienda</a>
+                            <a class="nav-link active" href="./productos">Tienda</a>
                         </li>
                     </div>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Acerca de nosotros</a>
+                        <a class="nav-link active" aria-current="page" href="./acercadenosotros.html">Acerca de
+                            nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Contáctanos</a>
+                        <a class="nav-link active" href="./contactanos.html">Contáctanos</a>
                     </li>
                 </ul>
             </div>
@@ -361,7 +351,7 @@
 
     </div>
     <!-- Aui termina el nav-bar -->
-
+    
     <!--Aquí inicia la landing page-->
     <div class="lan-landing">
         <div class="lan-landing-container nav-brd container-fluid" style="margin-top: 15px;">
