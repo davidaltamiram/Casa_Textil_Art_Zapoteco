@@ -91,7 +91,7 @@
             <!-- Aqui inicia el logo en el nav-bar -->
             <div class="col-4 d-flex justify-content-center">
 
-                <a href="./paginaprincipal.html" class="no-link-styles">
+                <a href="./pagprincipal.html" class="no-link-styles">
                     <div class="logo">
                         <div class="d-none d-md-block logo-img">
                             <img class="icon-size icon" src="./assets/icons/logo.png" alt="Logo"></img>
@@ -159,17 +159,69 @@
                                     stroke="#5E412F" stroke-linecap="round" stroke-linejoin="round" />
                             </svg></a>
 
-                        <a title="User" href="./login.html" class="user">
-                            <svg class="nav-user-icon" width="27" height="27" viewBox="0 0 27 27" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M1 26V24.4375C1 18.3969 6.59645 13.5 13.5 13.5C20.4036 13.5 26 18.3969 26 24.4375V26"
-                                    stroke="#5E412F" stroke-linecap="round" stroke-linejoin="round" />
-                                <path
-                                    d="M13.4998 13.5C17.4446 13.5 20.6426 10.7017 20.6426 7.25C20.6426 3.79822 17.4446 1 13.4998 1C9.5549 1 6.35693 3.79822 6.35693 7.25C6.35693 10.7017 9.5549 13.5 13.4998 13.5Z"
-                                    stroke="#5E412F" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg></a>
+                        <!--Aquí inician modificaciones-->
+                        <div class="collapse navbar-collapse nav-user" id="inactive-user">
 
+                            <ul class="navbar-nav nav-user-list">
+
+                                <li class="nav-item dropdown nav-user-dropdown">
+
+
+                                    <svg class="nav-user-icon" width="27" height="27" viewBox="0 0 27 27"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-link dropdown-toggle"
+                                        id="navbarDarkDropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"
+                                        role="button">
+                                        <path
+                                            d="M1 26V24.4375C1 18.3969 6.59645 13.5 13.5 13.5C20.4036 13.5 26 18.3969 26 24.4375V26"
+                                            stroke="#5E412F" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M13.4998 13.5C17.4446 13.5 20.6426 10.7017 20.6426 7.25C20.6426 3.79822 17.4446 1 13.4998 1C9.5549 1 6.35693 3.79822 6.35693 7.25C6.35693 10.7017 9.5549 13.5 13.4998 13.5Z"
+                                            stroke="#5E412F" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                    <ul class="dropdown-menu dropdown-menu-end nav-user-dropdown-list"
+                                        aria-labelledby="navbarDarkDropdownMenuLink">
+                                        <li><a class="dropdown-item" href="./login.html">Iniciar sesión</a></li>
+                                        <li><a class="dropdown-item" href="./registro.html">Registrarse</a></li>
+                                    </ul>
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                        <!--Para usuario activo-->
+
+                        <div class="collapse navbar-collapse nav-useractive d-none" id="active-user">
+
+                            <ul class="navbar-nav nav-useractive-list">
+
+                                <li class="nav-item dropdown nav-useractive-dropdown">
+
+                                    <svg class="nav-useractive-icon" width="27" height="27" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-link dropdown-toggle"
+                                    id="navbarDarkDropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"
+                                    role="button">
+                                        <path d="M1.15527 20.0002V18.8127C1.15527 14.2218 4.71266 10.5002 9.10091 10.5002C13.4892 10.5002 17.0465 14.2218 17.0465 18.8127V20.0002" stroke="#5E412F" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M9.10089 10.4999C11.6084 10.4999 13.6412 8.37325 13.6412 5.74996C13.6412 3.12663 11.6084 1 9.10089 1C6.59333 1 4.56055 3.12663 4.56055 5.74996C4.56055 8.37325 6.59333 10.4999 9.10089 10.4999Z" stroke="#5E412F" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <ellipse cx="15.5" cy="16" rx="5.5" ry="5" fill="#78C0A8"/>
+                                        </svg>
+
+                                    <ul class="dropdown-menu dropdown-menu-end nav-useractive-dropdown-list"
+                                        aria-labelledby="navbarDarkDropdownMenuLink">
+                                        <li class="dropdown-item user-style">Bienvenido <span id="name"></span></li>
+                                        <li><a class="dropdown-item" href="">Mi cuenta</a></li>
+                                        <li><a id="logout" class="dropdown-item" href="">Cerrar sesión</a></li>
+                                    </ul>
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+
+                        <!--Aquí terminan las modificaciones-->
 
                         <div class="collapse navbar-collapse nav-language" id="navbarDropdown">
 
@@ -233,7 +285,7 @@
                     </svg>
 
                 </button>
-                <a href="./paginaprincipal.html" class="no-link-styles">
+                <a href="./pagprincipal.html" class="no-link-styles">
                     <img class="icon-size icon" src="./assets/icons/logo.png" alt="Logo">
                 </a>
             </div>

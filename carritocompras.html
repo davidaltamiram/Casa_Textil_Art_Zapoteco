@@ -34,7 +34,7 @@
     integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <link rel="stylesheet" href="./assets/styles/style.css">
+  <link rel="stylesheet" href="./assets/styles/styleproductos.css">
   <link rel="stylesheet" href="./assets/styles/styleFooter.css">
 
   <!-- Navbar cristian -->
@@ -50,22 +50,23 @@
 <body>
 
   <!-- Aqui inician las promos -->
-  <div id="promo" class="container-fluid nav-brd fnt promo-top sticky-top stcky">
+  <!-- Aqui inician las promos -->
+  <div class="container-fluid nav-brd fnt promo-top sticky-top stcky" id="promo">
     <div class="row text-center">
 
       <div class="col-11">
-        <a href="" class="promo-link" id="promo-tag""></a>
-          </div>
+        <a href="" class="promo-link" id="promo-tag"></a>
+      </div>
 
-          <div class=" col-1 text-end">
-          <button id="promoButton" type="button" class="btn btn-sm nav-btn-cross">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M13.8137 1.08634C14.0621 0.837827 14.0621 0.434907 13.8137 0.186394C13.5651 -0.0621314 13.1622 -0.0621314 12.9136 0.186394L7 6.10004L1.08634 0.186394C0.837827 -0.0621314 0.434907 -0.0621314 0.186394 0.186394C-0.0621314 0.434907 -0.0621314 0.837827 0.186394 1.08634L6.10004 7L0.186394 12.9136C-0.0621314 13.1622 -0.0621314 13.5651 0.186394 13.8137C0.434907 14.0621 0.837827 14.0621 1.08634 13.8137L7 7.89996L12.9136 13.8137C13.1622 14.0621 13.5651 14.0621 13.8137 13.8137C14.0621 13.5651 14.0621 13.1622 13.8137 12.9136L7.89996 7L13.8137 1.08634Z"
-                fill="black" />
-            </svg>
+      <div class="col-1 text-end">
+        <button type="button" id="promoButton" class="btn btn-sm nav-btn-cross">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M13.8137 1.08634C14.0621 0.837827 14.0621 0.434907 13.8137 0.186394C13.5651 -0.0621314 13.1622 -0.0621314 12.9136 0.186394L7 6.10004L1.08634 0.186394C0.837827 -0.0621314 0.434907 -0.0621314 0.186394 0.186394C-0.0621314 0.434907 -0.0621314 0.837827 0.186394 1.08634L6.10004 7L0.186394 12.9136C-0.0621314 13.1622 -0.0621314 13.5651 0.186394 13.8137C0.434907 14.0621 0.837827 14.0621 1.08634 13.8137L7 7.89996L12.9136 13.8137C13.1622 14.0621 13.5651 14.0621 13.8137 13.8137C14.0621 13.5651 14.0621 13.1622 13.8137 12.9136L7.89996 7L13.8137 1.08634Z"
+              fill="black" />
+          </svg>
 
-          </button>
+        </button>
       </div>
 
     </div>
@@ -104,7 +105,8 @@
             <a class="nav-link active" href="./productos.html">Tienda</a>
           </li>
           <li class="nav-item navbar-dir-about">
-            <a class="nav-link active" aria-current="page" href="./acercadenosotros.html"><span>Quienes somos</span></a>
+            <a class="nav-link active" aria-current="page" href="./acercadenosotros.html"><span>Quienes
+                somos</span></a>
           </li>
           <li class="nav-item navbar-dir-contact">
             <a class="nav-link active" href="./contactanos.html">Contacto</a>
@@ -116,7 +118,7 @@
       <!-- Aqui inicia el logo en el nav-bar -->
       <div class="col-4 d-flex justify-content-center">
 
-        <a href="./paginaprincipal.html" class="no-link-styles">
+        <a href="./pagprincipal.html" class="no-link-styles">
           <div class="logo">
             <div class="d-none d-md-block logo-img">
               <img class="icon-size icon" src="./assets/icons/logo.png" alt="Logo"></img>
@@ -182,16 +184,71 @@
                   stroke="#5E412F" stroke-linecap="round" stroke-linejoin="round" />
               </svg></a>
 
-            <a title="User" href="./login.html" class="user">
-              <svg class="nav-user-icon" width="27" height="27" viewBox="0 0 27 27" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 26V24.4375C1 18.3969 6.59645 13.5 13.5 13.5C20.4036 13.5 26 18.3969 26 24.4375V26"
-                  stroke="#5E412F" stroke-linecap="round" stroke-linejoin="round" />
-                <path
-                  d="M13.4998 13.5C17.4446 13.5 20.6426 10.7017 20.6426 7.25C20.6426 3.79822 17.4446 1 13.4998 1C9.5549 1 6.35693 3.79822 6.35693 7.25C6.35693 10.7017 9.5549 13.5 13.4998 13.5Z"
-                  stroke="#5E412F" stroke-linecap="round" stroke-linejoin="round" />
-              </svg></a>
+            <!--Aquí inician modificaciones-->
+            <div class="collapse navbar-collapse nav-user" id="inactive-user">
 
+              <ul class="navbar-nav nav-user-list">
+
+                <li class="nav-item dropdown nav-user-dropdown">
+
+
+                  <svg class="nav-user-icon" width="27" height="27" viewBox="0 0 27 27" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" class="nav-link dropdown-toggle" id="navbarDarkDropdownMenuLink"
+                    data-bs-toggle="dropdown" aria-expanded="false" role="button">
+                    <path d="M1 26V24.4375C1 18.3969 6.59645 13.5 13.5 13.5C20.4036 13.5 26 18.3969 26 24.4375V26"
+                      stroke="#5E412F" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M13.4998 13.5C17.4446 13.5 20.6426 10.7017 20.6426 7.25C20.6426 3.79822 17.4446 1 13.4998 1C9.5549 1 6.35693 3.79822 6.35693 7.25C6.35693 10.7017 9.5549 13.5 13.4998 13.5Z"
+                      stroke="#5E412F" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+
+                  <ul class="dropdown-menu dropdown-menu-end nav-user-dropdown-list"
+                    aria-labelledby="navbarDarkDropdownMenuLink">
+                    <li><a class="dropdown-item" href="./login.html">Iniciar sesión</a></li>
+                    <li><a class="dropdown-item" href="./registro.html">Registrarse</a></li>
+                  </ul>
+
+                </li>
+
+              </ul>
+
+            </div>
+
+            <!--Para usuario activo-->
+
+            <div class="collapse navbar-collapse nav-useractive d-none" id="active-user">
+
+              <ul class="navbar-nav nav-useractive-list">
+
+                <li class="nav-item dropdown nav-useractive-dropdown">
+
+                  <svg class="nav-useractive-icon" width="27" height="27" viewBox="0 0 21 21" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" class="nav-link dropdown-toggle" id="navbarDarkDropdownMenuLink"
+                    data-bs-toggle="dropdown" aria-expanded="false" role="button">
+                    <path
+                      d="M1.15527 20.0002V18.8127C1.15527 14.2218 4.71266 10.5002 9.10091 10.5002C13.4892 10.5002 17.0465 14.2218 17.0465 18.8127V20.0002"
+                      stroke="#5E412F" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M9.10089 10.4999C11.6084 10.4999 13.6412 8.37325 13.6412 5.74996C13.6412 3.12663 11.6084 1 9.10089 1C6.59333 1 4.56055 3.12663 4.56055 5.74996C4.56055 8.37325 6.59333 10.4999 9.10089 10.4999Z"
+                      stroke="#5E412F" stroke-linecap="round" stroke-linejoin="round" />
+                    <ellipse cx="15.5" cy="16" rx="5.5" ry="5" fill="#78C0A8" />
+                  </svg>
+
+                  <ul class="dropdown-menu dropdown-menu-end nav-useractive-dropdown-list"
+                    aria-labelledby="navbarDarkDropdownMenuLink">
+                    <li class="dropdown-item user-style">Bienvenido <span id="name"></span></li>
+                    <li><a class="dropdown-item" href="">Mi cuenta</a></li>
+                    <li><a id="logout" class="dropdown-item" href="">Cerrar sesión</a></li>
+                  </ul>
+
+                </li>
+
+              </ul>
+
+            </div>
+
+
+            <!--Aquí terminan las modificaciones-->
 
             <div class="collapse navbar-collapse nav-language" id="navbarDropdown">
 
@@ -252,7 +309,7 @@
           </svg>
 
         </button>
-        <a href="./paginaprincipal.html" class="no-link-styles">
+        <a href="./pagprincipal.html" class="no-link-styles">
           <img class="icon-size icon" src="./assets/icons/logo.png" alt="Logo">
         </a>
       </div>
@@ -292,7 +349,8 @@
             </li>
           </div>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="./acercadenosotros.html">Acerca de nosotros</a>
+            <a class="nav-link active" aria-current="page" href="./acercadenosotros.html">Acerca de
+              nosotros</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" href="./contactanos.html">Contáctanos</a>
@@ -316,18 +374,14 @@
     <!-- Fin de la barra lateral -->
 
   </div>
-  <!-- Aui termina el nav-bar -->
+  <!-- Aqui termina el nav-bar -->
 
   <!-- Inicio de contendor de bton -->
   <div class="container-fluid">
 
     <div class="boton">
-      <button type="button" class="filtro-bton d-none d-lg-block d-md-none d-sm-none " id="bton-filtro">
+      <button type="button" class="filtro-bton" id="bton-filtro">
         <!--The <i> tag defines a part of text in an alternate voice or mood. The content inside is typically displayed in italic.-->
-        <i class="fi fi-rs-settings-sliders" id="icon-filtro"> Filtro</i>
-      </button>
-
-      <button type="button" class="filtro-bton d-lg-none d-md-block d-sm-block d-block" data-bs-toggle="modal" data-bs-target="#filtromodal">
         <i class="fi fi-rs-settings-sliders" id="icon-filtro"> Filtro</i>
       </button>
     </div>
@@ -343,7 +397,7 @@
             <hr id="borde-filtro">
 
             <!--The lead class in Bootstrap is used to add emphasis to a paragraph.-->
-            <div class="categoria_producto check">
+            <div class="categoria_producto " class="lead check">
               <p id="title_check">Tipo de Producto</p>
               <!-- Check points -->
               <label><input type="checkbox" value="cojines"> Cojínes </label><br>
@@ -352,13 +406,13 @@
               <label><input type="checkbox" value="tapetes"> Tapetes </label><br>
             </div>
             <hr id="borde-filtro">
-            <div class="categoria_producto check">
+            <div class="categoria_producto" class="lead check">
               <p id="title_check">Material</p>
               <label><input type="checkbox" value="algodon"> Algodón </label><br>
               <label><input type="checkbox" value="lana"> Lana </label><br>
             </div>
             <hr id="borde-filtro">
-            <div class="categoria_producto check">
+            <div class="categoria_producto" class="lead check">
               <p id="title_check">Color</p>
               <label><input type="checkbox" value="azul"> Azul </label><br>
               <label><input type="checkbox" value="cafe"> Café </label><br>
@@ -375,118 +429,48 @@
                 <i class="fi fi-rs-settings-sliders" id="icon-filtro"> Aplicar</i>
               </button>
               <button type="button" class="filtro-bton" id="">
-                <i class="fi fi-rs-settings-sliders" id="icon-filtro"> Borrar</i>
+                <i class=" fi-rs-settings-sliders" id="icon-filtro"> Borrar</i>
               </button>
             </div>
             <!-- Fin de check points -->
           </div>
         </div>
-
-        <!-- Filtro en modal -->
-
-        <div class="container d-lg-none d-md-block d-sm-block d-block">
-          <div class="modal fade" id="filtromodal" tabindex="-1" aria-labelledby="filtromodal" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="filtromodal">Filtro</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-
-                <div class="modal-body ">
-                  <div class="col-md-12 col-sm-12 col-12" id="filtro">
-                    <div class="d-block d-sm-block d-md-block d-lg-none">
-                      <hr id="borde-filtro">
-          
-                      <!--The lead class in Bootstrap is used to add emphasis to a paragraph.-->
-                      <div class="categoria_producto check">
-                        <p id="title_check">Tipo de Producto</p>
-                        <!-- Check points -->
-                        <label><input type="checkbox" value="cojines"> Cojínes </label><br>
-                        <label><input type="checkbox" value="colchas"> Colchas </label><br>
-                        <label><input type="checkbox" value="manteles"> Manteles </label><br>
-                        <label><input type="checkbox" value="tapetes"> Tapetes </label><br>
-                      </div>
-                      <hr id="borde-filtro">
-                      <div class="categoria_producto check">
-                        <p id="title_check">Material</p>
-                        <label><input type="checkbox" value="algodon"> Algodón </label><br>
-                        <label><input type="checkbox" value="lana"> Lana </label><br>
-                      </div>
-                      <hr id="borde-filtro">
-                      <div class="categoria_producto check">
-                        <p id="title_check">Color</p>
-                        <label><input type="checkbox" value="azul"> Azul </label><br>
-                        <label><input type="checkbox" value="cafe"> Café </label><br>
-                        <label><input type="checkbox" value="gris"> Gris </label><br>
-                        <label><input type="checkbox" value="naranja"> Naranja </label><br>
-                        <label><input type="checkbox" value="negro"> Negro </label><br>
-                        <label><input type="checkbox" value="rojo"> Rojo</label><br>
-                        <label><input type="checkbox" value="rosa"> Rosa </label><br>
-                        <label><input type="checkbox" value="verde"> Verde </label><br>
-                      </div>
-                      <hr id="borde-filtro">
-                      <!-- Fin de check points -->
-                    </div>
-                  </div>
-                </div>
-
-                <div class="modal-footer">
-                  <button type="button" class="btn filtro-bton " data-bs-dismiss="modal">Borrar</button>
-                  <button type="button" class="btn filtro-bton ">Aplicar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-        <!-- Fin filtro en modal -->
         <!-- Fin de filtro -->
 
 
-        <!-- Contenedor de productos a mostrar -->
-        <div class="col-sm-12 col-md-12 col-lg-10 " class="row justify-content-center" >
+        <!-- Contenedor de categorías y productos a mostrar -->
+        <div class="col-sm-12 col-md-12 col-lg-10 " class="row justify-content-center">
           <div class="row" id="productos">
 
             <!-- Contenedor de categorias -->
             <div class="contenedorcategorias justify-content-center" style="margin-bottom: 1rem;">
               <div class="row justify-content-center text-dark">
                 <div class="col-3 col-sm-3 col-md-2 col-lg-">
-                  <p id="cojines" value="cojines">COJÍNES</p>
+                  COJÍNES
                 </div>
 
                 <div class="col-3 col-sm-3 col-md-2 col-lg-2">
-                  <p id="colchas" value="colchas">COLCHAS</p>
+                  COLCHAS
                 </div>
 
                 <div class="col-3 col-sm-3 col-md-2 col-lg-2">
-                  <p id="manteles" value="manteles">MANTELES</p>
+                  MANTELES
                 </div>
 
                 <div class="col-3 col-sm-3 col-md-2 col-lg-2">
-                  <p id="tapetes" value="tapetes">TAPETES</p>
+                  TAPETES
                 </div>
               </div>
             </div>
-            <!-- Termina el contenedor de categorias -->
-
+            <!-- Termina el contenedor de categorias  -->
+            <!--Inicia el contenedor de productos-->
             <div class="row justify-content-center">
-
-            
-
             </div>
-
-
-
-
-
-
-
-
+            <!-- Fin de contenedor de productos -->
           </div>
-          <!-- Fin de contenedor de productos -->
-
         </div>
       </div>
+
 
     </div>
   </div>
@@ -494,43 +478,24 @@
   <!-- Galeria de imagenes de productos -->
 
   <hr>
+
   <div class="container" id="subtituloCarousel" class="text-center display-1 mb-3"> El arte de la decoración </div>
 
   <div class="row mt-5">
-    <div class="owl-carousel owl-theme">
-      <div class="item">
-        <div class="card">
+    <div class="owl-carousel owl-theme" id="productosCarousel">
 
-          <img src="./assets/imagenesCarousel/Cojín algodón edición especial negro.jpg"
-            alt="Cojín algodón edición especial negro" class="card-img-top">
-
-          <div class="container" id="product_image_modal"></div>
-        </div>
-      </div>
-      <div class="item mb-4">
-        <div class="card">
-          <img src="./assets/imagenesCarousel/Tapete pelicanos 1.20 2.jpg " alt="Tapete pelicanos 1.20 2."
-            class="card-img-top">
-        </div>
-      </div>
-      <div class="item">
-        <div class="card">
-          <img src="./assets/imagenesCarousel/Mantel azul.jpg " alt="Mantel azul" class="card-img-top">
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="card">
-          <img src="./assets/imagenesCarousel/Tapete geométrico naranja 1.20 2.jpg"
-            alt="Tapete geométrico naranja 1.20 2" class="card-img-top">
-        </div>
-      </div>
 
     </div>
 
   </div>
 
-  </div>
+
+
+
+
+
+  <hr>
+
 
 
   <div id="footer"></div>
@@ -558,7 +523,7 @@
 
   <script src="./assets/js/nav-bar.js"></script>
   <script src="./assets/js/footer.js"></script>
-  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/productos.js"></script>
 </body>
 
 </html>
