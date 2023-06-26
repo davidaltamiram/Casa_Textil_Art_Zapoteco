@@ -279,7 +279,7 @@ footer.innerHTML = `
 <div class="row">
 <div class="col">
 <div class="terminos">
-    Términos y condiciones
+<a href="./terminosycondiciones.html">Términos y condiciones</a>
 </div>
 </div>
 <div class="col">
