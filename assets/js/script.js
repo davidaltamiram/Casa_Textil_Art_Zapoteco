@@ -1,7 +1,7 @@
 var productos= [];
 
 const divProductos = document.querySelector("#productos");
-const cojines = document.getElementById("cojines").value;
+
 
 
 function cargarJSON(){
