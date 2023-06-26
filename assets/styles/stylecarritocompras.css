@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css');
+
+
+
+
+#myBagTitle{
+    
+    background-color: rgb(255, 255, 255);
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    padding: 1.2rem;
+    margin-top: 3rem;
+
+}
+
+#cross-icon-button{
+    border: none;
+    background-color: white;
+    display: block;
+    max-width:fit-content;
+    padding: .4rem;
+
+}
+
+#productImgMyBag{
+    max-width: 150px;
+    margin: .5rem;
+}
+
+
+
+.card-text{
+  
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+   
+}
+
+
+
+#productQuantity{
+    margin: .8rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    
+}
+
+
+#productQuantitySelect{
+    width: max-content;
+    display: block;
+    margin: 0 auto;
+   
+  
+}
+
+
+#productPrice{
+    margin: .8rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+#orderCompraCard{
+    background-color: rgb(255, 255, 255);
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    text-align: center;
+    margin: .5;
+
+    
+   
+}
+
+
+#orderCompraTitle{
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    
+   
+}
+
+
+hr{
+        color:#5E412F ;
+}
+
+#subtotal{
+    margin-top: .25rem;
+}
+
+
+#procederPago{
+    color: black;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    background-color: #78C0A8;
+    border-color: #78C0A8;
+    padding: .5rem;
+    margin: 0 auto;
+    display: block;
+    margin-top: 2rem;
+}
