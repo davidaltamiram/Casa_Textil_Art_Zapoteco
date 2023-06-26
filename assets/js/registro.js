@@ -156,20 +156,36 @@ class usuario {
 
 //Esta función guarda el usuario
 function guardarUsuario() {
+	var checkUser = JSON.parse(localStorage.getItem('usuarios'));
 
-	//Primero se instancia el objeto usuarioRegistrado utilizando los .value de cada elemento obtenido del HTML
-	let usuarioRegistrado = new usuario(nombreUsuario.value, telefonoUsuario.value, emailUsuario.value, passwordUsuario.value)
+	if (checkUser === null) {
 
-	//Luego se agrega ese objeto al arreglo usuariosRegistrados con el metodo push
-	usuariosRegistrados.push(usuarioRegistrado);
+		//Primero se instancia el objeto usuarioRegistrado utilizando los .value de cada elemento obtenido del HTML
+		let usuarioRegistrado = new usuario(nombreUsuario.value, telefonoUsuario.value, emailUsuario.value, passwordUsuario.value)
 
-
-	//Finalmente se almacena en el localStorage, siendo la key usuarios y el value todo el arreglo de objetos en formato JSON
-	localStorage.setItem('usuarios', JSON.stringify(usuariosRegistrados));
+		//Luego se agrega ese objeto al arreglo usuariosRegistrados con el metodo push
+		usuariosRegistrados.push(usuarioRegistrado);
 
 
-	//Esta función se repite cada que se active el eventListener
+		//Finalmente se almacena en el localStorage, siendo la key usuarios y el value todo el arreglo de objetos en formato JSON
+		localStorage.setItem('usuarios', JSON.stringify(usuariosRegistrados));
 
+
+		//Esta función se repite cada que se active el eventListener
+
+	} else {
+		usuariosRegistrados = checkUser;
+
+		//Primero se instancia el objeto usuarioRegistrado utilizando los .value de cada elemento obtenido del HTML
+		let usuarioRegistrado = new usuario(nombreUsuario.value, telefonoUsuario.value, emailUsuario.value, passwordUsuario.value)
+
+		//Luego se agrega ese objeto al arreglo usuariosRegistrados con el metodo push
+		usuariosRegistrados.push(usuarioRegistrado);
+
+
+		//Finalmente se almacena en el localStorage, siendo la key usuarios y el value todo el arreglo de objetos en formato JSON
+		localStorage.setItem('usuarios', JSON.stringify(usuariosRegistrados));
+	}
 
 }
 
@@ -183,7 +199,7 @@ botonEnviar.addEventListener("click", e => {
 	if (campos.nombre && campos.password && campos.email && campos.telefono && terminos2.checked && campos.emailNuevo) {
 
 		guardarUsuario();
-
+		window.location.href = "./login.html";
 	}
 
 });
