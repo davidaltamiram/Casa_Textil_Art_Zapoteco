@@ -389,7 +389,7 @@ function imageButtons() {
                                         <br>
                                         <div class="text_product_modal"
                                             id="price_product_catalog">
-                                            $####
+                                            $250
                                         </div>
                                         <div class="text_product_modal"
                                             id="color_product_catalog">
