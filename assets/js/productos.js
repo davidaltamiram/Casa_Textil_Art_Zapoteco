@@ -27,7 +27,7 @@ const catalogo = [{
     categoria: "cojines",
     precio: 250,
     color: "Azul",
-    tamaño: "50x50 cm",
+    tamaño: "50 x 50 cm",
     material: "Algodon",
     composicion: "100% natural",
     consecutivo: 1,
@@ -176,7 +176,7 @@ const catalogoMasVendidos = [{
     categoria: "cojines",
     precio: 250,
     color: "Azul",
-    tamaño: "50x50 cm",
+    tamaño: "50 x 50 cm",
     material: "Algodon",
     composicion: "100% natural",
     consecutivo: 1,
@@ -397,7 +397,7 @@ function imageButtons() {
                                         </div>
                                         <div class="text_product_modal"
                                             id="size_product_catalog">
-                                            Tamaño: 50x50 cm
+                                            Tamaño: 50 x 50 cm
                                         </div>
                                         <div class="text_product_modal"
                                             id="material_ product_catalog">
