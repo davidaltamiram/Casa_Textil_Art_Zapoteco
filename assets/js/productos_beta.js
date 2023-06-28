@@ -389,7 +389,7 @@ function imageButtons() {
                                         <br>
                                         <div class="text_product_modal"
                                             id="price_product_catalog">
-                                            $250
+                                            $####
                                         </div>
                                         <div class="text_product_modal"
                                             id="color_product_catalog">
@@ -397,7 +397,7 @@ function imageButtons() {
                                         </div>
                                         <div class="text_product_modal"
                                             id="size_product_catalog">
-                                            Tamaño: 50 x 50 cm
+                                            Tamaño: 50x50 cm
                                         </div>
                                         <div class="text_product_modal"
                                             id="material_ product_catalog">

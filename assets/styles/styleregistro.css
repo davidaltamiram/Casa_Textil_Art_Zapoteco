@@ -115,7 +115,7 @@
 }
 
 #grupo_nombre {
-    margin-top: 7%;
+    margin-top: 5%;
 }
 
 #floatingName:focus {
@@ -153,9 +153,11 @@
 .form-floating input:focus~label,
 .form-floating input:not(:placeholder-shown)~label {
     font-size: 0.8rem;
-    padding: 3px;
     position: absolute;
     z-index: 1;
+    background-color: transparent;
+    padding: 0.1px;
+
     /* Espaciado adicional de la etiqueta al escribir */
 }
 
@@ -170,7 +172,7 @@
     font-family: 'Figtree', sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 19.5px;
+    font-size: 16px;
 }
 
 #floatingTel {
@@ -184,21 +186,21 @@
     font-family: 'Figtree', sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 19.5px;
+    font-size: 16px;
 }
 
 #floatingPassword {
     font-family: 'Figtree', sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 19.5px;
+    font-size: 16px;
 }
 
 #floatingConfirm {
     font-family: 'Figtree', sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 19.5px;
+    font-size: 16px;
 }
 
 .form-check-label {
@@ -206,6 +208,7 @@
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
+    margin-left: -250px;
 }
 
 
@@ -248,6 +251,7 @@
         font-style: normal;
         font-weight: 300;
         font-size: 14px;
+        margin-left: -80px;
     }
 
     .formulario__input-error {
@@ -331,35 +335,35 @@
         font-family: 'Figtree', sans-serif;
         font-style: normal;
         font-weight: 300;
-        font-size: 18px;
+        font-size: 14px;
     }
 
     #floatingTel {
         font-family: 'Figtree', sans-serif;
         font-style: normal;
         font-weight: 300;
-        font-size: 16px;
+        font-size: 14px;
     }
 
     #floatingInput {
         font-family: 'Figtree', sans-serif;
         font-style: normal;
         font-weight: 300;
-        font-size: 18px;
+        font-size: 14px;
     }
 
     #floatingPassword {
         font-family: 'Figtree', sans-serif;
         font-style: normal;
         font-weight: 300;
-        font-size: 18px;
+        font-size: 14px;
     }
 
     #floatingConfirm {
         font-family: 'Figtree', sans-serif;
         font-style: normal;
         font-weight: 300;
-        font-size: 18px;
+        font-size: 14px;
     }
 
     #boton {
@@ -395,13 +399,14 @@
     }
 
     .tituloRegistro {
-        padding-top: 15px;
+        padding-top: 10px;
         font-family: 'Raleway', sans-serif;
         font-style: normal;
         font-weight: 600;
-        font-size: 32px;
+        font-size: 30px;
         line-height: 56px;
         text-align: center;
+        padding-bottom: -600px;
 
         color: black;
     }
@@ -409,9 +414,9 @@
     .form-check-label {
         font-family: 'Figtree', sans-serif;
         font-style: normal;
-        font-weight: 500;
+        font-weight: 400;
         font-size: 14px;
-        margin-left: -10%;
+        margin-left: -30px;
         color: #000000;
     }
 
@@ -419,7 +424,7 @@
         display: none;
         font-family: 'Figtree', sans-serif;
         font-style: normal;
-        font-weight: 500;
+        font-weight: 400;
         font-size: 12px;
         color:#000000;
     
@@ -429,7 +434,7 @@
         display: block;
         font-family: 'Figtree', sans-serif;
         font-style: normal;
-        font-weight: 500;
+        font-weight: 400;
         font-size: 12px;
         color:#000000;
     }
@@ -438,7 +443,7 @@
         display: none;
         font-family: 'Figtree', sans-serif;
         font-style: normal;
-        font-weight: 500;
+        font-weight: 400;
         font-size: 12px;
         color:#000000;
     
@@ -448,7 +453,7 @@
         display: block;
         font-family: 'Figtree', sans-serif;
         font-style: normal;
-        font-weight: 500;
+        font-weight: 400;
         font-size: 12px;
         color:#000000;
     }
@@ -457,7 +462,7 @@
         display: none;
         font-family: 'Figtree', sans-serif;
         font-style: normal;
-        font-weight: 500;
+        font-weight: 400;
         font-size: 12px;
         color:#000000;
     
@@ -467,7 +472,7 @@
         display: block;
         font-family: 'Figtree', sans-serif;
         font-style: normal;
-        font-weight: 500;
+        font-weight: 400;
         font-size: 12px;
         color:#000000;
     
@@ -477,7 +482,7 @@
         display: none;
         font-family: 'Figtree', sans-serif;
         font-style: normal;
-        font-weight: 500;
+        font-weight: 400;
         font-size: 12px;
         color:#000000;
     
@@ -487,7 +492,7 @@
         display: block;
         font-family: 'Figtree', sans-serif;
         font-style: normal;
-        font-weight: 500;
+        font-weight: 400;
         font-size: 12px;
         color:#000000;
     
@@ -504,7 +509,7 @@
         font-family: 'Figtree', sans-serif;
         font-style: normal;
         font-weight: 300;
-        font-size: 16px;
+        font-size: 14px;
     }
 
     #floatingTel {
@@ -518,21 +523,21 @@
         font-family: 'Figtree', sans-serif;
         font-style: normal;
         font-weight: 300;
-        font-size: 16px;
+        font-size: 14px;
     }
 
     #floatingPassword {
         font-family: 'Figtree', sans-serif;
         font-style: normal;
         font-weight: 300;
-        font-size: 16px;
+        font-size: 14px;
     }
 
     #floatingConfirm {
         font-family: 'Figtree', sans-serif;
         font-style: normal;
         font-weight: 300;
-        font-size: 16px;
+        font-size: 14px;
     }
 
 

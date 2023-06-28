@@ -1,0 +1,38 @@
+body{
+    background-color: #ffffff;
+}
+
+#contenedor{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.registration-form{
+	padding: 50px 0;
+}
+
+.registro-form form{
+    max-width: auto;
+    margin: auto;
+    padding: 50px 70px;
+}
+
+.registro-form .input{
+    width: 90%;
+	border-radius: 20px;
+    margin-bottom: 25px;
+    color: black;
+}
+
+.registro-form .boton{
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #F07818;
+    border: none;
+    color: white;
+    margin-top: 20px;
+}

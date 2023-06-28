@@ -1,0 +1,143 @@
+
+@import url('https://fonts.cdnfonts.com/css/snell-roundhand');
+@import url('https://fonts.cdnfonts.com/css/athelas');
+
+
+.contenedorgeneral{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 6fr;
+    grid-template-rows: 1.5fr 2.5fr 1.5fr;
+    height: 100vh;
+}
+
+.imglateral{
+    background-image: url(../img/Background-landing.jpg);
+    grid-row: 1 / span 3;
+    grid-column: 1 / span 3;
+}
+
+.imganimada{
+    background-image: url(../img/tellar.png);
+    background-size: cover;
+    background-position: center center;  
+    grid-row: 2;
+    grid-column: 2 / span 2;
+}
+
+.contenedorBlanco{
+    grid-row: 1/span 3;
+    grid-column: 5/span 1;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr 1fr 1fr;
+}
+
+.texto1{
+    padding-left: 15%;
+    margin-top: 5%;
+    font-size: 50px;
+    font-family: 'Raleway', sans-serif;
+    font-style: bold;
+    padding-top: 10%;
+    grid-column: 1 /span 3 ;
+    grid-row: 1;
+}
+.texto2{
+    font-size: 50px;
+    font-family: 'Raleway', sans-serif;
+    font-style: bold;
+    padding-top: 25%;
+    padding-left: 50%;
+    grid-column: 1 /span 3 ;
+    grid-row: 1; 
+}
+.contenedorLogo{
+    grid-column: 2/span 2 ;
+    grid-row: 2; 
+    margin-top: 15%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+.logoimg{
+    height: 100px;
+    width: 100px;
+    padding-top: 0%;
+    grid-column: 1;
+    grid-row: 2;
+}
+.logofila2{
+    grid-column: 2;
+    grid-row: 2;
+}
+.fnt-t {
+    font-size: 32px ;
+    font-weight: bolder;
+    font-family: 'Snell Roundhand', sans-serif;
+    text-decoration: none;
+    
+}
+
+.fnt-sub {
+    font-family: 'Athelas', sans-serif   !important;
+    font-size: 22px !important;
+    margin-left: 25px;
+}
+.anclaje{
+    text-decoration: none;
+    color: inherit;
+}
+
+/*
+.logo{
+    padding-top: 65%;
+    grid-column: 5 ;
+    grid-row: 2/span 1; 
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.logoimg{
+    height: 100px;
+    width: 100px;
+    /*grid-column: 1;*/
+/*}
+
+.fnt-t {
+    font-size: 32px ;
+    font-weight: bolder;
+    font-family: 'Snell Roundhand', sans-serif;
+    
+}
+
+.fnt-sub {
+    font-family: 'Athelas', sans-serif   !important;
+    font-size: 22px !important;
+    margin-left: 25px;
+}
+
+.anclaje{
+    grid-row: 3;
+    grid-column: 5;
+}
+.prueba{
+    grid-row: 2 /span 2;
+    columns: 3 /span 3;
+}
+/*-------------------------------------
+.contenedor-logo {
+    background-color: aqua;
+    padding: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .texto {
+    opacity: 0;
+  }
+  
+  .contenedor-logo:hover .texto {
+    opacity: 1;
+  }
+
+/*+++++++++++++++++++++++++++++++++++++++++++++*/
+

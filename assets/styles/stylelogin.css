@@ -113,6 +113,14 @@
 }
 */
 
+.invalid-login{
+    position: absolute; 
+    right: 125px; 
+    color: beige; 
+    font-size: 25px; 
+    top: 85px;
+}
+
 /*Esta media query es para pantalla de tablet*/
 @media (min-width: 768px) and (max-width: 992px) {
     .tituloLogin {
@@ -158,6 +166,16 @@
         font-size: 18px;
     }
 
+    .invalid-login{
+        position: absolute; 
+        right: 23px; 
+        color: beige; 
+        font-size: 18px; 
+        top: 85px;
+    }
+    .registro{
+        font-size: 18px; 
+    }
 
 }
 
@@ -243,6 +261,17 @@
         margin-top: -30px;
     }
     */
+
+    .invalid-login{
+        position: absolute; 
+        right: 0px; 
+        color: beige; 
+        font-size: 15px; 
+        top: 85px;
+    }
+    .registro{
+        font-size: 16px; 
+    }
 
 }
 

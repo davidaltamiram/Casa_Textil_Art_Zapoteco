@@ -32,5 +32,38 @@ const promoButton = document.querySelector("#promoButton");
 const promoContainer = document.querySelector("#promo");
 const navbar = document.querySelector("#nav-bar");
 
-promoButton.addEventListener("click", function(){promoContainer.classList.add("d-none");
-navbar.classList.toggle("stcky-blw");});
+promoButton.addEventListener("click", function () {
+    promoContainer.classList.add("d-none");
+    navbar.classList.toggle("stcky-blw");
+});
+
+
+//Logica para el inicio de sesion
+var usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivo"));
+const inactiveUser = document.getElementById("inactive-user");
+const activeUser = document.getElementById("active-user");
+const userName = document.getElementById("name");
+const logout = document.getElementById("logout");
+
+window.onload = loginUser;
+logout.addEventListener("click", logginOut);
+
+function loginUser() {
+
+    if (usuarioActivo) {
+        const user = JSON.parse(localStorage.getItem("usuario"));
+        const firstName = user.nombre.split(" ", 1);
+        userName.innerHTML = firstName;
+        inactiveUser.classList.add("d-none");
+        activeUser.classList.remove("d-none");
+    }else{
+        inactiveUser.classList.remove("d-none");
+        activeUser.classList.add("d-none");
+    }
+};
+
+function logginOut(){
+    localStorage.setItem("usuarioActivo",false);
+    localStorage.removeItem("usuario");
+    location.reload();
+};
