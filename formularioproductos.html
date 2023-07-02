@@ -44,6 +44,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/styles/producto-form.css">
+
 </head>
 <body>
 
@@ -137,7 +138,7 @@
                 <div class="d-flex justify-content-end rgt-elements">
 
                     <form class="d-none d-lg-flex" role="search">
-                        <div class="input-group form-control">
+                        <div class="input-group form-control form-control-busqueda">
                             <input type="text" class="form-brd fnt-input inpt-elem" placeholder="Buscar..."
                                 aria-label="Username" aria-describedby="basic-addon1">
                             <span class="input-group-text border-white nav-form-span">
@@ -384,31 +385,54 @@
 <div class="col-12 col-sm-12 col-md-6 col-lg-6 ">
        <div class="card">
         <div class="registro-form text-center">
-           
+
             <form id="formulario">
                 <h3>Registro de productos</h3>
-                <div class="form-group">
-                    <input type="text" class="form-control input" id="producto" placeholder="Producto">
+
+                <br>
+
+                <div class="form-floating">
+                    <input type="text" id="producto" class="colorborde form-control form-control-lg" placeholder="1"/>
+                    <label class="label" for="1">Producto</label>
+                  </div>
+                    
+                  <br>
+
+                <div class="form-floating">
+                    <input type="text" id="precio" class="colorborde form-control form-control-lg" placeholder="1"/>
+                    <label class="label" for="1">Precio</label>
                 </div>
-                <div class="form-group">
-                    <input type="text" class="form-control input" id="precio" placeholder="Precio">
+
+                  <br>
+
+                <div class="form-floating">
+                    <input type="text" id="color" class="colorborde form-control form-control-lg" placeholder="1"/>
+                    <label class="label" for="1">Color</label>
+                  </div>
+                    
+                  <br>
+
+                <div class="form-floating">
+                    <input type="text" id="tamaño" class="colorborde form-control form-control-lg" placeholder="1"/>
+                    <label class="label" for="1">Tamaño</label>
                 </div>
-                <div class="form-group">
-                    <input type="text" class="form-control input" id="color" placeholder="Color">
+
+                <br>
+
+                <div class="form-floating">
+                    <input type="text" id="material" class="colorborde form-control form-control-lg" placeholder="1"/>
+                    <label class="label" for="1">Material</label>
                 </div>
-                <div class="form-group">
-                    <input type="text" class="form-control input text-dark" id="tamaño" placeholder="Medidas">
+
+                <br>
+
+                <div class="form-floating">
+                    <input type="file" id="img" class="colorborde form-control form-control-lg" placeholder="1"/>
+                    <label class="label" for="1">Imagen</label>
                 </div>
-                <div class="form-group">
-                <select class="form-select form-control input" id="material">
-                    <option selected>Material</option>
-                    <option value="algodon">Algodón</option>
-                    <option value="lana">Lana</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                    <input type="file" class="form-control input" id="img" placeholder="Sube una del producto">
-                </div>
+
+                <br>
+
                 <div class="form-group">
                     <button type="button" class="btn btn-block boton" id="boton">Subir Producto</button>
                 </div>
