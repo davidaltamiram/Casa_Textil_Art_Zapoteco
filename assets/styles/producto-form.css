@@ -2,12 +2,14 @@ body{
     background-color: #ffffff;
 }
 
+
 #contenedor{
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 20px;
 }
+
 
 .registration-form{
 	padding: 50px 0;
@@ -36,3 +38,14 @@ body{
     color: white;
     margin-top: 20px;
 }
+
+/*no es mip despues de aqui*/
+
+
+.colorborde:focus {
+    box-shadow: 0 0 0 0.2rem lightcoral;
+    border-color: lightcoral;
+
+}
+
+
