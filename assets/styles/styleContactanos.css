@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree&display=swap');
 
 
+#contenedor{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 .text-center{
     text-align: center;
     align-items: center;
@@ -10,7 +16,6 @@
 .enviarBtn {
     box-sizing: border-box;
 
-    position: relative;
     height: 52px;
     width: 158px;
     margin-top: 31px;
@@ -105,8 +110,7 @@
 .requisitos{
     font-family: 'Figtree', sans-serif;
     font-size: 24px;
-    position: relative;
-    left: 198px;
+    
 }
 .colEntradas{
     margin-left: -40%; 
@@ -117,7 +121,6 @@
     background: #FFFFFF;
     border: 1px solid #5E412F;
     border-radius: 10px;
-    width: 85%;
     height: 40px;
 }
 
