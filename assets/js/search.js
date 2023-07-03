@@ -1,3 +1,7 @@
+//Recolectar en arreglo con split para comprar coda elemento con el elemento del arreglo del json
+const searchWord = (localStorage.getItem('search').toLowerCase())
+const allElements="";
+
 var posiciones = [];
 //Conexion con api o json
 var productosjson = fetch('./assets/js/productos.json')
@@ -36,32 +40,86 @@ bton.addEventListener("click", (e) => {
 const divProductos = document.querySelector("#contenedor");
 const cojinesfiltro = document.getElementById("cojines");
 const colchasfiltro = document.getElementById("colchas");
+const mantelesfiltro = document.getElementById("manteles");
+const tapetesfiltro = document.getElementById("tapetes");
+const todos = document.getElementById("allElements");
 
-function addProducto(filtro) {
+//Funcion para buscar elementos y filtrar en base al elemento buscado y almacenado en localstorage desde orea pagina o la misma
+async function collectFilteredItems(elementSearch) {
+  var searchArray = [];
+  var found = [];
+  
+  const arrayProductos = await productosjson;
+  
+  //Match total
+  arrayProductos.forEach((elemento)=>{
+    const lowerCaseProducto = elemento.producto.toLowerCase();
 
-    productosjson.then(array => {
+    if (lowerCaseProducto.includes(elementSearch)){
+      searchArray.push(elemento);
+      found.push(elemento);  
+    };
+    
+  });
+
+  //Match Parcial
+  searchElement = elementSearch.split(" ");
+  searchElement.forEach(searchElement => {
+    //Poner minuscula para los elementos del json a buscar
+    const searchWord = searchElement;
+
+    arrayProductos.forEach(item=> {
+      const lowerCaseProducto = item.producto.toLowerCase();
+      const lowerCaseCategoria = item.categoria.toLowerCase();
+      const lowerCaseColor = item.color.toLowerCase();
+      const lowerCaseMaterial = item.material.toLowerCase();
+      
+      if ((lowerCaseProducto.includes(searchWord) || 
+          lowerCaseCategoria.includes(searchWord)||
+          lowerCaseColor.includes(searchWord) ||
+          lowerCaseMaterial.includes(searchWord)) &&
+          !productoEncontrado(found, item)){
+
+        searchArray.push(item);
+        found.push(item);     
+      } 
+    },
+  )});
+
+    return searchArray;
+};
+
+//Funcion para buscar si X elemento ya se almaceno durante el filtrado, de ser asi excluirlo.
+function productoEncontrado(elementosAlmacenados, buscar){
+  return elementosAlmacenados.some(search => {return search.id===buscar.id })
+};
+
+function addProducto(filtro, elementoBusqueda) {
+    const searchArray = collectFilteredItems(elementoBusqueda);
+
+    searchArray.then(array => {
         var objetosImpresos = []; 
 
-        array.forEach(function (objeto, indice) {
+        array.forEach((objeto, indice)=> {
 
             if (filtro === 'cojinesfiltro' && objeto.categoria === 'cojines') {
                 // Filtrar caso 1
               } else if (filtro === 'colchasfiltro' && objeto.categoria === 'colchas') {
                 // Filtrar caso 2
-              } else if (filtro === 'filtro3' && objeto.categoria === 'Categoria3') {
+              } else if (filtro === 'mantelesfiltro' && objeto.categoria === 'mantel') {
                 // Filtrar caso 3
-              } else if (filtro === 'filtro4' && objeto.categoria === 'Categoria4') {
+              } else if (filtro === 'tapetesfiltro' && objeto.categoria === 'tapetes') {
                 // Filtrar caso 4
-              } else if (!filtro) {
+              } else if (filtro === null) {
                 // Sin filtro, mostrar todos los objetos
               } else {
                 return; // Salir del bucle si no se cumple ningún filtro
               }
         
-              posiciones.push(indice);
+            posiciones.push(indice);
 
-          var productCard = document.createElement("div");
-          productCard.classList = "col-sm-6 col-md-4 col-lg-4 align-items-center";
+            var productCard = document.createElement("div");
+            productCard.classList = "col-sm-6 col-md-4 col-lg-4 align-items-center";
          
           productCard.innerHTML = `
             <button id="imageButton" data-bs-toggle="modal" data-bs-target="#exampleModal${indice}">
@@ -143,21 +201,37 @@ function addProducto(filtro) {
       });
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    addProducto();
+document.addEventListener("DOMContentLoaded", () => {
+    addProducto(null,searchWord);
   });
 
   cojinesfiltro.addEventListener('click', function() {
     divProductos.innerHTML = ""; // Limpiar el contenido previo en el contenedor
-    addProducto('cojinesfiltro'); // Llamar a addProductos() con el filtro 1
+    addProducto('cojinesfiltro', searchWord); // Llamar a addProductos() con el filtro 1
   });
 
   colchasfiltro.addEventListener('click', function() {
-    divProductos.innerHTML = ""; // Limpiar el contenido previo en el contenedor
-    addProducto('colchasfiltro'); // Llamar a addProductos() con el filtro 1
+    divProductos.innerHTML = ""; 
+    addProducto('colchasfiltro', searchWord); 
   });
-//Termina lo referente a pintar el catalogo de prodcutos del html
 
+  mantelesfiltro.addEventListener('click', function() {
+    divProductos.innerHTML = ""; 
+    addProducto('mantelesfiltro', searchWord); 
+  });
+
+  tapetesfiltro.addEventListener('click', function() {
+    divProductos.innerHTML = ""; 
+    addProducto('tapetesfiltro', searchWord); 
+  });
+
+  todos.addEventListener('click', function() {
+    localStorage.setItem('search',"");
+    window.location.href = "./productos.html";
+  });
+
+
+//Termina lo referente a pintar el catalogo de prodcutos del html
 
 
 //Inicia lo referente a pintar el carousel del html
@@ -218,101 +292,34 @@ $('.owl-carousel').owlCarousel({
     }
 });
 
-//Finaliza jQuery carousel
+//Agregar funcionalidad de busqueda del nav-bar
 
+//Event listener para botones
+mainButton.addEventListener("click", () => {
+  localStorage.setItem('search',"");
+  divProductos.innerHTML = ""; 
+  addProducto(null, mainInput.value); 
+});
 
-//Almaceno el lugar de destino de mi tarjeta en una constante
-// const product_image_modal = document.getElementById("product_image_modal");
-// const imageProductButton = document.getElementById("imageButton");
+floatButton.addEventListener("click", () => {
+  localStorage.setItem('search',"");
+  divProductos.innerHTML = ""; 
+  addProducto(null, floatInput.value); 
+  content.classList.add("d-none");
+});
 
+//Event listener para los forms
+mainForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  localStorage.setItem('search',"");
+  divProductos.innerHTML = ""; 
+  addProducto(null, mainInput.value); 
+});
 
-// function imageButtons() {
-
-
-//     //Guardo los valores de mis inputs
-
-
-
-//     //1Creo el elemento
-
-//     product_image_modal.innerHTML = `
-
-//     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-//         aria-hidden="true">
-//         <div class="modal-dialog modal-lg ">
-//             <div class="modal-content">
-//                 <div class="modal-body">
-//                     <div class="container">
-//                         <div class="row justify-content-end">
-//                             <button id="button_close_modal" type="button"
-//                             data-bs-dismiss="modal" aria-label="Close">
-//                             <i class="fi fi-sr-cross" id="cross-icon"></i>
-//                             </button>
-//                         </div>
-
-
-                        
-//                         <div class="row">
-//                             <div class="col-lg-7">
-//                                 <img class="img-fluid"  src="./assets/img/productos/prod-coj-01.jpg"
-//                                     alt="Producto">
-//                             </div>
-
-//                             <div class="col-lg-5" class="container ">
-
-//                                 <br>
-
-                                
-//                                     <div class="container-fluid " id="text_content_modal">
-
-//                                         <div id="title_product_catalog">
-//                                             Funda para cojín
-//                                         </div>
-//                                         <br>
-//                                         <div class="text_product_modal"
-//                                             id="price_product_catalog">
-//                                             $250
-//                                         </div>
-//                                         <div class="text_product_modal"
-//                                             id="color_product_catalog">
-//                                             Color: Azul
-//                                         </div>
-//                                         <div class="text_product_modal"
-//                                             id="size_product_catalog">
-//                                             Tamaño: 50 x 50 cm
-//                                         </div>
-//                                         <div class="text_product_modal"
-//                                             id="material_ product_catalog">
-//                                             Material: Algodón
-//                                         </div>
-//                                         <div class="text_product_modal"
-//                                             id="composition_ product_catalog">
-//                                             Composición: 100% natural
-//                                         </div>
-//                                         <br>
-
-//                                         <div class="container-fluid " id="button_content_modal">
-                                        
-//                                         <button id="addCart"> Añadir al carrito</button>
-                                
-                               
-                                    
-//                                     </div>
-//                                 </div>
-                               
-                                   
-                                   
-                              
-//                             </div>
-//                         </div>
-//                     </div>
-//                 </div>
-//             </div>
-//         </div>
-// </div>`;
-
-
-// }
-
-//Creamos el botón de escucha
-//imageProductButton.addEventListener("click", imageButtons);
+floatForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  localStorage.setItem('search',"");
+  divProductos.innerHTML = ""; 
+  addProducto(null, floatInput.value);
+  content.classList.add("d-none"); 
+});

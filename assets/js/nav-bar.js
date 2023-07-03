@@ -56,14 +56,57 @@ function loginUser() {
         userName.innerHTML = firstName;
         inactiveUser.classList.add("d-none");
         activeUser.classList.remove("d-none");
-    }else{
+    } else {
         inactiveUser.classList.remove("d-none");
         activeUser.classList.add("d-none");
     }
 };
 
-function logginOut(){
-    localStorage.setItem("usuarioActivo",false);
+function logginOut() {
+    localStorage.setItem("usuarioActivo", false);
     localStorage.removeItem("usuario");
     location.reload();
 };
+
+//Aqui inicia la lógica de busqueda
+const mainInput = document.querySelector('#inpt-ele');
+const floatInput = document.querySelector('#float-inpt');
+const mainButton = document.querySelector('#nav-send-form');
+const floatButton = document.querySelector('#float-send-form');
+
+//---Form querySelector--//
+const mainForm = document.querySelector('#nav-form');
+const floatForm = document.querySelector('#float-form');
+
+
+//Event listener para botones
+mainButton.addEventListener("click", () => {
+    if (document.URL.split("/")[3] !== "search.html") {
+        localStorage.setItem('search', mainInput.value);
+        window.location.href = "./search.html";
+    };
+});
+
+floatButton.addEventListener("click", () => {
+    if (document.URL.split("/")[3] !== "search.html") {
+        localStorage.setItem('search', floatInput.value);
+        window.location.href = "./search.html";
+    };
+});
+
+//Event listener para los forms
+mainForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (document.URL.split("/")[3] !== "search.html") {
+        localStorage.setItem('search', mainInput.value);
+        window.location.href = "./search.html";
+    };
+});
+
+floatForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if ( document.URL.split("/")[3] !== "search.html") {
+        localStorage.setItem('search', floatInput.value);
+        window.location.href = "./search.html";
+    };
+});

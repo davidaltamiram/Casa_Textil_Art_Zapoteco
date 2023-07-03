@@ -48,8 +48,6 @@
 </head>
 
 <body>
-
-  <!-- Aqui inician las promos -->
   <!-- Aqui inician las promos -->
   <div class="container-fluid nav-brd fnt promo-top sticky-top stcky" id="promo">
     <div class="row text-center">
@@ -138,12 +136,12 @@
       <div id="rgt-icons" class="nav-icons col-4">
         <div class="d-flex justify-content-end rgt-elements">
 
-          <form class="d-none d-lg-flex" role="search">
-            <div class="input-group form-control">
-              <input type="text" class="form-brd fnt-input inpt-elem" placeholder="Buscar..." aria-label="Username"
-                aria-describedby="basic-addon1">
+          <form id="nav-form" class="d-none d-lg-flex" role="search">
+            <div class="input-group form-control nav-form-control">
+              <input id="inpt-ele" type="text" class="form-brd fnt-input inpt-elem" placeholder="Buscar..."
+                aria-label="Username" aria-describedby="basic-addon1">
               <span class="input-group-text border-white nav-form-span">
-                <button class="btn-search btn bg-white nav-form-btn" type="button">
+                <button id="nav-send-form" class="btn-search btn bg-white nav-form-btn" type="button">
 
                   <svg class="nav-form-svg" width="18" height="18" viewBox="0 0 18 18" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -314,13 +312,13 @@
         </a>
       </div>
 
-      <form class="d-flex ms-auto search" role="search">
-        <div class="input-group form-control float-search">
-          <input type="text" class="form-brd fnt-input float-search-input" placeholder="Buscar..." aria-label="Username"
-            aria-describedby="basic-addon1">
+      <form id="float-form" class="d-flex ms-auto search" role="search">
+        <div class="input-group nav-form-control form-control float-search">
+          <input id="float-inpt" type="text" class="form-brd fnt-input float-search-input" placeholder="Buscar..."
+            aria-label="Username" aria-describedby="basic-addon1">
           <span class="input-group-text border-white float-search-span">
             <button class="btn bg-white float-search-btn" type="button">
-              <svg class="float-search-svg" width="18" height="18" viewBox="0 0 18 18" fill="none"
+              <svg id="float-send-form" class="float-search-svg" width="18" height="18" viewBox="0 0 18 18" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M18 16.4423L12.6312 11.0726C13.4964 9.88361 13.9618 8.45066 13.9604 6.98019C13.9604 3.13139 10.829 0 6.98019 0C3.13139 0 0 3.13139 0 6.98019C0 10.829 3.13139 13.9604 6.98019 13.9604C8.45066 13.9618 9.88361 13.4964 11.0726 12.6312L16.4423 18L18 16.4423ZM6.98019 11.7558C6.03554 11.7559 5.11208 11.4759 4.32659 10.9511C3.54111 10.4263 2.92888 9.68041 2.56734 8.80768C2.2058 7.93495 2.11118 6.97461 2.29545 6.0481C2.47972 5.1216 2.93461 4.27055 3.60258 3.60258C4.27055 2.93461 5.1216 2.47972 6.0481 2.29545C6.97461 2.11118 7.93495 2.2058 8.80768 2.56734C9.68041 2.92888 10.4263 3.54111 10.9511 4.32659C11.4759 5.11208 11.7559 6.03554 11.7558 6.98019C11.7543 8.24631 11.2507 9.46014 10.3554 10.3554C9.46014 11.2507 8.24631 11.7543 6.98019 11.7558Z"
@@ -376,81 +374,81 @@
   </div>
   <!-- Aqui termina el nav-bar -->
 
-  
-<!--Inicia la página de carrito de compras-->
 
-<div class="container">
+  <!--Inicia la página de carrito de compras-->
 
-  <div class="container-fluid myBagProducts">
-    <div class="container-fluid row" id="myBagTitle">
-      Mi bolsa
-    </div>
+  <div class="container">
 
-    <div class="row container">
-      <div id="myBagContent" class="card mb-3 col-auto">
+    <div class="container-fluid myBagProducts">
+      <div class="container-fluid row" id="myBagTitle">
+        Mi bolsa
+      </div>
 
-        <div class=" row g-0 ">
-          <div class="row justify-content-end">
-            <button id="cross-icon-button" type="button">
-              <i id="cross-icon" class="fi fi-sr-cross"></i>
-            </button>
-          </div>
-          <div class="row">
-            <div class=" col-auto">
-              <img id="productImgMyBag" class="img-fluid rounded-start" src="./assets/img/productos/prod-coj-01.jpg"
-                alt="...">
+      <div class="row container">
+        <div id="myBagContent" class="card mb-3 col-auto">
+
+          <div class=" row g-0 ">
+            <div class="row justify-content-end">
+              <button id="cross-icon-button" type="button">
+                <i id="cross-icon" class="fi fi-sr-cross"></i>
+              </button>
             </div>
-
-
-            <div id="descriptionMyBag" class="card-body col-auto">
-              <div class="card-title" id="productTitle"> Funda de cojín</div>
-              <div class="card-text" id="color_product_catalog">
-                Color: Azul
-              </div>
-              <div class="card-text" id="size_product_catalog">
-                Tamaño: 50x50 cm
-              </div>
-              <div id="material_product_catalog" class="card-text" >
-                Material: Algodón
+            <div class="row">
+              <div class=" col-auto">
+                <img id="productImgMyBag" class="img-fluid rounded-start" src="./assets/img/productos/prod-coj-01.jpg"
+                  alt="...">
               </div>
 
+
+              <div id="descriptionMyBag" class="card-body col-auto">
+                <div class="card-title" id="productTitle"> Funda de cojín</div>
+                <div class="card-text" id="color_product_catalog">
+                  Color: Azul
+                </div>
+                <div class="card-text" id="size_product_catalog">
+                  Tamaño: 50x50 cm
+                </div>
+                <div id="material_product_catalog" class="card-text">
+                  Material: Algodón
+                </div>
+
+              </div>
+
+              <div class=" col-auto" id="productQuantity">
+                <div> Cantidad</div>
+                <select id="productQuantitySelect" class="form-select" aria-label="Default select example">
+                  <option selected>1</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+              <div class="col-auto" id="productPrice">
+                <div> $250 MXN</div>
+              </div>
             </div>
 
-            <div class=" col-auto" id="productQuantity">
-              <div> Cantidad</div>
-              <select id="productQuantitySelect" class="form-select" aria-label="Default select example">
-                <option selected>1</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-              </select>
-            </div>
-            <div class="col-auto" id="productPrice">
-              <div> $250 MXN</div>
-            </div>
           </div>
 
         </div>
-
-      </div>
-      <div id="orderCompraCard" class="card col-auto mb-3">
-        <div id="orderCompra" class="card-body">
-          <div class="card-title" id="orderCompraTitle"> Orden de compra</div>
-          <hr>
-          <div id="quantitySubtotal" class="card-text">
-            $250 MXN
-          </div>
-          <div id="subtotal" class="card-text">
-            Subtotal
-          </div>
-          <div class="card-text" id="color_product_catalog">
-            <button id="procederPago"> Proceder al pago</button>
+        <div id="orderCompraCard" class="card col-auto mb-3">
+          <div id="orderCompra" class="card-body">
+            <div class="card-title" id="orderCompraTitle"> Orden de compra</div>
+            <hr>
+            <div id="quantitySubtotal" class="card-text">
+              $250 MXN
+            </div>
+            <div id="subtotal" class="card-text">
+              Subtotal
+            </div>
+            <div class="card-text" id="color_product_catalog">
+              <button id="procederPago"> Proceder al pago</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
 
 
@@ -484,9 +482,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
