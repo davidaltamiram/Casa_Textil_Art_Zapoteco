@@ -1,8 +1,7 @@
-
 [
     {
     "id": "prod-coj-01",
-    "producto": "Funda para cojín",
+    "producto": "Funda para cojin azul",
     "categoria": "cojines",
     "precio": 250,
     "color": "Azul",
@@ -14,7 +13,7 @@
 },
 {
     "id": "prod-coj-02",
-    "producto": "Funda para cojín",
+    "producto": "Funda para cojin rosa",
     "categoria": "cojines",
     "precio": 300,
     "color": "Rosa",
@@ -26,7 +25,7 @@
 },
 {
     "id": "prod-coj-03",
-    "producto": "Funda para cojín",
+    "producto": "Funda para cojin gris",
     "categoria": "cojines",
     "precio": 350,
     "color": "Gris",
@@ -38,7 +37,7 @@
 },
 {
     "id": "prod-coj-04",
-    "producto": "Funda para cojín",
+    "producto": "Funda para cojin amarillo",
     "categoria": "cojines",
     "precio": 200,
     "color": "Amarillo",
@@ -50,7 +49,7 @@
 },
 {
     "id": "prod-coj-05",
-    "producto": "Funda para cojín",
+    "producto": "Funda para cojin blanco",
     "categoria": "cojines",
     "precio": 300,
     "color": "Blanco",
@@ -62,7 +61,7 @@
 },
 {
     "id": "prod-coj-06",
-    "producto": "Funda para cojín",
+    "producto": "Funda para cojin negro",
     "categoria": "cojines",
     "precio": 500,
     "color": "Negro",
@@ -74,7 +73,7 @@
 },
 {
     "id": "prod-coj-07",
-    "producto": "Funda para cojín",
+    "producto": "Funda para cojin verde",
     "categoria": "cojines",
     "precio": 400,
     "color": "Verde",
@@ -86,7 +85,7 @@
 },
 {
     "id": "prod-coj-08",
-    "producto": "Funda para cojín",
+    "producto": "Funda para cojin gris",
     "categoria": "cojines",
     "precio": 450,
     "color": "Gris",
@@ -98,7 +97,7 @@
 },
 {
     "id": "prod-coj-09",
-    "producto": "Funda para cojín",
+    "producto": "Cojin naranja",
     "categoria": "cojines",
     "precio": 300,
     "color": "Naranja",
@@ -110,7 +109,7 @@
 },
 {
     "id": "prod-coj-10",
-    "producto": "Funda para cojín",
+    "producto": "Cojin negro",
     "categoria": "cojines",
     "precio": 350,
     "color": "Negro",
@@ -122,7 +121,7 @@
 },
 {
     "id": "prod-col-01",
-    "producto": "Colcha",
+    "producto": "Colcha cafe",
     "categoria": "colchas",
     "precio": 800,
     "color": "Café",
@@ -134,7 +133,7 @@
 },
 {
     "id": "prod-col-02",
-    "producto": "Colcha",
+    "producto": "Colcha roja",
     "categoria": "colchas",
     "precio": 800,
     "color": "Rojo",
@@ -146,7 +145,7 @@
 },
 {
     "id": "prod-col-03",
-    "producto": "Colcha",
+    "producto": "Colcha rosa",
     "categoria": "colchas",
     "precio": 600,
     "color": "Rosa",
@@ -158,7 +157,7 @@
 },
 {
     "id": "prod-col-04",
-    "producto": "Colcha",
+    "producto": "Colcha azul",
     "categoria": "colchas",
     "precio": 750,
     "color": "Azul",
@@ -170,7 +169,7 @@
 },
 {
     "id": "prod-col-05",
-    "producto": "Colcha",
+    "producto": "Colcha gris",
     "categoria": "colchas",
     "precio": 650,
     "color": "Gris",
@@ -182,7 +181,7 @@
 },
 {
     "id": "prod-col-06",
-    "producto": "Colcha",
+    "producto": "Colcha rosa",
     "categoria": "colchas",
     "precio": 700,
     "color": "Rosa",
@@ -194,7 +193,7 @@
 },
 {
     "id": "prod-col-07",
-    "producto": "Colcha",
+    "producto": "Colcha azul",
     "categoria": "colchas",
     "precio": 800,
     "color": "Azul",
@@ -206,7 +205,7 @@
 },
 {
     "id": "prod-col-08",
-    "producto": "Colcha",
+    "producto": "Colcha morada",
     "categoria": "colchas",
     "precio": 850,
     "color": "Morado",
@@ -218,7 +217,7 @@
 },
 {
     "id": "prod-col-09",
-    "producto": "Colcha",
+    "producto": "Colcha azul",
     "categoria": "colchas",
     "precio": 800,
     "color": "Azul",
@@ -230,7 +229,7 @@
 },
 {
     "id": "prod-col-10",
-    "producto": "Colcha",
+    "producto": "Colcha cafe",
     "categoria": "colchas",
     "precio": 700,
     "color": "Café",
@@ -242,7 +241,7 @@
 },
 {
     "id": "prod-man-01",
-    "producto": "Mantel",
+    "producto": "Mantel cafe",
     "categoria": "manteles",
     "precio": 300,
     "color": "Café",
@@ -254,7 +253,7 @@
 },
 {
     "id": "prod-man-02",
-    "producto": "Mantel",
+    "producto": "Mantel gris",
     "categoria": "manteles",
     "precio": 500,
     "color": "Gris",
@@ -266,7 +265,7 @@
 },
 {
     "id": "prod-man-03",
-    "producto": "Mantel",
+    "producto": "Mantel crudo",
     "categoria": "manteles",
     "precio": 400,
     "color": "Crudo",
@@ -278,7 +277,7 @@
 },
 {
     "id": "prod-man-04",
-    "producto": "Mantel",
+    "producto": "Mantel fucsia",
     "categoria": "manteles",
     "precio": 200,
     "color": "Fucsia",
@@ -290,7 +289,7 @@
 },
 {
     "id": "prod-man-05",
-    "producto": "Mantel",
+    "producto": "Mantel rojo",
     "categoria": "manteles",
     "precio": 800,
     "color": "Rojo",
@@ -302,7 +301,7 @@
 },
 {
     "id": "prod-man-06",
-    "producto": "Mantel",
+    "producto": "Mantel dorado",
     "categoria": "manteles",
     "precio": 900,
     "color": "Dorado",
@@ -314,7 +313,7 @@
 },
 {
     "id": "prod-man-07",
-    "producto": "Mantel",
+    "producto": "Mantel blanco",
     "categoria": "manteles",
     "precio": 500,
     "color": "Blanco",
@@ -326,7 +325,7 @@
 },
 {
     "id": "prod-man-08",
-    "producto": "Mantel",
+    "producto": "Mantel negro",
     "categoria": "manteles",
     "precio": 400,
     "color": "Negro",
@@ -338,7 +337,7 @@
 },
 {
     "id": "prod-man-09",
-    "producto": "Mantel",
+    "producto": "Mantel azul",
     "categoria": "manteles",
     "precio": 200,
     "color": "Azul",
@@ -350,7 +349,7 @@
 },
 {
     "id": "prod-man-10",
-    "producto": "Mantel",
+    "producto": "Mantel gris",
     "categoria": "manteles",
     "precio": 300,
     "color": "Gris",
@@ -362,7 +361,7 @@
 },
 {
     "id": "prod-tap-01",
-    "producto": "Tapete",
+    "producto": "Tapete negro",
     "categoria": "tapetes",
     "precio": 300,
     "color": "Negro",
@@ -374,7 +373,7 @@
 },
 {
     "id": "prod-tap-02",
-    "producto": "Tapete",
+    "producto": "Tapete blanco",
     "categoria": "tapetes",
     "precio": 500,
     "color": "Blanco",
@@ -386,7 +385,7 @@
 },
 {
     "id": "prod-tap-03",
-    "producto": "Tapete",
+    "producto": "Tapete negro",
     "categoria": "tapetes",
     "precio": 400,
     "color": "Negro",
@@ -398,7 +397,7 @@
 },
 {
     "id": "prod-tap-04",
-    "producto": "Tapete",
+    "producto": "Tapete cafe",
     "categoria": "tapetes",
     "precio": 200,
     "color": "Café",
@@ -410,7 +409,7 @@
 },
 {
     "id": "prod-tap-05",
-    "producto": "Tapete",
+    "producto": "Tapete gris",
     "categoria": "tapetes",
     "precio": 800,
     "color": "Gris",
@@ -422,7 +421,7 @@
 },
 {
     "id": "prod-tap-06",
-    "producto": "Tapete",
+    "producto": "Tapete blanco",
     "categoria": "tapetes",
     "precio": 900,
     "color": "Blanco",
@@ -434,7 +433,7 @@
 },
 {
     "id": "prod-tap-07",
-    "producto": "Tapete",
+    "producto": "Tapete negro",
     "categoria": "tapetes",
     "precio": 500,
     "color": "Negro",
@@ -446,7 +445,7 @@
 },
 {
     "id": "prod-tap-08",
-    "producto": "Tapete",
+    "producto": "Tapete negro",
     "categoria": "tapetes",
     "precio": 400,
     "color": "Negro",
@@ -458,7 +457,7 @@
 },
 {
     "id": "prod-tap-09",
-    "producto": "Tapete",
+    "producto": "Tapete cafe",
     "categoria": "tapetes",
     "precio": 200,
     "color": "Café",
@@ -470,7 +469,7 @@
 },
 {
     "id": "prod-tap-10",
-    "producto": "Tapete",
+    "producto": "Tapete negro 2",
     "categoria": "tapetes",
     "precio": 300,
     "color": "Negro",

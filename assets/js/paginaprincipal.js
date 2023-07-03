@@ -20,4 +20,11 @@ $('.owl-carousel').owlCarousel({
             
         }
     }
-})
+});
+
+const botonColchas = document.querySelector('#colchasBoton');
+
+botonColchas.addEventListener("click", () => {
+    localStorage.setItem('search', "colchas");
+    window.location.href = "./search.html";
+});

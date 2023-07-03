@@ -190,7 +190,9 @@ function addProducto(filtro) {
     
       });
 }
+
 //carga los producos al cargar o recargar la pagina al principio
+
 document.addEventListener("DOMContentLoaded", function() {
     addProducto();
   });
@@ -376,4 +378,3 @@ $('.owl-carousel').owlCarousel({
 
 //Creamos el botón de escucha
 //imageProductButton.addEventListener("click", imageButtons);
-
