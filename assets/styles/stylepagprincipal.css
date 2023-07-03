@@ -83,11 +83,13 @@
     }
 
     #colchas{
-        margin-left: 15px;
+        margin-left: 37%;
         font-size: 300%;
         font-family: 'Raleway', sans-serif;
         font-style: bold;
-        padding-top: 10%;
+        /*padding-top: 10%;*/
+        margin-top: -65px;
+        text-align: center;
     }
     #tapetes{
         margin-left: 15px;
@@ -138,7 +140,7 @@
     }
 
     #colchas{
-        margin-left: 6px;
+        margin-left: 25%;
         font-size: 300%;
         font-family: 'Raleway', sans-serif;
         font-style: bold;
@@ -252,11 +254,13 @@
     }
 
     #colchas{
-        margin-left: 18px;
+        margin-left: 35%;
         font-size: 300%;
         font-family: 'Raleway', sans-serif;
         font-style: bold;
-        padding-top: 10%;
+        padding-top: 1%;
+        margin-top: -50%;
+        text-align: center;
     }
     #tapetes{
         margin-left: 18px;
@@ -367,11 +371,13 @@
     }
 
     #colchas{
-        margin-left: 14px;
+        margin-left: 40px;
         font-size: 300%;
         font-family: 'Raleway', sans-serif;
         font-style: bold;
         padding-top: 10%;
+        margin-top: -70px;
+        text-align: center;
     }
     #tapetes{
         margin-left: 14px;
@@ -429,11 +435,12 @@
     }
 
     #colchas{
-        margin-left: 18px;
+        margin-left: 35px;
         font-size: 200%;
         font-family: 'Raleway', sans-serif;
         font-style: bold;
         padding-top: 10%;
+        margin-top: -25px;
     }
     #tapetes{
         margin-left: 20px;
@@ -441,6 +448,7 @@
         font-family: 'Raleway', sans-serif;
         font-style: bold;
         padding-top: 10%;
+        text-align: center;
     }
     .titulo-cat{
         font-size: 200%;
@@ -540,13 +548,14 @@
 }
 
 .imgtext {
+    /*margin-top: 45px;*/
     color: white;
     width: 155px;
     height: 135px;
     padding: 0px 15px 0 15px;
     opacity: 0;
     position: absolute;
-    bottom: 0px;
+    bottom: -10px;
     left: 0;
     -webkit-transition: all 300ms ease-in-out;
     -o-transition: all 300ms ease-in-out;

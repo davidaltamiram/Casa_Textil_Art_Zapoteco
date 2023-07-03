@@ -13,26 +13,9 @@
 
 
   <!--link to bootstrap-->
-  <!--QQQ Este link de donde salió, no es el mismo que aparece en bootstrap para el html-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!--1. OWL CAROUSEL MIN.CSS-->
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!--2. Owl Carousel Theme Min.css-->
-
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
   <link rel="stylesheet" href="./assets/styles/stylecarritocompras.css">
   <link rel="stylesheet" href="./assets/styles/styleFooter.css">
@@ -375,75 +358,90 @@
   <!-- Aqui termina el nav-bar -->
 
 
-  <!--Inicia la página de carrito de compras-->
+ 
+  <div id="containerMyall" class="container ">
+    <div id="myBagTitle" class="container-fluid row">
+      Mi bolsa
+    </div>
+    <!-- window > 580  -->
+    <div id="containerMyBagOrder580" class="row ">
+      <div id="myBagContent580" class="">
+       
+        
 
-  <div class="container">
-
-    <div class="container-fluid myBagProducts">
-      <div class="container-fluid row" id="myBagTitle">
-        Mi bolsa
       </div>
 
-      <div class="row container">
-        <div id="myBagContent" class="card mb-3 col-auto">
-
-          <div class=" row g-0 ">
-            <div class="row justify-content-end">
-              <button id="cross-icon-button" type="button">
-                <i id="cross-icon" class="fi fi-sr-cross"></i>
-              </button>
-            </div>
-            <div class="row">
-              <div class=" col-auto">
-                <img id="productImgMyBag" class="img-fluid rounded-start" src="./assets/img/productos/prod-coj-01.jpg"
-                  alt="...">
-              </div>
 
 
-              <div id="descriptionMyBag" class="card-body col-auto">
-                <div class="card-title" id="productTitle"> Funda de cojín</div>
-                <div class="card-text" id="color_product_catalog">
-                  Color: Azul
-                </div>
-                <div class="card-text" id="size_product_catalog">
-                  Tamaño: 50x50 cm
-                </div>
-                <div id="material_product_catalog" class="card-text">
-                  Material: Algodón
-                </div>
-
-              </div>
-
-              <div class=" col-auto" id="productQuantity">
-                <div> Cantidad</div>
-                <select id="productQuantitySelect" class="form-select" aria-label="Default select example">
-                  <option selected>1</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                </select>
-              </div>
-              <div class="col-auto" id="productPrice">
-                <div> $250 MXN</div>
-              </div>
-            </div>
-
+      <div id="orderCompraCard" class=" card col-auto mb-3">
+        <div id="orderCompra" class="card-body">
+          <div class="card-title" id="orderCompraTitle"> Orden de compra</div>
+          <hr>
+          <div id="quantitySubtotal" class="card-text">
+            $250 MXN
           </div>
-
+          <div id="subtotal" class="card-text">
+            Subtotal
+          </div>
+          <div class="card-text" id="color_product_catalog">
+            <button id="procederPago"> Proceder al pago</button>
+          </div>
         </div>
-        <div id="orderCompraCard" class="card col-auto mb-3">
-          <div id="orderCompra" class="card-body">
-            <div class="card-title" id="orderCompraTitle"> Orden de compra</div>
-            <hr>
-            <div id="quantitySubtotal" class="card-text">
-              $250 MXN
-            </div>
-            <div id="subtotal" class="card-text">
-              Subtotal
-            </div>
-            <div class="card-text" id="color_product_catalog">
-              <button id="procederPago"> Proceder al pago</button>
-            </div>
+      </div>
+    </div>
+
+    <!-- 460 > window <= 580  -->
+
+
+    <div id="containerMyBagOrder460" class="row ">
+      <div id="myBagContent460">
+      </div>
+        
+
+      <div id="orderCompraCard" class=" card col-auto mb-3">
+        <div id="orderCompra" class="card-body">
+          <div class="card-title" id="orderCompraTitle"> Orden de compra</div>
+          <hr>
+          <div id="quantitySubtotal" class="card-text">
+            $250 MXN
+          </div>
+          <div id="subtotal" class="card-text">
+            Subtotal
+          </div>
+          <div class="card-text" id="color_product_catalog">
+            <button id="procederPago"> Proceder al pago</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <!--  window <= 460  -->
+
+
+    <div id="containerMyBagOrderMobile" class="row container-fluid">
+      <div id="myBagContentMobile">
+        
+
+
+      </div>
+
+      <div id="orderCompraCard" class=" card col-auto mb-3">
+        <div id="orderCompra" class="card-body">
+          <div class="card-title" id="orderCompraTitle"> Orden de compra</div>
+          <hr>
+          <div id="quantitySubtotal" class="card-text">
+            $250 MXN
+          </div>
+          <div id="subtotal" class="card-text">
+            Subtotal
+          </div>
+          <div class="card-text" id="color_product_catalog">
+            <button id="procederPago"> Proceder al pago</button>
           </div>
         </div>
       </div>
@@ -452,9 +450,11 @@
 
 
 
+
+
   <div id="footer"></div>
 
-  <!-- Fin de galeria de imagenes de productos -->
+
 
   <!--let's include cdn files-->
 

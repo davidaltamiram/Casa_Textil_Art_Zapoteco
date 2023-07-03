@@ -159,7 +159,7 @@ p{
     font-weight: normal;
 }
 
-#addCart{
+.addCartButtons{
     color: black;
     border-radius: 10px;
     font-size: 18px;
