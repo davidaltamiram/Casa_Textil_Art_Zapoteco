@@ -1,5 +1,7 @@
 //variable que almacena las posiciones y funge como indice
 var posiciones = [];
+//Arreglo en el cual se almacenan los productos ingresados a la bolsa del cliente
+let cartShopping = JSON.parse(localStorage.getItem("CartShopping")) || [];
 //Conexion con api o json
 var productosjson = fetch('./assets/js/productos.json')
 .then(response => response.json())
@@ -51,6 +53,7 @@ function addProducto(filtro) {
         //forEach con parametro objeto y indice, el parametro objeto funge como variable de los objetos al cual se puede acceder mediante objeto.value (key)
 
         //el parametro indice funge como indice sobre las posiciones de los objetos dentro del array
+
         array.forEach(function (objeto, indice) {
             //condicional de filtro donde pasa al parametro posiciones.push(indice) en donde empuja la condicional del filtro al parametro indice, donde retorna las posiciones de los obejetos aplicados por el filtro
             if (filtro === 'cojinesfiltro' && objeto.categoria === 'cojines') {
@@ -145,7 +148,7 @@ function addProducto(filtro) {
             
                                                      <div class="container-fluid " id="button_content_modal">
                                                     
-                                                     <button id="addCart"> Añadir al carrito</button>
+                                                     <button  id="addCart${indice}" class = "addCartButtons"> Añadir al carrito</button>
                                             
                                            
                                                 
@@ -170,6 +173,18 @@ function addProducto(filtro) {
           //empuja los objetos impresos al array
           objetosImpresos.push(indice); // Marcar el objeto como impreso
 
+          
+        //se trae del html el id de addCart con el índice del producto
+        var addCartButton = document.getElementById(`addCart${indice}`);
+
+        // addEvenlistener para el  "addCartButton", para que cada vez que se presione el botón de "addCart" se emmpuje el objeto al arreglo cartShopping
+        addCartButton.addEventListener("click", function() {
+          
+        cartShopping.push(objeto);
+        //Se guara el arreglo cartShopping en el localStorage
+        localStorage.setItem("CartShopping", JSON.stringify(cartShopping) );
+        });
+
         }
         });
     
@@ -188,17 +203,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
   colchasfiltro.addEventListener('click', function() {
     divProductos.innerHTML = ""; // Limpiar el contenido previo en el contenedor
-    addProducto('colchasfiltro'); // Llamar a addProductos() con el filtro 1
+    addProducto('colchasfiltro'); // Llamar a addProductos() con el filtro 2
   });
 
   mantelesfiltro.addEventListener('click', function() {
     divProductos.innerHTML = ""; // Limpiar el contenido previo en el contenedor
-    addProducto('mantelesfiltro'); // Llamar a addProductos() con el filtro 1
+    addProducto('mantelesfiltro'); // Llamar a addProductos() con el filtro 3
   });
 
   tapetesfiltro.addEventListener('click', function() {
     divProductos.innerHTML = ""; // Limpiar el contenido previo en el contenedor
-    addProducto('tapetesfiltro'); // Llamar a addProductos() con el filtro 1
+    addProducto('tapetesfiltro'); // Llamar a addProductos() con el filtro 4
   });
 //Termina lo referente a pintar el catalogo de prodcutos del html
 
