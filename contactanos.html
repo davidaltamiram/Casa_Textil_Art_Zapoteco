@@ -477,38 +477,47 @@
 
     <div class="container-fluid" id="contenedor">
         <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="contenedorFormulario">
-                    <form>
-                        <div class="row mb-3">
+                    <form id="formContactanos" class="formulario">
+                        <div class="row mb-3" id="grupo_nombre">
                             <label for="inputName3" class="col-sm-2 col-form-label " >Nombre</label>
                             <div class="col-sm-10">
-                              <input type="text" class="form-control " id="inputName3">
+                              <input type="text" class="form-control " id="nombre" name="nombre">
+                              <p class="formulario__input-error mensajeError">Ingresa un nombre válido.</p>
                             </div>
                           </div>
 
-                        <div class="row mb-3">
+                        <div class="row mb-3" id="grupo_email">
                           <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
                           <div class="col-sm-10">
-                            <input type="email" class="form-control" id="inputEmail3">
+                            <input type="email" class="form-control" id="inputEmail3" name="email">
+                            <p class="formulario__input-error mensajeError">Ingresa un email válido.</p>
                           </div>
                         </div>
 
-                        <div class="row mb-3">
+                        <div class="row mb-3" id="grupo_telefono">
                             <label for="telefono" class="col-sm-2 col-form-label">Teléfono</label>
                             <div class="col-sm-10">
-                              <input type="tel" class="form-control" id="telefono">
+                              <input type="tel" class="form-control" id="telefono" name="telefono">
+                              <p class="formulario__input-error mensajeError">Ingresa un número válido de 7 a 14 dígitos.</p>
                             </div>
                           </div>
 
-                          <div class="row mb-3">
+                          <div class="row mb-3" id="grupo_mensaje">
                             <label for="inputMensaje3" class="col-sm-2 col-form-label">Mensaje</label>
                             <div class="col-sm-10">
-                              <input type="text" class="form-control" id="inputMensaje3">
+                              <input type="text" class="form-control" id="inputMensaje3" name="mensaje">
+                              <p class="formulario__input-error mensajeError">Favor de ingresar un mensaje de 10 a 500 caracteres.
                             </div>
                           </div>
                         
                         <button type="submit" class="btn btn-primary enviarBtn">Enviar</button>
+                        <p class="formulario__mensaje-exito mensajeBoton" id="formulario__mensaje-exito">Se ha enviado la
+                            información
+                        </p>
+                        <p class="formulario__mensaje mensajeBoton" id="formulario__mensaje">Favor de llenar todos los
+                            campos</p>
                       </form>
                 </div>
             </div>

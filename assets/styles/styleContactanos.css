@@ -2,13 +2,13 @@
 
 
 #contenedor{
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+
+ 
+  
 }
 
 .text-center{
-    text-align: center;
+  
     align-items: center;
 }
 
@@ -26,6 +26,7 @@
     background: #78C0A8;
     border: 1px solid #78C0A8;
     border-radius: 10px;
+
 }
 
 .tituloContactanos {
