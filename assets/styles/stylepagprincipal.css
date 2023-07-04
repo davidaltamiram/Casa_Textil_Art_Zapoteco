@@ -5,26 +5,43 @@
 
 .animate__animated.animate__fadeInLeftBig {
     --animate-duration: 3s;
+}
+
+.btn-no-hover {
+    border: none;
+}
+
+.btn-no-hover:focus,
+.btn-no-hover:hover,
+.btn-no-hover:active {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: transparent !important;
+}
+
+.btn-no-focus:focus {
+    outline: none !important;
+    box-shadow: none !important;
   }
-  
 
 /*TAMAÑO DESKTOP*/
-  @media (min-width:993px){
-    .titulo{
+@media (min-width:993px) {
+
+    .titulo {
         font-size: 50px;
         font-family: 'Raleway', sans-serif;
         font-style: bold;
         padding-top: 10%;
-        
+
     }
-    
-    .l1{
+
+    .l1 {
         background-image: url(../img/bk.jpeg);
         height: 411px;
         background-size: cover;
     }
-    
-    .bienvenido{
+
+    .bienvenido {
         text-align: right;
         color: white;
         font-size: 50px;
@@ -33,8 +50,8 @@
         padding-top: 250px;
         padding-right: 20px;
     }
-    
-    #tradicion{
+
+    #tradicion {
         font-family: 'Raleway', sans-serif;
         font-style: normal;
         font-weight: 500;
@@ -44,16 +61,17 @@
         color: white;
         padding-right: 150px;
         padding-top: 20px;
-        
+
     }
-    .categorias{
+
+    .categorias {
 
         padding-top: 10%;
-        display:block;
-       
+        display: block;
+
     }
 
-    .titulo-acerca{
+    .titulo-acerca {
         color: white;
         margin-top: 25%;
         font-size: 30px;
@@ -71,10 +89,10 @@
         font-weight: bold;
         background-color: transparent;
         margin-left: 20%;
-        margin-top: 30%;        
-    }  
+        margin-top: 30%;
+    }
 
-    #cojines{
+    #cojines {
         margin-left: 20px;
         font-size: 300%;
         font-family: 'Raleway', sans-serif;
@@ -82,7 +100,7 @@
         padding-top: 10%;
     }
 
-    #colchas{
+    #colchas {
         margin-left: 37%;
         font-size: 300%;
         font-family: 'Raleway', sans-serif;
@@ -91,7 +109,8 @@
         margin-top: -65px;
         text-align: center;
     }
-    #tapetes{
+
+    #tapetes {
         margin-left: 15px;
         font-size: 300%;
         font-family: 'Raleway', sans-serif;
@@ -99,39 +118,40 @@
         padding-top: 10%;
     }
 
-    .topVentas{
+    .topVentas {
         margin-top: 100px;
         margin-bottom: 100px;
-        
+
     }
-    
 
-  }
 
-  @media (min-width:1200px){
-    .titulo-cat{
+}
+
+@media (min-width:1200px) {
+    .titulo-cat {
         font-size: 300%;
         font-family: 'Raleway', sans-serif;
         font-style: bold;
         padding-top: 10%;
         padding-bottom: 10%;
         margin-left: 5%;
-        
-        
+
+
     }
-  }
-  @media (min-width:993px) and (max-width:1199px){
-    .titulo-cat{
+}
+
+@media (min-width:993px) and (max-width:1199px) {
+    .titulo-cat {
         font-size: 260%;
         font-family: 'Raleway', sans-serif;
         font-style: bold;
         padding-top: 10%;
         padding-bottom: 10%;
         margin-left: 5%;
-        
+
     }
 
-    #cojines{
+    #cojines {
         margin-left: 8px;
         font-size: 300%;
         font-family: 'Raleway', sans-serif;
@@ -139,41 +159,42 @@
         padding-top: 10%;
     }
 
-    #colchas{
+    #colchas {
         margin-left: 25%;
         font-size: 300%;
         font-family: 'Raleway', sans-serif;
         font-style: bold;
         padding-top: 10%;
     }
-    #tapetes{
+
+    #tapetes {
         margin-left: 6px;
         font-size: 300%;
         font-family: 'Raleway', sans-serif;
         font-style: bold;
         padding-top: 10%;
     }
-  }
+}
 
 
 /*TAMAÑO TABLET*/
-@media (min-width: 767px) and (max-width: 992px){
-    .titulo{
+@media (min-width: 767px) and (max-width: 992px) {
+    .titulo {
         font-size: 35px;
         font-family: 'Raleway', sans-serif;
         font-style: bold;
         padding-top: 10%;
         padding-bottom: 10%;
-        
+
     }
 
-    .l1{
+    .l1 {
         background-image: url(../img/bk.jpeg);
         height: 350px;
         background-size: cover;
     }
 
-    .bienvenido{
+    .bienvenido {
         text-align: right;
         color: white;
         font-size: 40px;
@@ -183,7 +204,7 @@
         padding-right: 20px;
     }
 
-    #tradicion{
+    #tradicion {
         font-family: 'Raleway', sans-serif;
         font-style: normal;
         font-weight: 500;
@@ -193,17 +214,17 @@
         color: white;
         padding-right: 150px;
         padding-top: 20px;
-        
+
     }
 
-    .categorias{
+    .categorias {
 
         padding-top: 10%;
-        
-       
+
+
     }
 
-    .carousel-control-prev-icon{
+    .carousel-control-prev-icon {
         margin-left: 20px;
     }
 
@@ -211,9 +232,9 @@
         position: relative;
         overflow: hidden;
 
-      }
-    
-      .titulo-acerca{
+    }
+
+    .titulo-acerca {
         color: white;
         margin-top: 30%;
         font-size: 24px;
@@ -232,20 +253,20 @@
         background-color: transparent;
         margin-left: 15%;
         margin-top: 50%;
-        
-      }
 
-     .titulo-cat{
+    }
+
+    .titulo-cat {
         font-size: 300%;
         font-family: 'Raleway', sans-serif;
         font-style: bold;
         padding-top: 10%;
         padding-bottom: 10%;
         margin-left: 5px;
-        
+
     }
 
-    #cojines{
+    #cojines {
         margin-left: 18px;
         font-size: 300%;
         font-family: 'Raleway', sans-serif;
@@ -253,7 +274,7 @@
         padding-top: 10%;
     }
 
-    #colchas{
+    #colchas {
         margin-left: 35%;
         font-size: 300%;
         font-family: 'Raleway', sans-serif;
@@ -262,7 +283,8 @@
         margin-top: -50%;
         text-align: center;
     }
-    #tapetes{
+
+    #tapetes {
         margin-left: 18px;
         font-size: 300%;
         font-family: 'Raleway', sans-serif;
@@ -270,38 +292,38 @@
         padding-top: 10%;
     }
 
-    .topVentas{
+    .topVentas {
         margin-top: 40px;
         margin-bottom: 80px;
-        
+
     }
 
-    .carousel-control-prev-icon{
-        color:black;
+    .carousel-control-prev-icon {
+        color: black;
     }
-    
+
 
 }
 
 /*TAMAÑO CELULAR*/
-@media (min-width:535px) and (max-width: 766px){
-    .titulo{
+@media (min-width:535px) and (max-width: 766px) {
+    .titulo {
         font-size: 25px;
         font-family: 'Raleway', sans-serif;
         font-style: bold;
         padding-top: 10%;
         padding-bottom: 10%;
-        
+
     }
 
-    .l1{
+    .l1 {
         background-image: url(../img/bk.jpeg);
         height: 300px;
         background-size: cover;
         margin: 0;
     }
 
-    .bienvenido{
+    .bienvenido {
         text-align: right;
         color: white;
         font-size: 30px;
@@ -311,7 +333,7 @@
         padding-right: 20px;
     }
 
-    #tradicion{
+    #tradicion {
         font-family: 'Raleway', sans-serif;
         font-style: normal;
         font-weight: 500;
@@ -321,10 +343,10 @@
         color: white;
         padding-right: 10px;
         padding-top: 20px;
-        
+
     }
 
-    .titulo-acerca{
+    .titulo-acerca {
         color: white;
         margin-top: 50%;
         font-size: 20px;
@@ -343,26 +365,26 @@
         background-color: transparent;
         margin-left: 8%;
         margin-top: 75%;
-        
-      }
 
-      #sec-acerca{
-        /*background-image: url(../img/acercapagprincipal.jpeg);*/
-        background-image: url(../img/a11.jpeg);
-        background-size: cover;    
     }
 
-    .titulo-cat{
+    #sec-acerca {
+        /*background-image: url(../img/acercapagprincipal.jpeg);*/
+        background-image: url(../img/a11.jpeg);
+        background-size: cover;
+    }
+
+    .titulo-cat {
         font-size: 300%;
         font-family: 'Raleway', sans-serif;
         font-style: bold;
         padding-top: 10%;
         padding-bottom: 10%;
         margin-left: 1.5px;
-        
+
     }
 
-    #cojines{
+    #cojines {
         margin-left: 18px;
         font-size: 300%;
         font-family: 'Raleway', sans-serif;
@@ -370,7 +392,7 @@
         padding-top: 10%;
     }
 
-    #colchas{
+    #colchas {
         margin-left: 40px;
         font-size: 300%;
         font-family: 'Raleway', sans-serif;
@@ -379,19 +401,20 @@
         margin-top: -70px;
         text-align: center;
     }
-    #tapetes{
+
+    #tapetes {
         margin-left: 14px;
         font-size: 300%;
         font-family: 'Raleway', sans-serif;
         font-style: bold;
         padding-top: 10%;
     }
-    
-    
+
+
 }
 
-@media (max-width:534px){
-    #cojines{
+@media (max-width:534px) {
+    #cojines {
         margin-left: 24px;
         font-size: 250%;
         font-family: 'Raleway', sans-serif;
@@ -399,34 +422,36 @@
         padding-top: 10%;
     }
 
-    #colchas{
+    #colchas {
         margin-left: 18px;
         font-size: 250%;
         font-family: 'Raleway', sans-serif;
         font-style: bold;
         padding-top: 10%;
     }
-    #tapetes{
+
+    #tapetes {
         margin-left: 20px;
         font-size: 250%;
         font-family: 'Raleway', sans-serif;
         font-style: bold;
         padding-top: 10%;
     }
-    .titulo-cat{
+
+    .titulo-cat {
         font-size: 250%;
         font-family: 'Raleway', sans-serif;
         font-style: bold;
         padding-top: 10%;
         padding-bottom: 10%;
         margin-left: 8px;
-        
+
     }
 
 }
 
-@media (max-width:490px){
-    #cojines{
+@media (max-width:490px) {
+    #cojines {
         margin-left: 24px;
         font-size: 200%;
         font-family: 'Raleway', sans-serif;
@@ -434,7 +459,7 @@
         padding-top: 10%;
     }
 
-    #colchas{
+    #colchas {
         margin-left: 35px;
         font-size: 200%;
         font-family: 'Raleway', sans-serif;
@@ -442,7 +467,8 @@
         padding-top: 10%;
         margin-top: -25px;
     }
-    #tapetes{
+
+    #tapetes {
         margin-left: 20px;
         font-size: 200%;
         font-family: 'Raleway', sans-serif;
@@ -450,36 +476,37 @@
         padding-top: 10%;
         text-align: center;
     }
-    .titulo-cat{
+
+    .titulo-cat {
         font-size: 200%;
         font-family: 'Raleway', sans-serif;
         font-style: bold;
         padding-top: 10%;
         padding-bottom: 10%;
         margin-left: 10px;
-        
+
     }
 
 }
 
-@media (max-width:534px){
-    .titulo{
+@media (max-width:534px) {
+    .titulo {
         font-size: 25px;
         font-family: 'Raleway', sans-serif;
         font-style: bold;
         padding-top: 10%;
         padding-bottom: 10%;
-        
+
     }
 
-    .l1{
+    .l1 {
         background-image: url(../img/bk.jpeg);
         height: 300px;
         background-size: cover;
         margin: 0;
     }
 
-    .bienvenido{
+    .bienvenido {
         text-align: right;
         color: white;
         font-size: 30px;
@@ -489,7 +516,7 @@
         padding-right: 20px;
     }
 
-    #tradicion{
+    #tradicion {
         font-family: 'Raleway', sans-serif;
         font-style: normal;
         font-weight: 500;
@@ -499,10 +526,10 @@
         color: white;
         padding-right: 10px;
         padding-top: 20px;
-        
+
     }
 
-    .titulo-acerca{
+    .titulo-acerca {
         color: white;
         margin-top: 50%;
         font-size: 20px;
@@ -521,30 +548,30 @@
         background-color: transparent;
         margin-left: 8%;
         margin-top: 75%;
-        
-      }
 
-      #sec-acerca{
+    }
+
+    #sec-acerca {
         /*background-image: url(../img/acercapagprincipal.jpeg);*/
         background-image: url(../img/a11.jpeg);
-        background-size: cover;    
+        background-size: cover;
     }
 }
 
 
 
 
-.categorias{
+.categorias {
 
     padding-top: 10%;
-    display:block;
-   
+    display: block;
+
 }
 
-.imgcat{
+.imgcat {
     border-radius: 15px;
     height: 10%;
-        
+
 }
 
 .imgtext {
@@ -560,52 +587,53 @@
     -webkit-transition: all 300ms ease-in-out;
     -o-transition: all 300ms ease-in-out;
     transition: all 300ms ease-in-out;
-  }
-  .pic {
-      position: relative;
-      overflow: hidden;
-      margin: 50px auto;
+}
 
-    }
-    
-    .pic:hover img {
-      -webkit-transition: all 300ms ease-in-out;
-      -o-transition: all 300ms ease-in-out;
-      transition: all 300ms ease-in-out;
-      -webkit-filter: blur(1px);
-      -moz-filter: blur(1px);
-      -ms-filter: blur(1px);
-      -o-filter: blur(1px);
-      filter: blur(1px);
-      transform: scale(1.03);
-    }
-    
-    .pic:hover .imgtext {
-      -webkit-opacity: 1;
-      opacity: 1;
-    }
+.pic {
+    position: relative;
+    overflow: hidden;
+    margin: 50px auto;
 
-    
-  
+}
+
+.pic:hover img {
+    -webkit-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -ms-filter: blur(1px);
+    -o-filter: blur(1px);
+    filter: blur(1px);
+    transform: scale(1.03);
+}
+
+.pic:hover .imgtext {
+    -webkit-opacity: 1;
+    opacity: 1;
+}
 
 
 
-#sec-acerca{
+
+
+
+#sec-acerca {
     /*background-image: url(../img/acercapagprincipal.jpeg);*/
     background-image: url(../img/a2.jpeg);
     background-size: cover;
-    background-position: center center;    
+    background-position: center center;
 }
 
-.div1{
+.div1 {
     /*background-color: rgb(56, 55, 55);
     opacity: .45;*/
-    height: 432px;   
+    height: 432px;
 }
 
-.div2{
+.div2 {
     display: flex;
-  /*justify-content: center;
+    /*justify-content: center;
   align-items: center;
   /*height: 100vh;*/
 }
@@ -614,27 +642,24 @@
 
 
 
-  /*--------------------------*/
+/*--------------------------*/
 
-.titulo-boton{
+.titulo-boton {
     font-size: 20px;
     font-family: 'Raleway', sans-serif;
     font-style: bold;
-    
-}
-
-
-
-
-.owl-nav{
-    display:none
 
 }
 
-.fila-cat{
+
+
+
+.owl-nav {
+    display: none
+}
+
+.fila-cat {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
-
