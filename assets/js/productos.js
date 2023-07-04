@@ -1,7 +1,5 @@
 //variable que almacena las posiciones y funge como indice
 var posiciones = [];
-//Arreglo en el cual se almacenan los productos ingresados a la bolsa del cliente
-let cartShopping = JSON.parse(localStorage.getItem("CartShopping")) || [];
 //Conexion con api o json
 var productosjson = fetch('./assets/js/productos.json')
 .then(response => response.json())
@@ -53,7 +51,6 @@ function addProducto(filtro) {
         //forEach con parametro objeto y indice, el parametro objeto funge como variable de los objetos al cual se puede acceder mediante objeto.value (key)
 
         //el parametro indice funge como indice sobre las posiciones de los objetos dentro del array
-
         array.forEach(function (objeto, indice) {
             //condicional de filtro donde pasa al parametro posiciones.push(indice) en donde empuja la condicional del filtro al parametro indice, donde retorna las posiciones de los obejetos aplicados por el filtro
             if (filtro === 'cojinesfiltro' && objeto.categoria === 'cojines') {
@@ -130,25 +127,25 @@ function addProducto(filtro) {
                                                      </div>
                                                      <div class="text_product_modal"
                                                          id="color_product_catalog">
-                                                         ${objeto.color}
+                                                        Color: ${objeto.color}
                                                      </div>
                                                      <div class="text_product_modal"
                                                          id="size_product_catalog">
-                                                         ${objeto.tamaño}
+                                                         Tamaño: ${objeto.tamaño}
                                                      </div>
                                                      <div class="text_product_modal"
                                                          id="material_ product_catalog">
-                                                         ${objeto.material}
+                                                         Material: ${objeto.material}
                                                      </div>
                                                      <div class="text_product_modal"
                                                          id="composition_ product_catalog">
-                                                         ${objeto.composicion}
+                                                         Composición: ${objeto.composicion}
                                                      </div>
                                                      <br>
             
                                                      <div class="container-fluid " id="button_content_modal">
                                                     
-                                                     <button  id="addCart${indice}" class = "addCartButtons"> Añadir al carrito</button>
+                                                     <button id="addCart"> Añadir al carrito</button>
                                             
                                            
                                                 
@@ -173,26 +170,12 @@ function addProducto(filtro) {
           //empuja los objetos impresos al array
           objetosImpresos.push(indice); // Marcar el objeto como impreso
 
-          
-        //se trae del html el id de addCart con el índice del producto
-        var addCartButton = document.getElementById(`addCart${indice}`);
-
-        // addEvenlistener para el  "addCartButton", para que cada vez que se presione el botón de "addCart" se emmpuje el objeto al arreglo cartShopping
-        addCartButton.addEventListener("click", function() {
-          
-        cartShopping.push(objeto);
-        //Se guara el arreglo cartShopping en el localStorage
-        localStorage.setItem("CartShopping", JSON.stringify(cartShopping) );
-        });
-
         }
         });
     
       });
 }
-
 //carga los producos al cargar o recargar la pagina al principio
-
 document.addEventListener("DOMContentLoaded", function() {
     addProducto();
   });
@@ -205,53 +188,118 @@ document.addEventListener("DOMContentLoaded", function() {
 
   colchasfiltro.addEventListener('click', function() {
     divProductos.innerHTML = ""; // Limpiar el contenido previo en el contenedor
-    addProducto('colchasfiltro'); // Llamar a addProductos() con el filtro 2
+    addProducto('colchasfiltro'); // Llamar a addProductos() con el filtro 1
   });
 
   mantelesfiltro.addEventListener('click', function() {
     divProductos.innerHTML = ""; // Limpiar el contenido previo en el contenedor
-    addProducto('mantelesfiltro'); // Llamar a addProductos() con el filtro 3
+    addProducto('mantelesfiltro'); // Llamar a addProductos() con el filtro 1
   });
 
   tapetesfiltro.addEventListener('click', function() {
     divProductos.innerHTML = ""; // Limpiar el contenido previo en el contenedor
-    addProducto('tapetesfiltro'); // Llamar a addProductos() con el filtro 4
+    addProducto('tapetesfiltro'); // Llamar a addProductos() con el filtro 1
   });
 //Termina lo referente a pintar el catalogo de prodcutos del html
 
 
+//Inicia catalogo de los productos más vendidos
+const catalogoMasVendidos = [{
+    id: "prod-coj-01",
+    producto: "Funda para cojin",
+    categoria: "cojines",
+    precio: 250,
+    color: "Azul",
+    tamaño: "50x50 cm",
+    material: "Algodon",
+    composicion: "100% natural",
+    consecutivo: 1,
+    img: "./assets/img/productos/prod-coj-01.jpg",
+},
+{
+    id: "prod-coj-02",
+    producto: "Funda para cojin",
+    categoria: "cojines",
+    precio: 300,
+    color: "rosa",
+    tamaño: "50x50 cm",
+    material: "Algodon orgánico",
+    composicion: "100% natural",
+    consecutivo: 2,
+    img: "./assets/img/productos/prod-coj-02.jpg",
+},
+{
+    id: "prod-coj-03",
+    producto: "Funda para cojin",
+    categoria: "cojines",
+    precio: 350,
+    color: "Gris",
+    tamaño: "50x50 cm",
+    material: "Algodon",
+    composicion: "100% natural",
+    consecutivo: 1,
+    img: "./assets/img/productos/prod-coj-03.jpg",
+},
+{
+    id: "prod-coj-05",
+    producto: "Funda para cojin",
+    categoria: "cojines",
+    precio: 250,
+    color: "Blanco",
+    tamaño: "50x50 cm",
+    material: "Algodon",
+    composicion: "100% natural",
+    consecutivo: 1,
+    img: "./assets/img/productos/prod-coj-05.jpg",
+},
+{
+    id: "prod-coj-06",
+    producto: "Funda para cojin",
+    categoria: "cojines",
+    precio: 250,
+    color: "Negro",
+    tamaño: "50x50 cm",
+    material: "Algodon",
+    composicion: "100% natural",
+    consecutivo: 1,
+    img: "./assets/img/productos/prod-coj-06.jpg",
+},
+{
+    id: "prod-coj-08",
+    producto: "Funda para cojin",
+    categoria: "cojines",
+    precio: 450,
+    color: "Gris",
+    tamaño: "50x50 cm",
+    material: "Algodon orgánico",
+    composicion: "100% natural",
+    consecutivo: 1,
+    img: "./assets/img/productos/prod-coj-08.jpg",
+}];
 
 //Inicia lo referente a pintar el carousel del html
 
-const divCarousel = document.querySelector("#productosCarousel");
+const divCarousel = document.getElementById("productosCarousel");
 
 function addProductoCarousel() {
-//conexion a la promesa que retorna las espuestas del json
-    productosjson.then(array => {
-//filtro para seleccionar olo 5 productos del arreglo de objetos
-        const tope = 5;
-        const productostop = array.slice(0, tope);
-//fin del filtro
+ 
 
-//se usa productostop porque es la variable que trae el arreglo y contiene un limite de 5 productos
-    productostop.forEach(function (objeto) {
+    
+    catalogoMasVendidos.forEach(function (objeto) {
 
         var productCardCarousel = document.createElement("div");
         productCardCarousel.classList = "item";
 
         productCardCarousel.innerHTML = `
-        <div class="card" id="imageButton">
-        <img src="${objeto.img}"
-        alt="Producto" class="card-img-top">
-    </div>
-
+        <div class="card" id="">
+          <img src="${objeto.img}" alt="Tapete geométrico naranja 1.20 2" class="card-img-top">
+        </div>
 `;
+        console.log(productCardCarousel);
         divCarousel.appendChild(productCardCarousel);
     });
-    });
-//fin de la conexion con la promesa
+    
 }
-
 
 addProductoCarousel();
 
@@ -378,3 +426,4 @@ $('.owl-carousel').owlCarousel({
 
 //Creamos el botón de escucha
 //imageProductButton.addEventListener("click", imageButtons);
+
