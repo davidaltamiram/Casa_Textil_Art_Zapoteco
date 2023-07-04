@@ -1,8 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree&display=swap');
 
 
+.labelsContactanos{
+    font-family: 'Figtree', sans-serif;
+    font-size: 24px;
+    padding-left: 205px;
+
+}
+
+.inputsContactanos{
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #5E412F;
+    border-radius: 10px;
+    height: 40px;
+   
+}
+
+
+.inputsContactanos2{
+
+    padding-left: 15%;
+padding-right: 12%;
+}
+
+
+
+
+
+
+
 .text-center{
-    text-align: center;
+  
     align-items: center;
 }
 
@@ -10,7 +39,6 @@
 .enviarBtn {
     box-sizing: border-box;
 
-    position: relative;
     height: 52px;
     width: 158px;
     margin-top: 31px;
@@ -21,6 +49,7 @@
     background: #78C0A8;
     border: 1px solid #78C0A8;
     border-radius: 10px;
+
 }
 
 .tituloContactanos {
@@ -105,8 +134,7 @@
 .requisitos{
     font-family: 'Figtree', sans-serif;
     font-size: 24px;
-    position: relative;
-    left: 198px;
+    
 }
 .colEntradas{
     margin-left: -40%; 
@@ -117,11 +145,10 @@
     background: #FFFFFF;
     border: 1px solid #5E412F;
     border-radius: 10px;
-    width: 85%;
     height: 40px;
 }
 
-#nombreLabel{
+/* #nombreLabel{
     margin-top: 54px;
     margin-bottom: 0px;
 }
@@ -162,7 +189,7 @@
     padding: 50px;
     align-items:center;
 
-}
+} */
 
 
 .mensajeError{
@@ -181,7 +208,7 @@
     
 }
 
-::placeholder{
+.inputsContactanos::placeholder{
     font-family: 'Figtree', sans-serif;
     font-size: 18px;
     position: absolute;
@@ -228,6 +255,37 @@
 /*Aquí empiezan las media query para la responsividad para celular*/
 
 @media (max-width: 767.98px) {
+
+    .labelsContactanos{
+        font-family: 'Figtree', sans-serif;
+        font-size: 16px;
+        padding-left: 27px;
+        
+    
+    }
+    
+    .inputsContactanos{
+        box-sizing: border-box;
+        background: #FFFFFF;
+        border: 1px solid #5E412F;
+        border-radius: 10px;
+        height: 40px;
+       
+    }
+    
+
+
+.inputsContactanos2{
+
+    padding-left: 3%;
+padding-right: 3%;
+} 
+
+
+
+
+    
+    
 
     .tituloContactanos {
         font-size: 32px;
@@ -395,12 +453,12 @@
         margin-bottom: 0px;
     }
 
-    ::placeholder{
+    .inputsContactanos::placeholder{
         font-family: 'Figtree', sans-serif;
         font-size: 14px;
         position: absolute;
-        left: 10%;
-        top: 7px;
+        left: 5%;
+        top: 25%;
 
     }
 }
@@ -409,7 +467,33 @@
 
 
 /* Para tablet */
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 1300px) {
+
+    .labelsContactanos{
+        font-family: 'Figtree', sans-serif;
+        font-size: 20px;
+        padding-left: 60px;
+        
+    
+    }
+    
+    .inputsContactanos{
+        box-sizing: border-box;
+        background: #FFFFFF;
+        border: 1px solid #5E412F;
+        border-radius: 10px;
+        height: 40px;
+       
+    }
+    
+
+
+.inputsContactanos2{
+
+    padding-left: 8%;
+padding-right: 10%;
+} 
+
 
     .tituloContactanos {
         font-size: 40px;
@@ -580,7 +664,7 @@
         margin-bottom: 0px;
     }
 
-    ::placeholder{
+    .inputsContactanos::placeholder{
         font-family: 'Figtree', sans-serif;
         font-size: 15px;
         position: absolute;

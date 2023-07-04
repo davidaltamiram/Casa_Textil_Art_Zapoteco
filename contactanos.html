@@ -397,9 +397,9 @@
                     <p class="clave" id="horario1">Horario de atención</p>
                 </div>
                 <div class="col">
-                    <p class="valor d-lg-none d-block d-md-none" id="horario2">Lun-Sab. 8:30 - 19:00. Dom. 8:30 - 17:00
+                    <p class="valor d-lg-none d-block d-md-none" id="horario2">Lun-Sab: 8:30 - 19:00 Dom: 8:30 - 17:00
                     </p>
-                    <p class="valor d-lg-block d-md-block d-none" id="horario2">Lunes-Sábado. 8:30 - 19:00. <br>Domingo.
+                    <p class="valor d-lg-block d-md-block d-none" id="horario2">Lunes-Sábado: 8:30 - 19:00 <br>Domingo:
                         8:30 - 17:00</p>
                 </div>
             </div>
@@ -421,7 +421,7 @@
     <!--Aquí temina la parte del separador-->
 
     <!--Aquí empieza el formulario-->
-    <div id="contenedor" class="container-fluid">
+    <!-- <div  id="contenedor" class="container-fluid">
         <form class="formulario" id="formContactanos">
             <div class="row" id="grupo_nombre">
                 <div class="col">
@@ -474,6 +474,56 @@
                 </div>
             </div>
         </form>
+    </div> -->
+
+    <div class="container-fluid" id="contenedor">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="contenedorFormulario">
+                    <form id="formContactanos" class="formulario">
+                        <div class="row mb-3" id="grupo_nombre">
+                            <label for="inputName3" class="col-sm-2 col-form-label labelsContactanos " >Nombre</label>
+                            <div class="col-sm-10 inputsContactanos2">
+                              <input type="text" class="form-control inputsContactanos" id="inputName3" name="nombre" placeholder="Ingrese su nombre">
+                              <p class="formulario__input-error mensajeError">Ingresa un nombre válido.</p>
+                            </div>
+                          </div>
+
+                        <div class="row mb-3" id="grupo_email">
+                          <label for="inputEmail3" class="col-sm-2 col-form-label labelsContactanos">Email</label>
+                          <div class="col-sm-10 inputsContactanos2">
+                            <input type="email" class="form-control inputsContactanos" id="inputEmail3" name="email" placeholder="ejempo@email.com">
+                            <p class="formulario__input-error mensajeError">Ingresa un email válido.</p>
+                          </div>
+                        </div>
+
+                        <div class="row mb-3" id="grupo_telefono">
+                            <label for="inputTel3" class="col-sm-2 col-form-label labelsContactanos" >Teléfono</label>
+                            <div class="col-sm-10 inputsContactanos2">
+                              <input type="tel" class="form-control inputsContactanos" id="inputTel3" name="telefono" placeholder="Ingrese su número telefónico">
+                              <p class="formulario__input-error mensajeError">Ingresa un número válido de 7 a 14 dígitos.</p>
+                            </div>
+                          </div>
+
+                          <div class="row mb-3" id="grupo_mensaje">
+                            <label for="inputMensaje3" class="col-sm-2 col-form-label labelsContactanos">Mensaje</label>
+                            <div class="col-sm-10 inputsContactanos2">
+                              <input type="text" class="form-control inputsContactanos" id="inputMensaje3" name="mensaje" placeholder="Ingrese su mensaje">
+                              <p class="formulario__input-error mensajeError">Favor de ingresar un mensaje de 10 a 500 caracteres.
+                            </div>
+                          </div>
+                        <div class="text-center">
+                        <button type="submit" class="enviarBtn">Enviar</button>
+                        <p class="formulario__mensaje-exito mensajeBoton" id="formulario__mensaje-exito">Se ha enviado la
+                            información
+                        </p>
+                        <p class="formulario__mensaje mensajeBoton" id="formulario__mensaje">Favor de llenar todos los
+                            campos</p>
+                        </div>
+                      </form>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!--Aquí termina el formulario-->
