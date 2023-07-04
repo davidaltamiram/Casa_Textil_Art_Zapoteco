@@ -43,10 +43,10 @@ const mantelesfiltro = document.getElementById("manteles");
 const tapetesfiltro = document.getElementById("tapetes");
 
 //funcion con parametro filtro
-function addProducto(filtro) {
+function addProducto(filtro,arregloProductos) {
 
     //promesa con funcion array 
-    productosjson.then(array => {
+    arregloProductos.then(array => {
         //variable de objetos ya impresos en pantalla
         var objetosImpresos = []; 
 
@@ -194,28 +194,28 @@ function addProducto(filtro) {
 //carga los producos al cargar o recargar la pagina al principio
 
 document.addEventListener("DOMContentLoaded", function() {
-    addProducto();
+    addProducto(null, productosjson);
   });
 
   //hace accionar el parametro filtro que acciona la condicional, pasando los datos de la posiciones a indice empujando como resultado los objetos filtrados por su tipo de categoria
   cojinesfiltro.addEventListener('click', function() {
     divProductos.innerHTML = ""; // Limpiar el contenido previo en el contenedor
-    addProducto('cojinesfiltro'); // Llamar a addProductos() con el filtro 1
+    addProducto('cojinesfiltro', productosjson); // Llamar a addProductos() con el filtro 1
   });
 
   colchasfiltro.addEventListener('click', function() {
     divProductos.innerHTML = ""; // Limpiar el contenido previo en el contenedor
-    addProducto('colchasfiltro'); // Llamar a addProductos() con el filtro 2
+    addProducto('colchasfiltro', productosjson); // Llamar a addProductos() con el filtro 2
   });
 
   mantelesfiltro.addEventListener('click', function() {
     divProductos.innerHTML = ""; // Limpiar el contenido previo en el contenedor
-    addProducto('mantelesfiltro'); // Llamar a addProductos() con el filtro 3
+    addProducto('mantelesfiltro', productosjson); // Llamar a addProductos() con el filtro 3
   });
 
   tapetesfiltro.addEventListener('click', function() {
     divProductos.innerHTML = ""; // Limpiar el contenido previo en el contenedor
-    addProducto('tapetesfiltro'); // Llamar a addProductos() con el filtro 4
+    addProducto('tapetesfiltro', productosjson); // Llamar a addProductos() con el filtro 4
   });
 //Termina lo referente a pintar el catalogo de prodcutos del html
 
@@ -279,6 +279,213 @@ $('.owl-carousel').owlCarousel({
         }
     }
 });
+
+
+ //Inicia la logica para la funcionalidad del filttro
+ const botonFiltrar = document.getElementById("filtrar-boton");
+ const botonlimpiarFiltro = document.getElementById("limpiar-filtro");
+
+ //Botones del modal
+ const botonFiltrarModal = document.getElementById("filtrar-boton-modal");
+ const botonlimpiarFiltroModal = document.getElementById("limpiar-filtro-modal");
+
+//Aqui se colocan los elementos del chechbox lateral
+const checkCojin = document.getElementById("cojin-lateral");
+const checkColcha = document.getElementById("colcha-lateral");
+const checkManteles = document.getElementById("mantel-lateral");
+const checkTapetes = document.getElementById("tapetes-lateral");
+
+const checkAlgodon = document.getElementById("algodon-lateral");
+const checkLana = document.getElementById("lana-lateral");
+
+const checkAzul = document.getElementById("azul-lateral");
+const checkCafe = document.getElementById("cafe-lateral");
+const checkGris = document.getElementById("gris-lateral");
+const checkNaranja = document.getElementById("naranja-lateral");
+const checkNegro = document.getElementById("negro-lateral");
+const checkRojo = document.getElementById("rojo-lateral");
+const checkRosa = document.getElementById("rosa-lateral");
+const checkVerde = document.getElementById("verde-lateral");
+
+//Aqui se colocan los elementos del chechbox del modal
+const checkCojinModal = document.getElementById("cojin-modal");
+const checkColchaModal = document.getElementById("colcha-modal");
+const checkMantelesModal = document.getElementById("mantel-modal");
+const checkTapetesModal = document.getElementById("tapetes-modal");
+
+const checkAlgodonModal = document.getElementById("algodon-modal");
+const checkLanaModal = document.getElementById("lana-modal");
+
+const checkAzulModal = document.getElementById("azul-modal");
+const checkCafeModal = document.getElementById("cafe-modal");
+const checkGrisModal = document.getElementById("gris-modal");
+const checkNaranjaModal = document.getElementById("naranja-modal");
+const checkNegroModal = document.getElementById("negro-modal");
+const checkRojoModal = document.getElementById("rojo-modal");
+const checkRosaModal = document.getElementById("rosa-modal");
+const checkVerdeModal = document.getElementById("verde-modal");
+
+//Funcionalidad del boton borrar filtro y checkboxes
+botonlimpiarFiltro.addEventListener("click", ()=>{
+    divProductos.innerHTML = ""
+    addProducto(null, productosjson);
+    uncheckAll();
+});
+
+//Funcionalidad del boton borrar filtro y checkboxes Modal
+botonlimpiarFiltroModal.addEventListener("click", (e)=>{
+    e.preventDefault();
+    divProductos.innerHTML = ""
+    addProducto(null, productosjson);
+    uncheckAll();
+});
+
+//Funcionalidad del boton filtrar
+var arregloFiltros = [];
+
+botonFiltrar.addEventListener("click",()=>{
+    filtrosCheckbox();
+    const arreglocheckbox = collectFilteredItems(arregloFiltros);
+    if(arregloFiltros.length !== 0){
+        divProductos.innerHTML = ""
+        addProducto(null, arreglocheckbox);
+        arregloFiltros = [];
+    }
+});
+
+//Funcionalidad del boton filtrar Modal
+botonFiltrarModal.addEventListener("click",(e)=>{
+    filtrosCheckbox();
+    const arreglocheckbox = collectFilteredItems(arregloFiltros);
+    if(arregloFiltros.length !== 0){
+        divProductos.innerHTML = ""
+        addProducto(null, arreglocheckbox);
+        arregloFiltros = [];
+    }
+});
+
+//Funcion para recolectar los filtros del checkbox
+function filtrosCheckbox(){
+
+    if(checkCojin.checked || checkCojinModal.checked){
+        arregloFiltros.push(checkCojin.value.toLowerCase())
+    }
+    if(checkColcha.checked || checkColchaModal.checked){
+        arregloFiltros.push(checkColcha.value.toLowerCase())
+    }
+    if(checkManteles.checked || checkMantelesModal.checked){
+        arregloFiltros.push(checkManteles.value.toLowerCase())
+    }
+    if(checkTapetes.checked || checkTapetesModal.checked){
+        arregloFiltros.push(checkTapetes.value.toLowerCase())
+    }
+
+    if(checkAlgodon.checked || checkAlgodonModal.checked){
+        arregloFiltros.push(checkAlgodon.value.toLowerCase())
+    }
+    if(checkLana.checked || checkLanaModal.checked){
+        arregloFiltros.push(checkLana.value.toLowerCase())
+    }
+
+    if(checkAzul.checked || checkAzulModal.checked){
+        arregloFiltros.push(checkAzul.value.toLowerCase())
+    }
+    if(checkCafe.checked || checkCafeModal.checked){
+        arregloFiltros.push(checkCafe.value.toLowerCase())
+    }
+    if(checkGris.checked || checkGrisModal.checked){
+        arregloFiltros.push(checkGris.value.toLowerCase())
+    }
+    if(checkNaranja.checked  || checkNaranjaModal.checked){
+        arregloFiltros.push(checkNaranja.value.toLowerCase())
+    }
+    if(checkNegro.checked || checkNegroModal.checked){
+        arregloFiltros.push(checkNegro.value.toLowerCase())
+    }
+    if(checkRojo.checked || checkRojoModal.checked){
+        arregloFiltros.push(checkRojo.value.toLowerCase())
+    }
+    if(checkRosa.checked || checkRosaModal.checked){
+        arregloFiltros.push(checkRosa.value.toLowerCase())
+    }
+    if(checkVerde.checked || checkVerdeModal.checked){
+        arregloFiltros.push(checkVerde.value.toLowerCase())
+    }
+
+};
+
+//Funcion para desmarcar checkboxes
+
+function uncheckAll(){
+    checkCojin.checked = false;
+    checkCojinModal.checked = false;
+    checkColcha.checked = false;
+    checkColchaModal.checked = false;
+    checkManteles.checked = false;
+    checkMantelesModal.checked = false;
+    checkTapetes.checked = false;
+    checkTapetesModal.checked = false;
+    checkAlgodon.checked = false;
+    checkAlgodonModal.checked = false;
+    checkLana.checked = false;
+    checkLanaModal.checked = false;
+    checkAzul.checked = false;
+    checkAzulModal.checked = false;
+    checkCafe.checked = false;
+    checkCafeModal.checked = false;
+    checkGris.checked = false;
+    checkGrisModal.checked = false;
+    checkNaranja.checked = false;
+    checkNaranjaModal.checked = false;
+    checkNegro.checked = false;
+    checkNegroModal.checked = false;
+    checkRojo.checked = false;
+    checkRojoModal.checked = false;
+    checkRosa.checked = false;
+    checkRosaModal.checked = false;
+    checkVerde.checked = false;
+    checkVerdeModal.checked = false;  
+};
+
+//Funcion de filtrado de elementos
+async function collectFilteredItems(searchElement) {
+    var searchArray = [];
+    var found = [];
+    
+    const arrayProductos = await productosjson;
+    
+    searchElement.forEach(searchElement => {
+
+      const searchWord = searchElement;
+  
+      arrayProductos.forEach(item=> {
+        const lowerCaseProducto = item.producto.toLowerCase();
+        const lowerCaseCategoria = item.categoria.toLowerCase();
+        const lowerCaseColor = item.color.toLowerCase();
+        const lowerCaseMaterial = item.material.toLowerCase();
+        
+        if ((lowerCaseProducto.includes(searchWord) || 
+            lowerCaseCategoria.includes(searchWord)||
+            lowerCaseColor.includes(searchWord) ||
+            lowerCaseMaterial.includes(searchWord)) &&
+            !productoEncontrado(found, item)){
+  
+          searchArray.push(item);
+          found.push(item);     
+        } 
+      },
+    )});
+  
+      return searchArray;
+};
+
+//Funcion para buscar si X elemento ya se almaceno durante el filtrado, de ser asi excluirlo.
+function productoEncontrado(elementosAlmacenados, buscar){
+    return elementosAlmacenados.some(search => {return search.id===buscar.id })
+};
+
+
+
 
 //Finaliza jQuery carousel
 
