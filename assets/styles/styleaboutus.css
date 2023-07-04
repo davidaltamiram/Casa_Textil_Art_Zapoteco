@@ -128,3 +128,9 @@
 	margin-bottom: 50px;
 }
 
+@media (min-width:993px){
+video{
+	height: 95vh;
+	width: 100vw;
+}
+}
