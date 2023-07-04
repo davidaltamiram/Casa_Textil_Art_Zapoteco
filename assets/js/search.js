@@ -1,6 +1,7 @@
 //Recolectar en arreglo con split para comprar coda elemento con el elemento del arreglo del json
 const searchWord = (localStorage.getItem('search').toLowerCase())
 const allElements="";
+console.log(searchWord);
 
 var posiciones = [];
 //Conexion con api o json
@@ -298,13 +299,13 @@ $('.owl-carousel').owlCarousel({
 mainButton.addEventListener("click", () => {
   localStorage.setItem('search',"");
   divProductos.innerHTML = ""; 
-  addProducto(null, mainInput.value); 
+  addProducto(null, mainInput.value.toLowerCase()); 
 });
 
 floatButton.addEventListener("click", () => {
   localStorage.setItem('search',"");
   divProductos.innerHTML = ""; 
-  addProducto(null, floatInput.value); 
+  addProducto(null, floatInput.value.toLowerCase()); 
   content.classList.add("d-none");
 });
 
@@ -313,13 +314,13 @@ mainForm.addEventListener("submit", (e) => {
   e.preventDefault();
   localStorage.setItem('search',"");
   divProductos.innerHTML = ""; 
-  addProducto(null, mainInput.value); 
+  addProducto(null, mainInput.value.toLowerCase()); 
 });
 
 floatForm.addEventListener("submit", (e) => {
   e.preventDefault();
   localStorage.setItem('search',"");
   divProductos.innerHTML = ""; 
-  addProducto(null, floatInput.value);
+  addProducto(null, floatInput.value.toLowerCase());
   content.classList.add("d-none"); 
 });
