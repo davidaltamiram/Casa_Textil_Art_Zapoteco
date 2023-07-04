@@ -12,9 +12,6 @@ var productosjson = fetch('./assets/js/productos.json')
 });
 //fin de conexion
 
-
-
-
 /*Inicio de elementos y evento de bton filtro en contenedor de productos*/
 var bton = document.getElementById("bton-filtro");
 var filtro = document.querySelector("#filtro");
@@ -188,29 +185,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
   colchasfiltro.addEventListener('click', function() {
     divProductos.innerHTML = ""; // Limpiar el contenido previo en el contenedor
-<<<<<<< HEAD
     addProducto('colchasfiltro', productosjson); // Llamar a addProductos() con el filtro 2
-=======
-    addProducto('colchasfiltro'); // Llamar a addProductos() con el filtro 1
->>>>>>> 3e128996a652412444919731b3248c3f03c6bfb3
   });
 
   mantelesfiltro.addEventListener('click', function() {
     divProductos.innerHTML = ""; // Limpiar el contenido previo en el contenedor
-<<<<<<< HEAD
     addProducto('mantelesfiltro', productosjson); // Llamar a addProductos() con el filtro 3
-=======
-    addProducto('mantelesfiltro'); // Llamar a addProductos() con el filtro 1
->>>>>>> 3e128996a652412444919731b3248c3f03c6bfb3
   });
 
   tapetesfiltro.addEventListener('click', function() {
     divProductos.innerHTML = ""; // Limpiar el contenido previo en el contenedor
-<<<<<<< HEAD
     addProducto('tapetesfiltro', productosjson); // Llamar a addProductos() con el filtro 4
-=======
-    addProducto('tapetesfiltro'); // Llamar a addProductos() con el filtro 1
->>>>>>> 3e128996a652412444919731b3248c3f03c6bfb3
   });
 //Termina lo referente a pintar el catalogo de prodcutos del html
 
