@@ -13,11 +13,28 @@
 
 
   <!--link to bootstrap-->
+  <!--QQQ Este link de donde salió, no es el mismo que aparece en bootstrap para el html-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <link rel="stylesheet" href="./assets/styles/stylecarritocompras.css">
+  <!--1. OWL CAROUSEL MIN.CSS-->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!--2. Owl Carousel Theme Min.css-->
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="./assets/styles/stylesearch.css">
   <link rel="stylesheet" href="./assets/styles/styleFooter.css">
 
   <!-- Navbar cristian -->
@@ -31,6 +48,7 @@
 </head>
 
 <body>
+
   <!-- Aqui inician las promos -->
   <div class="container-fluid nav-brd fnt promo-top sticky-top stcky" id="promo">
     <div class="row text-center">
@@ -340,113 +358,213 @@
       </div>
 
       <!-- <div class="bottom-external">
-              <ul class="navbar-nav external bottom">
-                  <li class="nav-item">
-                      <a class="nav-link active" href="#">Mi cuenta</a>
-                  </li>
-                  <li class="nav-item spanish">
-                      <a class="nav-link active" aria-current="page" href="#">Español</a>
-                  </li>
-                  <li class="nav-item english d-none">
-                      <a class="nav-link active" aria-current="page" href="#">English</a>
-                  </li>
-          </div> -->
+                <ul class="navbar-nav external bottom">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Mi cuenta</a>
+                    </li>
+                    <li class="nav-item spanish">
+                        <a class="nav-link active" aria-current="page" href="#">Español</a>
+                    </li>
+                    <li class="nav-item english d-none">
+                        <a class="nav-link active" aria-current="page" href="#">English</a>
+                    </li>
+            </div> -->
     </div>
     <!-- Fin de la barra lateral -->
 
   </div>
   <!-- Aqui termina el nav-bar -->
 
+  <!-- Inicio de contendor de bton -->
+  <div class="container-fluid">
 
- 
-  <div id="containerMyall" class="container ">
-    <div id="myBagTitle" class="container-fluid row">
-      Mi bolsa
+    <div class="boton">
+      <button type="button" class="filtro-bton d-none d-lg-block d-md-none d-sm-none " id="bton-filtro">
+        <!--The <i> tag defines a part of text in an alternate voice or mood. The content inside is typically displayed in italic.-->
+        <i class="fi fi-rs-settings-sliders" id="icon-filtro"> Filtro</i>
+      </button>
+
+      <button type="button" class="filtro-bton d-lg-none d-md-block d-sm-block d-block" data-bs-toggle="modal"
+        data-bs-target="#filtromodal">
+        <i class="fi fi-rs-settings-sliders" id="icon-filtro"> Filtro</i>
+      </button>
     </div>
-    <!-- window > 580  -->
-    <div id="containerMyBagOrder580" class="row ">
-      <div id="myBagContent580" class="">
-       
-        
 
-      </div>
+    <!-- Fin de contendor de bton -->
 
+    <!-- Contenedor area de productos -->
+    <div class="contenedorproductos">
+      <div class="row justify-content-center">
+        <!-- Inicio de filtro -->
+        <div class="col-lg-2" id="filtro">
+          <div class="d-none d-sm-none d-md-none d-lg-block">
+            <hr id="borde-filtro">
 
-
-      <div id="orderCompraCard" class=" card col-auto mb-3">
-        <div id="orderCompra" class="card-body">
-          <div class="card-title" id="orderCompraTitle"> Orden de compra</div>
-          <hr>
-          <div id="quantitySubtotal" class="card-text">
-            $250 MXN
+            <!--The lead class in Bootstrap is used to add emphasis to a paragraph.-->
+            <div class="categoria_producto check">
+              <p id="title_check">Tipo de Producto</p>
+              <!-- Check points -->
+              <label><input type="checkbox" value="cojines"> Cojínes </label><br>
+              <label><input type="checkbox" value="colchas"> Colchas </label><br>
+              <label><input type="checkbox" value="manteles"> Manteles </label><br>
+              <label><input type="checkbox" value="tapetes"> Tapetes </label><br>
+            </div>
+            <hr id="borde-filtro">
+            <div class="categoria_producto check">
+              <p id="title_check">Material</p>
+              <label><input type="checkbox" value="algodon"> Algodón </label><br>
+              <label><input type="checkbox" value="lana"> Lana </label><br>
+            </div>
+            <hr id="borde-filtro">
+            <div class="categoria_producto check">
+              <p id="title_check">Color</p>
+              <label><input type="checkbox" value="azul"> Azul </label><br>
+              <label><input type="checkbox" value="cafe"> Café </label><br>
+              <label><input type="checkbox" value="gris"> Gris </label><br>
+              <label><input type="checkbox" value="naranja"> Naranja </label><br>
+              <label><input type="checkbox" value="negro"> Negro </label><br>
+              <label><input type="checkbox" value="rojo"> Rojo</label><br>
+              <label><input type="checkbox" value="rosa"> Rosa </label><br>
+              <label><input type="checkbox" value="verde"> Verde </label><br>
+            </div>
+            <hr id="borde-filtro">
+            <div class="botones">
+              <button type="button" class="filtro-bton" id="">
+                <i class="fi fi-rs-settings-sliders" id="icon-filtro"> Aplicar</i>
+              </button>
+              <button type="button" class="filtro-bton" id="">
+                <i class=" fi-rs-settings-sliders" id="icon-filtro"> Borrar</i>
+              </button>
+            </div>
+            <!-- Fin de check points -->
           </div>
-          <div id="subtotal" class="card-text">
-            Subtotal
+        </div>
+
+        <!-- Filtro en modal -->
+
+        <div class="container d-lg-none d-md-block d-sm-block d-block">
+          <div class="modal fade" id="filtromodal" tabindex="-1" aria-labelledby="filtromodal" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="filtromodal">Filtro</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body ">
+                  <div class="col-md-12 col-sm-12 col-12" id="filtro">
+                    <div class="d-block d-sm-block d-md-block d-lg-none">
+                      <hr id="borde-filtro">
+
+                      <!--The lead class in Bootstrap is used to add emphasis to a paragraph.-->
+                      <div class="categoria_producto check">
+                        <p id="title_check">Tipo de Producto</p>
+                        <!-- Check points -->
+                        <label><input type="checkbox" value="cojines"> Cojínes </label><br>
+                        <label><input type="checkbox" value="colchas"> Colchas </label><br>
+                        <label><input type="checkbox" value="manteles"> Manteles </label><br>
+                        <label><input type="checkbox" value="tapetes"> Tapetes </label><br>
+                      </div>
+                      <hr id="borde-filtro">
+                      <div class="categoria_producto check">
+                        <p id="title_check">Material</p>
+                        <label><input type="checkbox" value="algodon"> Algodón </label><br>
+                        <label><input type="checkbox" value="lana"> Lana </label><br>
+                      </div>
+                      <hr id="borde-filtro">
+                      <div class="categoria_producto check">
+                        <p id="title_check">Color</p>
+                        <label><input type="checkbox" value="azul"> Azul </label><br>
+                        <label><input type="checkbox" value="cafe"> Café </label><br>
+                        <label><input type="checkbox" value="gris"> Gris </label><br>
+                        <label><input type="checkbox" value="naranja"> Naranja </label><br>
+                        <label><input type="checkbox" value="negro"> Negro </label><br>
+                        <label><input type="checkbox" value="rojo"> Rojo</label><br>
+                        <label><input type="checkbox" value="rosa"> Rosa </label><br>
+                        <label><input type="checkbox" value="verde"> Verde </label><br>
+                      </div>
+                      <hr id="borde-filtro">
+                      <!-- Fin de check points -->
+                    </div>
+                  </div>
+                </div>
+
+                <div class="modal-footer">
+                  <button type="button" class="btn filtro-bton " data-bs-dismiss="modal">Borrar</button>
+                  <button type="button" class="btn filtro-bton ">Aplicar</button>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="card-text" id="color_product_catalog">
-            <button id="procederPago"> Proceder al pago</button>
+        </div>
+        <!-- Fin filtro en modal -->
+        <!-- Fin de filtro -->
+
+
+
+
+        <!-- Contenedor de categorías y productos a mostrar -->
+        <div class="col-sm-12 col-md-12 col-lg-10 " class="row justify-content-center">
+
+
+          <div class="row">
+
+            <!-- Contenedor de categorias -->
+            <div class="contenedorcategorias justify-content-center" style="margin-bottom: 1rem;">
+              <div class="row justify-content-center text-dark">
+                <div class="col-3 col-sm-3 col-md-2 col-lg-">
+                  <p type="button" id="allElements">MOSTRAR TODO</p>
+                </div>
+
+                <div class="col-3 col-sm-3 col-md-2 col-lg-">
+                  <p type="button" id="cojines">COJÍNES</p>
+                </div>
+
+                <div class="col-3 col-sm-3 col-md-2 col-lg-2">
+                  <p type="button" id="colchas">COLCHAS</p>
+                </div>
+
+                <div class="col-3 col-sm-3 col-md-2 col-lg-2">
+                  <p type="button" id="manteles">MANTELES</p>
+                </div>
+
+                <div class="col-3 col-sm-3 col-md-2 col-lg-2">
+                  <p type="button" id="tapetes">TAPETES</p>
+                </div>
+              </div>
+            </div>
+            <!-- Termina el contenedor de categorias  -->
+            <!--Inicia el contenedor de productos-->
+            <div class="row justify-content-center" id="contenedor">
+
+            </div>
+            <!-- Fin de contenedor de productos -->
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- 460 > window <= 580  -->
 
 
-    <div id="containerMyBagOrder460" class="row ">
-      <div id="myBagContent460">
-      </div>
-        
-
-      <div id="orderCompraCard" class=" card col-auto mb-3">
-        <div id="orderCompra" class="card-body">
-          <div class="card-title" id="orderCompraTitle"> Orden de compra</div>
-          <hr>
-          <div id="quantitySubtotal" class="card-text">
-            $250 MXN
-          </div>
-          <div id="subtotal" class="card-text">
-            Subtotal
-          </div>
-          <div class="card-text" id="color_product_catalog">
-            <button id="procederPago"> Proceder al pago</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-
-
-
-    <!--  window <= 460  -->
-
-
-    <div id="containerMyBagOrderMobile" class="row container-fluid">
-      <div id="myBagContentMobile">
-        
-
-
-      </div>
-
-      <div id="orderCompraCard" class=" card col-auto mb-3">
-        <div id="orderCompra" class="card-body">
-          <div class="card-title" id="orderCompraTitle"> Orden de compra</div>
-          <hr>
-          <div id="quantitySubtotal" class="card-text">
-            $250 MXN
-          </div>
-          <div id="subtotal" class="card-text">
-            Subtotal
-          </div>
-          <div class="card-text" id="color_product_catalog">
-            <button id="procederPago"> Proceder al pago</button>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
+
+  <!-- Galeria de imagenes de productos -->
+
+  <hr>
+
+  <div class="container" id="subtituloCarousel" class="text-center display-1 mb-3"> El arte de la decoración </div>
+
+  <div class="row mt-5">
+    <div class="owl-carousel owl-theme" id="productosCarousel">
+
+
+    </div>
+
+  </div>
+
+
+
+
+
 
 
 
@@ -454,7 +572,7 @@
 
   <div id="footer"></div>
 
-
+  <!-- Fin de galeria de imagenes de productos -->
 
   <!--let's include cdn files-->
 
@@ -477,8 +595,7 @@
 
   <script src="./assets/js/nav-bar.js"></script>
   <script src="./assets/js/footer.js"></script>
-  <script src="./assets/js/carritocompras.js"></script>
-
+  <script src="./assets/js/search.js"></script>
 </body>
 
 </html>

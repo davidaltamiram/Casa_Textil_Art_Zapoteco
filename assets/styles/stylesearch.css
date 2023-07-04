@@ -123,7 +123,7 @@ p{
 
 #imageButton{
     width: auto;
-    box-sizing: none;
+    box-sizing: unset;
     vertical-align: middle;
     border: none;
     background-color: white;
@@ -159,7 +159,7 @@ p{
     font-weight: normal;
 }
 
-.addCartButtons{
+#addCart{
     color: black;
     border-radius: 10px;
     font-size: 18px;
