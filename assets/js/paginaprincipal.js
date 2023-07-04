@@ -22,9 +22,30 @@ $('.owl-carousel').owlCarousel({
     }
 });
 
+const botonCojines = document.querySelector('#cojinesBoton');
+
+botonCojines.addEventListener("click", () => {
+    localStorage.setItem('search', "cojines");
+    window.location.href = "./search.html";
+});
+
 const botonColchas = document.querySelector('#colchasBoton');
 
 botonColchas.addEventListener("click", () => {
     localStorage.setItem('search', "colchas");
+    window.location.href = "./search.html";
+});
+
+const botonTapetes = document.querySelector('#tapetesBoton');
+
+botonTapetes.addEventListener("click", () => {
+    localStorage.setItem('search', "tapetes");
+    window.location.href = "./search.html";
+});
+
+const botonManteles = document.querySelector('#mantelesBoton');
+
+botonManteles.addEventListener("click", () => {
+    localStorage.setItem('search', "manteles");
     window.location.href = "./search.html";
 });
