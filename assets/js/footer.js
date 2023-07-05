@@ -7,7 +7,7 @@ footer.innerHTML = `
     <hr>
     <h1 class="visitanos">Visítanos</h1>
     <p class="Datos">
-    Carretera a Teotitlán del valle KM 0.5 S/N
+    Carretera a Teotitlán del Valle KM 0.5 S/N
     <br>
     Lunes - Sábado: 8:30 - 19:00
     <br>
