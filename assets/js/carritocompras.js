@@ -1,10 +1,17 @@
 let cartShopping = JSON.parse(localStorage.getItem("CartShopping")) || [];
 
-console.log(cartShopping);
+
+
 
 const containerMyBagOrder580SH = document.getElementById("containerMyBagOrder580");
+
 const containerMyBagOrder460SH = document.getElementById("containerMyBagOrder460");
 const containerMyBagOrderMobileSH = document.getElementById("containerMyBagOrderMobile");
+const quantitySubtotalProduct580 = document.querySelector("#quantitySubtotal580");
+const quantitySubtotalProduct460 = document.querySelector("#quantitySubtotal460");
+const quantitySubtotalProductMobile = document.getElementById("quantitySubtotalMobile");
+console.log(quantitySubtotalProductMobile);
+
 
 
 
@@ -100,7 +107,7 @@ function addMyBagContent580() {
               <div> $${objeto.precio} MXN</div>
             </div>
             <div id="crossButton" class="col-auto">
-              <button id="cross-icon-button" type="button">
+              <button id="cross-icon-button580${indice}" class = "cross-icon-buttons" type="button">
                 <i id="cross-icon" class="fi fi-sr-cross"></i>
               </button>
             </div>
@@ -111,9 +118,40 @@ function addMyBagContent580() {
     divMyBagContent580.appendChild(myBagContent);
    
 
+    var deleteButton = document.getElementById(`cross-icon-button580${indice}`);
+
+
+
+    deleteButton.addEventListener("click", function() {
+      console.log("Antes del splice dentro de la funcion", cartShopping)
+
+      cartShopping.splice(indice, 1);
+      divMyBagContent580.innerHTML = "";
+      addMyBagContent580();
+
+      const subtotalProducts = cartShopping.reduce((acc, producto) => acc + producto.precio, 0);
+      quantitySubtotalProduct580.innerHTML = `$${subtotalProducts} MXN`;
+      localStorage.setItem("CartShopping", JSON.stringify(cartShopping));
+      console.log("Despues set local storage", cartShopping)
+      
+
+
+
+
+      });
+
 
     });
+   
 
+
+    //Price in the modal
+    const subtotalProducts = cartShopping.reduce((acc, producto) => acc + producto.precio, 0);
+    
+    quantitySubtotalProduct580.innerHTML = `$${subtotalProducts} MXN`;
+    
+  
+    
    
 
 
@@ -133,7 +171,7 @@ const divMyBagContent460 = document.querySelector("#myBagContent460");
 
 function addMyBagContent460() {
  
-    var printedProducts = [];
+   
 
     cartShopping.forEach(function (objeto, indice) {
 
@@ -160,7 +198,7 @@ function addMyBagContent460() {
         </div>
       </div>
       <div id="crossButton" class="col-auto">
-        <button id="cross-icon-button" type="button">
+        <button id="cross-icon-button460${indice}" class = "cross-icon-buttons" type="button">
           <i id="cross-icon" class="fi fi-sr-cross"></i>
         </button>
       </div>
@@ -185,11 +223,35 @@ function addMyBagContent460() {
     `;
 
       divMyBagContent460.appendChild(myBagContent);
-      printedProducts.push(indice);
+
+      var deleteButton = document.getElementById(`cross-icon-button460${indice}`);
+
+      deleteButton.addEventListener("click", function() {
+
+        cartShopping.splice(indice, 1);
+        divMyBagContent460.innerHTML = "";
+        addMyBagContent460();
+        
+        const subtotalProducts = cartShopping.reduce((acc, producto) => acc + producto.precio, 0);
+        quantitySubtotalProduct460.innerHTML = `$${subtotalProducts} MXN`;
+        localStorage.setItem("CartShopping", JSON.stringify(cartShopping));
+  
+  
+  
+  
+        });
+      
 
     });
 
 
+  //Price in the modal
+  const subtotalProducts = cartShopping.reduce((acc, producto) => acc + producto.precio, 0);
+    
+  quantitySubtotalProduct460.innerHTML = `$${subtotalProducts} MXN`;
+  
+
+  
 
 
   
@@ -227,7 +289,7 @@ function addMyBagContentMobile() {
             alt="...">
         </div>
         <div id="crossButton" class="col-auto">
-          <button id="cross-icon-button" type="button">
+          <button id="cross-icon-buttonMobile${indice}" class = "cross-icon-buttons" type="button">
             <i id="cross-icon" class="fi fi-sr-cross"></i>
           </button>
         </div>
@@ -268,13 +330,37 @@ function addMyBagContentMobile() {
       divMyBagContentMobile.appendChild(myBagContent);
 
 
+      var deleteButton = document.getElementById(`cross-icon-buttonMobile${indice}`);
+
+
+      deleteButton.addEventListener("click", function() {
+  
+        cartShopping.splice(indice, 1);
+        divMyBagContentMobile.innerHTML = "";
+        addMyBagContentMobile();
+  
+        const subtotalProducts = cartShopping.reduce((acc, producto) => acc + producto.precio, 0);
+        quantitySubtotalProductMobile.innerHTML = `$${subtotalProducts} MXN`;
+        localStorage.setItem("CartShopping", JSON.stringify(cartShopping));
+  
+  
+  
+  
+        });
+  
+      
+
+
     });
 
 
+  //Price in the modal
+  const subtotalProducts = cartShopping.reduce((acc, producto) => acc + producto.precio, 0);
+    
+  quantitySubtotalProductMobile.innerHTML = `$${subtotalProducts} MXN`;
+  
 
-
-
-
+  
 
 
 }
@@ -293,7 +379,6 @@ document.addEventListener("DOMContentLoaded", function(){
     console.log("Loaded cart from local storage: ", cartShopping);
   }
 })
-
 
 
 
