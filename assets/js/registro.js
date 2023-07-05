@@ -21,7 +21,8 @@ const campos = {
 }
 
 
-
+// Esto activa la validación dependiendo el input seleccionado con los atributos expresiones que selecciona que expresión Regex aplicar,
+// el e.target a cual y el string que haga match con el e.taget.name
 const validarFormulario = (e) => {
 	switch (e.target.name) {
 		case "nombre":
@@ -36,22 +37,26 @@ const validarFormulario = (e) => {
 			break;
 		case "email":
 			validarCampo(expresiones.correo, e.target, 'email');
+
+			//Esto trae todo localStorage con el Key usuario, teniendo como value un JSON con todos los correos registrados
 			var checkStorage = localStorage.getItem('usuarios');
 
+			//Si no hay ningún correo registrado
 			if (checkStorage === null) {
-				campos.emailNuevo = true;
+				campos.emailNuevo = true; //no aplica ningún filtro y deja registrarse, cambiando el campo a true
 
-			} else {
+			} else { //de lo contrario
 
+				//parsea el JSON para que sea un array y buscar dentro del mismo los correos para hacer validación 
 				var checkStorage = JSON.parse(checkStorage);
-				for (let users of checkStorage) {
-					if (users.email.toLowerCase() === emailUsuario.value.toLowerCase()) {
-						document.querySelector(`#grupo_email .formulario__email-error`).classList.add('formulario__email-error-activo');
-						campos.emailNuevo = false;
-						break;
-					} else {
-						campos.emailNuevo = true;
-						document.querySelector(`#grupo_email .formulario__email-error`).classList.remove('formulario__email-error-activo');
+				for (let users of checkStorage) { //con un for.. of hacemos una iteración a todo el array
+					if (users.email.toLowerCase() === emailUsuario.value.toLowerCase()) { //normalizamos lo ingresado con lo registrado con un toLowerCase y comparamos si es estrictamente igual
+						document.querySelector(`#grupo_email .formulario__email-error`).classList.add('formulario__email-error-activo'); //si es positivo mandamos mensaje de error
+						campos.emailNuevo = false; //y setea el valor en false para que no se pueda enviar el registro
+						break; //aquí rompemos la iteración para que no haya conflicto ya que solo nos interesa hacer la iteración hasta donde un dato coincide, todo lo demás después de eso no nos interesa
+					} else { //de lo contrario
+						campos.emailNuevo = true; //seteamos el campo en true para poder mandar el registro
+						document.querySelector(`#grupo_email .formulario__email-error`).classList.remove('formulario__email-error-activo'); //y quitamos el mensaje de error
 					}
 				}
 			}
@@ -63,6 +68,8 @@ const validarFormulario = (e) => {
 	}
 }
 
+
+//Esta es la función que se activa con el SwitchCase
 const validarCampo = (expresion, input, campo) => {
 	if (expresion.test(input.value)) {
 
@@ -75,6 +82,7 @@ const validarCampo = (expresion, input, campo) => {
 	}
 }
 
+//Esto es una función especial para validar que ambas contraseñas sean iguales
 const validarPassword2 = () => {
 	const inputPassword1 = document.getElementById('floatingPassword');
 	const inputPassword2 = document.getElementById('floatingConfirm');
@@ -88,27 +96,33 @@ const validarPassword2 = () => {
 	}
 }
 
+
+//con esto, activamos la validación en el Switch Case cada que; se levanta una tecla (Keyup) o se hace click fuera del input (blur)
 inputs.forEach((input) => {
 	input.addEventListener('keyup', validarFormulario);
 	input.addEventListener('blur', validarFormulario);
 });
 
+
+// esto utiliza TODOS los inputs + el checkbox, aquí se usa el objeto Campos
 formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 
 	var terminos = document.getElementById('gridCheck');
+
+	//Solamente cuando todos los campos estén en true deja enviar el registro
 	if (campos.nombre && campos.password && campos.email && campos.telefono && terminos.checked && campos.emailNuevo) {
 		formulario.reset();
 
-		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
+		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo'); //Se activa el mensaje de exito
 		setTimeout(() => {
 			document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
-		}, 5000);
+		}, 5000); //Y despues de 5 segundos se quita gracias al setTimeout
 
-	} else {
-		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
+	} else { //De lo contrario
+		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo'); //Activa el mensaje de error
 		setTimeout(() => {
-			document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
+			document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo'); //y se quita después de 2 segundos
 		}, 2000);
 
 	}

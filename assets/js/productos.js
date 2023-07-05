@@ -1,7 +1,5 @@
 //variable que almacena las posiciones y funge como indice
 var posiciones = [];
-//Arreglo en el cual se almacenan los productos ingresados a la bolsa del cliente
-let cartShopping = JSON.parse(localStorage.getItem("CartShopping")) || [];
 //Conexion con api o json
 var productosjson = fetch('./assets/js/productos.json')
 .then(response => response.json())
@@ -120,7 +118,6 @@ function addProducto(filtro,arregloProductos) {
                                                      ${objeto.producto}
                                                      </div>
                                                      <br>
-                                                    
                                                      <div class="text_product_modal"
                                                          id="price_product_catalog">
                                                          $${objeto.precio} MXN
@@ -142,11 +139,10 @@ function addProducto(filtro,arregloProductos) {
                                                          Composición: ${objeto.composicion}
                                                      </div>
                                                      <br>
-                                                   
             
                                                      <div class="container-fluid " id="button_content_modal">
                                                     
-                                                     <button  id="addCart${indice}" class = "addCartButtons"> Añadir al carrito</button>
+                                                     <button id="addCart"> Añadir al carrito</button>
                                             
                                            
                                                 
@@ -171,35 +167,12 @@ function addProducto(filtro,arregloProductos) {
           //empuja los objetos impresos al array
           objetosImpresos.push(indice); // Marcar el objeto como impreso
 
-
-
-
-          
-        //se trae del html el id de addCart con el índice del producto
-        var addCartButton = document.getElementById(`addCart${indice}`);
-
-        // addEvenlistener para el  "addCartButton", para que cada vez que se presione el botón de "addCart" se emmpuje el objeto al arreglo cartShopping
-        addCartButton.addEventListener("click", function() {
-          
-        cartShopping.push(objeto);
-        //Se guara el arreglo cartShopping en el localStorage
-        localStorage.setItem("CartShopping", JSON.stringify(cartShopping) );
-        });
-
-
-
-
-
-
-
-
-
-
         }
         });
     
       });
 }
+
 //carga los producos al cargar o recargar la pagina al principio
 document.addEventListener("DOMContentLoaded", function() {
     addProducto(null, productosjson);
