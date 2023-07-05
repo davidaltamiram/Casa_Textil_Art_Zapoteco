@@ -1,18 +1,19 @@
 //Recolectar en arreglo con split para comprar coda elemento con el elemento del arreglo del json
 const searchWord = (localStorage.getItem('search').toLowerCase())
-const allElements = "";
+const allElements="";
+console.log(searchWord);
 
 var posiciones = [];
 //Conexion con api o json
 var productosjson = fetch('./assets/js/productos.json')
-  .then(response => response.json())
-  .then(data => {
+.then(response => response.json())
+.then(data => {
     var array = Object.values(data);
     return array;
-  })
-  .catch(error => {
-    console.log("Error al obtener el archivo JSON", error);
-  });
+})
+.catch(error => {
+    console.log("Error al obtener el archivo JSON", error); 
+});
 //fin de conexion
 
 
@@ -23,12 +24,12 @@ var bton = document.getElementById("bton-filtro");
 var filtro = document.querySelector("#filtro");
 
 bton.addEventListener("click", (e) => {
-  e.preventDefault();
-  if (filtro.style.display === "block") {
-    filtro.style.display = "none";
-  } else {
-    filtro.style.display = "block";
-  }
+    e.preventDefault();
+    if (filtro.style.display === "block") {
+        filtro.style.display = "none";
+    } else {
+        filtro.style.display = "block";
+    }
 });
 
 /*Fin de elementos de bton filtro en contenedor de productos*/
@@ -48,18 +49,18 @@ const todos = document.getElementById("allElements");
 async function collectFilteredItems(elementSearch) {
   var searchArray = [];
   var found = [];
-
+  
   const arrayProductos = await productosjson;
-
+  
   //Match total
-  arrayProductos.forEach((elemento) => {
+  arrayProductos.forEach((elemento)=>{
     const lowerCaseProducto = elemento.producto.toLowerCase();
 
-    if (lowerCaseProducto.includes(elementSearch)) {
+    if (lowerCaseProducto.includes(elementSearch)){
       searchArray.push(elemento);
-      found.push(elemento);
+      found.push(elemento);  
     };
-
+    
   });
 
   //Match Parcial
@@ -68,61 +69,60 @@ async function collectFilteredItems(elementSearch) {
     //Poner minuscula para los elementos del json a buscar
     const searchWord = searchElement;
 
-    arrayProductos.forEach(item => {
+    arrayProductos.forEach(item=> {
       const lowerCaseProducto = item.producto.toLowerCase();
       const lowerCaseCategoria = item.categoria.toLowerCase();
       const lowerCaseColor = item.color.toLowerCase();
       const lowerCaseMaterial = item.material.toLowerCase();
-
-      if ((lowerCaseProducto.includes(searchWord) ||
-        lowerCaseCategoria.includes(searchWord) ||
-        lowerCaseColor.includes(searchWord) ||
-        lowerCaseMaterial.includes(searchWord)) &&
-        !productoEncontrado(found, item)) {
+      
+      if ((lowerCaseProducto.includes(searchWord) || 
+          lowerCaseCategoria.includes(searchWord)||
+          lowerCaseColor.includes(searchWord) ||
+          lowerCaseMaterial.includes(searchWord)) &&
+          !productoEncontrado(found, item)){
 
         searchArray.push(item);
-        found.push(item);
-      }
+        found.push(item);     
+      } 
     },
-    )
-  });
+  )});
 
-  return searchArray;
+    return searchArray;
 };
 
 //Funcion para buscar si X elemento ya se almaceno durante el filtrado, de ser asi excluirlo.
-function productoEncontrado(elementosAlmacenados, buscar) {
-  return elementosAlmacenados.some(search => { return search.id === buscar.id })
+function productoEncontrado(elementosAlmacenados, buscar){
+  return elementosAlmacenados.some(search => {return search.id===buscar.id })
 };
 
 function addProducto(filtro, elementoBusqueda) {
-  const searchArray = collectFilteredItems(elementoBusqueda);
+    const searchArray = collectFilteredItems(elementoBusqueda);
 
-  searchArray.then(array => {
-    var objetosImpresos = [];
+    searchArray.then(array => {
+        var objetosImpresos = []; 
 
-    array.forEach((objeto, indice) => {
+        array.forEach((objeto, indice)=> {
 
-      if (filtro === 'cojinesfiltro' && objeto.categoria === 'cojines') {
-        // Filtrar caso 1
-      } else if (filtro === 'colchasfiltro' && objeto.categoria === 'colchas') {
-        // Filtrar caso 2
-      } else if (filtro === 'mantelesfiltro' && objeto.categoria === 'mantel') {
-        // Filtrar caso 3
-      } else if (filtro === 'tapetesfiltro' && objeto.categoria === 'tapetes') {
-        // Filtrar caso 4
-      } else if (filtro === null) {
-        // Sin filtro, mostrar todos los objetos
-      } else {
-        return; // Salir del bucle si no se cumple ningún filtro
-      }
+            if (filtro === 'cojinesfiltro' && objeto.categoria === 'cojines') {
+                // Filtrar caso 1
+              } else if (filtro === 'colchasfiltro' && objeto.categoria === 'colchas') {
+                // Filtrar caso 2
+              } else if (filtro === 'mantelesfiltro' && objeto.categoria === 'mantel') {
+                // Filtrar caso 3
+              } else if (filtro === 'tapetesfiltro' && objeto.categoria === 'tapetes') {
+                // Filtrar caso 4
+              } else if (filtro === null) {
+                // Sin filtro, mostrar todos los objetos
+              } else {
+                return; // Salir del bucle si no se cumple ningún filtro
+              }
+        
+            posiciones.push(indice);
 
-      posiciones.push(indice);
-
-      var productCard = document.createElement("div");
-      productCard.classList = "col-sm-6 col-md-4 col-lg-4 align-items-center";
-
-      productCard.innerHTML = `
+            var productCard = document.createElement("div");
+            productCard.classList = "col-sm-6 col-md-4 col-lg-4 align-items-center";
+         
+          productCard.innerHTML = `
             <button id="imageButton" data-bs-toggle="modal" data-bs-target="#exampleModal${indice}">
               <div class="card" id="card-gallery" >
                 <img class="card-img-top" class="img-fluid mx-auto d-block" src="${objeto.img}" alt="Producto">
@@ -131,12 +131,12 @@ function addProducto(filtro, elementoBusqueda) {
                 </div>
               </div>
             </button>  `;
-      divProductos.appendChild(productCard);
+            divProductos.appendChild(productCard);
 
-      // Verificar si el objeto ya se ha impreso previamente
-      if (!objetosImpresos.includes(indice)) {
-        var modal = document.createElement("div");
-        modal.innerHTML = `
+                // Verificar si el objeto ya se ha impreso previamente
+        if (!objetosImpresos.includes(indice)) {
+            var modal = document.createElement("div");
+            modal.innerHTML = `
     <div class="modal fade" id="exampleModal${indice}" tabindex="-1" aria-labelledby="exampleModalLabel${indice}" aria-hidden="true">
       <div class="modal-dialog">
           <div class="modal-content">
@@ -193,142 +193,77 @@ function addProducto(filtro, elementoBusqueda) {
     </div>
           `;
 
-        productCard.appendChild(modal);
-        objetosImpresos.push(indice); // Marcar el objeto como impreso
+          productCard.appendChild(modal);
+          objetosImpresos.push(indice); // Marcar el objeto como impreso
 
-      }
-    });
-
-  });
+        }
+        });
+    
+      });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  addProducto(null, searchWord);
-});
+    addProducto(null,searchWord);
+  });
 
-cojinesfiltro.addEventListener('click', function () {
-  divProductos.innerHTML = ""; // Limpiar el contenido previo en el contenedor
-  addProducto('cojinesfiltro', searchWord); // Llamar a addProductos() con el filtro 1
-});
+  cojinesfiltro.addEventListener('click', function() {
+    divProductos.innerHTML = ""; // Limpiar el contenido previo en el contenedor
+    addProducto('cojinesfiltro', searchWord); // Llamar a addProductos() con el filtro 1
+  });
 
-colchasfiltro.addEventListener('click', function () {
-  divProductos.innerHTML = "";
-  addProducto('colchasfiltro', searchWord);
-});
+  colchasfiltro.addEventListener('click', function() {
+    divProductos.innerHTML = ""; 
+    addProducto('colchasfiltro', searchWord); 
+  });
 
-mantelesfiltro.addEventListener('click', function () {
-  divProductos.innerHTML = "";
-  addProducto('mantelesfiltro', searchWord);
-});
+  mantelesfiltro.addEventListener('click', function() {
+    divProductos.innerHTML = ""; 
+    addProducto('mantelesfiltro', searchWord); 
+  });
 
-tapetesfiltro.addEventListener('click', function () {
-  divProductos.innerHTML = "";
-  addProducto('tapetesfiltro', searchWord);
-});
+  tapetesfiltro.addEventListener('click', function() {
+    divProductos.innerHTML = ""; 
+    addProducto('tapetesfiltro', searchWord); 
+  });
 
-todos.addEventListener('click', function () {
-  localStorage.setItem('search', "");
-  window.location.href = "./productos.html";
-});
+  todos.addEventListener('click', function() {
+    localStorage.setItem('search',"");
+    window.location.href = "./productos.html";
+  });
 
 
 //Termina lo referente a pintar el catalogo de prodcutos del html
-//Inicia catalogo de los productos más vendidos
-const catalogoMasVendidos = [{
-  id: "prod-coj-01",
-  producto: "Funda para cojin",
-  categoria: "cojines",
-  precio: 250,
-  color: "Azul",
-  tamaño: "50x50 cm",
-  material: "Algodon",
-  composicion: "100% natural",
-  consecutivo: 1,
-  img: "./assets/img/productos/prod-coj-01.jpg",
-},
-{
-  id: "prod-coj-02",
-  producto: "Funda para cojin",
-  categoria: "cojines",
-  precio: 300,
-  color: "rosa",
-  tamaño: "50x50 cm",
-  material: "Algodon orgánico",
-  composicion: "100% natural",
-  consecutivo: 2,
-  img: "./assets/img/productos/prod-coj-02.jpg",
-},
-{
-  id: "prod-coj-03",
-  producto: "Funda para cojin",
-  categoria: "cojines",
-  precio: 350,
-  color: "Gris",
-  tamaño: "50x50 cm",
-  material: "Algodon",
-  composicion: "100% natural",
-  consecutivo: 1,
-  img: "./assets/img/productos/prod-coj-03.jpg",
-},
-{
-  id: "prod-coj-05",
-  producto: "Funda para cojin",
-  categoria: "cojines",
-  precio: 250,
-  color: "Blanco",
-  tamaño: "50x50 cm",
-  material: "Algodon",
-  composicion: "100% natural",
-  consecutivo: 1,
-  img: "./assets/img/productos/prod-coj-05.jpg",
-},
-{
-  id: "prod-coj-06",
-  producto: "Funda para cojin",
-  categoria: "cojines",
-  precio: 250,
-  color: "Negro",
-  tamaño: "50x50 cm",
-  material: "Algodon",
-  composicion: "100% natural",
-  consecutivo: 1,
-  img: "./assets/img/productos/prod-coj-06.jpg",
-},
-{
-  id: "prod-coj-08",
-  producto: "Funda para cojin",
-  categoria: "cojines",
-  precio: 450,
-  color: "Gris",
-  tamaño: "50x50 cm",
-  material: "Algodon orgánico",
-  composicion: "100% natural",
-  consecutivo: 1,
-  img: "./assets/img/productos/prod-coj-08.jpg",
-}];
+
 
 //Inicia lo referente a pintar el carousel del html
 
-const divCarousel = document.getElementById("productosCarousel");
+const divCarousel = document.querySelector("#productosCarousel");
 
 function addProductoCarousel() {
+//conexion a la promesa que retorna las espuestas del json
+    productosjson.then(array => {
+//filtro para seleccionar olo 5 productos del arreglo de objetos
+        const tope = 5;
+        const productostop = array.slice(0, tope);
+//fin del filtro
 
-  catalogoMasVendidos.forEach(function (objeto) {
+//se usa productostop porque es la variable que trae el arreglo y contiene un limite de 5 productos
+    productostop.forEach(function (objeto) {
 
-    var productCardCarousel = document.createElement("div");
-    productCardCarousel.classList = "item";
+        var productCardCarousel = document.createElement("div");
+        productCardCarousel.classList = "item";
 
-    productCardCarousel.innerHTML = `
-        <div class="card" id="">
-          <img src="${objeto.img}" alt="Tapete geométrico naranja 1.20 2" class="card-img-top">
+        productCardCarousel.innerHTML = `
+        <div class="card" id="imageButton">
+            <img src="${objeto.img}"
+            alt="Producto" class="card-img-top">
         </div>
 `;
-    console.log(productCardCarousel);
-    divCarousel.appendChild(productCardCarousel);
-  });
-
+        divCarousel.appendChild(productCardCarousel);
+    });
+    });
+//fin de la conexion con la promesa
 }
-
 
 
 addProductoCarousel();
@@ -338,54 +273,54 @@ addProductoCarousel();
 //Inicia jQuery carousel
 
 $('.owl-carousel').owlCarousel({
-  loop: true,
-  margin: 10,
-  nav: true,
-  autoplay: true,
-  autoplayTimeout: 1500,
-  autoplayHoverPause: true,
-
-  responsive: {
-    0: {
-      items: 1
-    },
-    600: {
-      items: 3
-    },
-    1000: {
-      items: 3
+    loop: true,
+    margin: 10,
+    nav: true,
+    autoplay:true,
+    autoplayTimeout:1500,
+    autoplayHoverPause:true,
+    
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 3
+        },
+        1000: {
+            items: 3
+        }
     }
-  }
 });
 
 //Agregar funcionalidad de busqueda del nav-bar
 
 //Event listener para botones
 mainButton.addEventListener("click", () => {
-  localStorage.setItem('search', "");
-  divProductos.innerHTML = "";
-  addProducto(null, mainInput.value.toLowerCase());
+  localStorage.setItem('search',"");
+  divProductos.innerHTML = ""; 
+  addProducto(null, mainInput.value.toLowerCase()); 
 });
 
 floatButton.addEventListener("click", () => {
-  localStorage.setItem('search', "");
-  divProductos.innerHTML = "";
-  addProducto(null, floatInput.value.toLowerCase());
+  localStorage.setItem('search',"");
+  divProductos.innerHTML = ""; 
+  addProducto(null, floatInput.value.toLowerCase()); 
   content.classList.add("d-none");
 });
 
 //Event listener para los forms
 mainForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  localStorage.setItem('search', "");
-  divProductos.innerHTML = "";
-  addProducto(null, mainInput.value.toLowerCase());
+  localStorage.setItem('search',"");
+  divProductos.innerHTML = ""; 
+  addProducto(null, mainInput.value.toLowerCase()); 
 });
 
 floatForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  localStorage.setItem('search', "");
-  divProductos.innerHTML = "";
+  localStorage.setItem('search',"");
+  divProductos.innerHTML = ""; 
   addProducto(null, floatInput.value.toLowerCase());
-  content.classList.add("d-none");
+  content.classList.add("d-none"); 
 });
