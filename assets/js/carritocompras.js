@@ -1,10 +1,6 @@
 let cartShopping = JSON.parse(localStorage.getItem("CartShopping")) || [];
 
-
-
-
 const containerMyBagOrder580SH = document.getElementById("containerMyBagOrder580");
-
 const containerMyBagOrder460SH = document.getElementById("containerMyBagOrder460");
 const containerMyBagOrderMobileSH = document.getElementById("containerMyBagOrderMobile");
 const quantitySubtotalProduct580 = document.querySelector("#quantitySubtotal580");
