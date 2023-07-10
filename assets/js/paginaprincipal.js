@@ -49,3 +49,32 @@ botonManteles.addEventListener("click", () => {
     localStorage.setItem('search', "manteles");
     window.location.href = "./search.html";
 });
+
+const botonCojines2 = document.querySelector('#cojinesBoton2');
+
+botonCojines2.addEventListener("click", () => {
+    localStorage.setItem('search', "cojines");
+    window.location.href = "./search.html";
+});
+
+const botonColchas2 = document.querySelector('#colchasBoton2');
+
+botonColchas2.addEventListener("click", () => {
+    localStorage.setItem('search', "colchas");
+    window.location.href = "./search.html";
+});
+
+const botonTapetes2 = document.querySelector('#tapetesBoton2');
+
+botonTapetes2.addEventListener("click", () => {
+    localStorage.setItem('search', "tapetes");
+    window.location.href = "./search.html";
+});
+
+const botonManteles2 = document.querySelector('#mantelesBoton2');
+
+botonManteles2.addEventListener("click", () => {
+    localStorage.setItem('search', "manteles");
+    window.location.href = "./search.html";
+});
+
