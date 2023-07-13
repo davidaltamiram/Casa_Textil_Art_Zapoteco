@@ -5,35 +5,46 @@ const password = document.getElementById('floatingPassword');
 const loginfailed = document.getElementById('login-failed');
 const mainPage = document.getElementById("redirect");
 
+class Login {
+  email;
+  password;
 
-function validateUser() {
-  var users = localStorage.getItem("usuarios");
-
-  var loginEmail = email.value;
-  var loginPassword = password.value;
-
-  var succeslogin = false;
-
-  if (users === null || users.length === 0) {
-    return succeslogin;
+  constructor(email, password) {
+    this.email = email;
+    this.password = password;
   }
+}
 
-  var usersArray = JSON.parse(users);
 
-  usersArray.forEach(user => {
+function validateUser(loginrequest) {
 
-    if (user.email.toLowerCase() === loginEmail.toLowerCase() && user.password === loginPassword) {
+  fetch("https://artezapotecobackend-production.up.railway.app/user/login", {
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json'   // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: JSON.stringify(loginrequest)
+  })
+    .then(response => {
+      if (response.ok) {
+        return response.text();
+      } else {
+        loginfailed.classList.remove("d-none");
+      }
+    }).then(userId=>{
+      localStorage.setItem("usuario", userId);
       localStorage.setItem("usuarioActivo", true);
-      localStorage.setItem('usuario', JSON.stringify(user));
-      succeslogin = true;
-    }
+      window.location.href = "./pagprincipal.html";
+    })
+    .catch(e => {
+      console.log("Conexion fallida " + e);
+    })
 
-  });
-
-  return succeslogin;
 };
 
-
+function createlogin() {
+  return new Login(email.value, password.value);
+}
 
 async function checkLogin() {
 
@@ -41,18 +52,8 @@ async function checkLogin() {
     e.preventDefault();
   });
 
-  var succeslogin = validateUser();
-
-  if (succeslogin) {
-
-    // submitFormDataToServer().then(() => {
-      window.location.href = "./pagprincipal.html";
-    // });
-
-  } else {
-    loginfailed.classList.remove("d-none");
-  }
-
+  var loginrequest = createlogin();
+  validateUser(loginrequest);
 };
 
 function hideLoginError() {
@@ -63,14 +64,3 @@ function hideLoginError() {
 window.addEventListener("load", hideLoginError);
 boton.addEventListener("click", checkLogin);
 
-// submitFormDataToServer(){ //Funcion pendiente para enviar el submit al servidor 
-// return new Promise((resolve, reject) => {
-//    Implementar logica para mandar el email y contraseña al servidor
-      
-//     Una vez resuelto el envio de datos al servidor, resolver la promesa
-//     resolve();
-      
-//     Si existe un error en el submit, rechazar la promesa
-//     reject();
-//   });
-// }}

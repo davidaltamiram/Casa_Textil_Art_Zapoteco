@@ -147,20 +147,21 @@ let usuariosRegistrados = [];
 class usuario {
 
 	//atributos
-	nombre = "";
-	telefono = "";
+	name = "";
+	phoneNumber = "";
 	email = "";
+	discount = 10;
+	newCostumer = true;
 	password = "";
-
 
 	//constructor
 	constructor(nombre, telefono, email, password) {
-
-		this.nombre = nombre;
-		this.telefono = telefono;
+		this.name = nombre;
+		this.phoneNumber = telefono;
 		this.email = email;
+		this.discount;
+		this.newCostumer;
 		this.password = password;
-
 	}
 }
 
@@ -170,36 +171,11 @@ class usuario {
 
 //Esta función guarda el usuario
 function guardarUsuario() {
-	var checkUser = JSON.parse(localStorage.getItem('usuarios'));
 
-	if (checkUser === null) {
+	//Primero se instancia el objeto usuarioRegistrado utilizando los .value de cada elemento obtenido del HTML
+	let usuarioRegistrado = new usuario(nombreUsuario.value, telefonoUsuario.value, emailUsuario.value, passwordUsuario.value)
 
-		//Primero se instancia el objeto usuarioRegistrado utilizando los .value de cada elemento obtenido del HTML
-		let usuarioRegistrado = new usuario(nombreUsuario.value, telefonoUsuario.value, emailUsuario.value, passwordUsuario.value)
-
-		//Luego se agrega ese objeto al arreglo usuariosRegistrados con el metodo push
-		usuariosRegistrados.push(usuarioRegistrado);
-
-
-		//Finalmente se almacena en el localStorage, siendo la key usuarios y el value todo el arreglo de objetos en formato JSON
-		localStorage.setItem('usuarios', JSON.stringify(usuariosRegistrados));
-
-
-		//Esta función se repite cada que se active el eventListener
-
-	} else {
-		usuariosRegistrados = checkUser;
-
-		//Primero se instancia el objeto usuarioRegistrado utilizando los .value de cada elemento obtenido del HTML
-		let usuarioRegistrado = new usuario(nombreUsuario.value, telefonoUsuario.value, emailUsuario.value, passwordUsuario.value)
-
-		//Luego se agrega ese objeto al arreglo usuariosRegistrados con el metodo push
-		usuariosRegistrados.push(usuarioRegistrado);
-
-
-		//Finalmente se almacena en el localStorage, siendo la key usuarios y el value todo el arreglo de objetos en formato JSON
-		localStorage.setItem('usuarios', JSON.stringify(usuariosRegistrados));
-	}
+	return usuarioRegistrado;
 
 }
 
@@ -212,8 +188,24 @@ botonEnviar.addEventListener("click", e => {
 	const terminos2 = document.getElementById('gridCheck');
 	if (campos.nombre && campos.password && campos.email && campos.telefono && terminos2.checked && campos.emailNuevo) {
 
-		guardarUsuario();
-		window.location.href = "./login.html";
+		var guardar = guardarUsuario();
+		fetch("https://artezapotecobackend-production.up.railway.app/user",{
+			method: "POST",
+			headers: {
+				'Content-Type': 'application/json'   // 'Content-Type': 'application/x-www-form-urlencoded',
+			},
+			body: JSON.stringify(guardar)
+		})
+		.then (response=>{
+			if(response.ok){
+				window.location.href = "./login.html";
+			}
+		})
+		.catch (e =>{
+
+			console.log("Conexion fallida"+e)
+		})
+		
 	}
 
 });
