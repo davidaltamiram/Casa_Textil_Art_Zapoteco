@@ -189,7 +189,7 @@ botonEnviar.addEventListener("click", e => {
 	if (campos.nombre && campos.password && campos.email && campos.telefono && terminos2.checked && campos.emailNuevo) {
 
 		var guardar = guardarUsuario();
-		fetch("http://localhost:8080/user",{
+		fetch("https://artezapotecobackend-production.up.railway.app/user",{
 			method: "POST",
 			headers: {
 				'Content-Type': 'application/json'   // 'Content-Type': 'application/x-www-form-urlencoded',

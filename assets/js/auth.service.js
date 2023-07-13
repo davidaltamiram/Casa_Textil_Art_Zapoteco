@@ -18,7 +18,7 @@ class Login {
 
 function validateUser(loginrequest) {
 
-  fetch("http://localhost:8080/user/login", {
+  fetch("https://artezapotecobackend-production.up.railway.app/user/login", {
     method: "POST",
     headers: {
       'Content-Type': 'application/json'   // 'Content-Type': 'application/x-www-form-urlencoded',
@@ -27,11 +27,14 @@ function validateUser(loginrequest) {
   })
     .then(response => {
       if (response.ok) {
-        localStorage.setItem("usuario", 1);
-        window.location.href = "./pagprincipal.html";
+        return response.text();
       } else {
         loginfailed.classList.remove("d-none");
       }
+    }).then(userId=>{
+      localStorage.setItem("usuario", userId);
+      localStorage.setItem("usuarioActivo", true);
+      window.location.href = "./pagprincipal.html";
     })
     .catch(e => {
       console.log("Conexion fallida " + e);
@@ -40,7 +43,7 @@ function validateUser(loginrequest) {
 };
 
 function createlogin() {
-  return new Login(email.value,password.value); 
+  return new Login(email.value, password.value);
 }
 
 async function checkLogin() {

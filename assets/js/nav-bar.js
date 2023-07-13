@@ -50,12 +50,33 @@ logout.addEventListener("click", logginOut);
 
 function loginUser() {
 
+
     if (usuarioActivo) {
-        const user = JSON.parse(localStorage.getItem("usuario"));
-        const firstName = user.nombre.split(" ", 1);
-        userName.innerHTML = firstName;
-        inactiveUser.classList.add("d-none");
-        activeUser.classList.remove("d-none");
+        const idUser = parseInt(localStorage.getItem("usuario"));
+        fetch(`https://artezapotecobackend-production.up.railway.app/user/login/${idUser}`, {
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json'   // 'Content-Type': 'application/x-www-form-urlencoded',
+            }
+        })
+            .then(response => {
+                if (response.ok) {
+                    return response.text();
+                } else {
+                    loginfailed.classList.remove("d-none");
+                }
+            }).then(userId => {
+                const firstName = userId.split(" ", 1);
+                userName.innerHTML = firstName;
+                inactiveUser.classList.add("d-none");
+                activeUser.classList.remove("d-none");
+            })
+            .catch(e => {
+                activeUser.classList.add("d-none");
+                inactiveUser.classList.remove("d-none");
+                console.log("Conexion fallida " + e);
+            });
+
     } else {
         inactiveUser.classList.remove("d-none");
         activeUser.classList.add("d-none");
@@ -105,7 +126,7 @@ mainForm.addEventListener("submit", (e) => {
 
 floatForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    if ( document.URL.split("/")[3] !== "search.html") {
+    if (document.URL.split("/")[3] !== "search.html") {
         localStorage.setItem('search', floatInput.value);
         window.location.href = "./search.html";
     };
