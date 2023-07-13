@@ -35,11 +35,13 @@
     <div class="container-fluid nav-brd fnt promo-top sticky-top stcky" id="promo">
         <div class="row text-center">
 
-            <div class="col-11">
-                <p href="" class="promo-link" id="promo-tag" type="button">Promoción 10% de descuento en tu primera compra</p>
+            <div class="col-sm-11 col-10">
+                <p href="" class="promo-link" id="promo-tag" type="button">Promoción 10% de descuento en tu primera
+                    compra</p>
+                <p href="" class="promo-link2 d-none" id="promo-tag2" type="button">Promoción 10% de descuento!!</p>
             </div>
 
-            <div class="col-1 text-end">
+            <div class="col-sm-1 text-end col-2">
                 <button type="button" id="promoButton" class="btn btn-sm nav-btn-cross">
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -379,7 +381,7 @@
                     <h1 class="tituloRegistro">Registro</h1>
                     <!--Aquí empieza el formulario-->
 
-                    <form id="formulario">
+                    <form id="formulario" action="http://localhost:8080/user" method="POST">
                         <div class="form-floating mb-3" id="grupo_nombre">
                             <input type="text" class="form-control" id="floatingName" placeholder="nombre"
                                 name="nombre">
