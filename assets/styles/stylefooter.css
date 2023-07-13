@@ -1,0 +1,80 @@
+.visitanos {
+    display: flex;
+    justify-content: center;
+
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+
+    color: #000000;
+}
+
+.Datos {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 16px;
+
+    color: #000000;
+}
+
+.terminos {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #000000;
+}
+
+.derechos {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #000000;
+}
+
+.redes {
+    margin-top: -6px;
+}
+
+.container-fondo {
+    margin-top: 15px;
+    font-size: 14;
+    text-align: center;
+    display: grid;
+    /*indica la forma en como se muestran los elementos*/
+    grid-template-columns: auto auto auto;
+    /*Indicar cuántas columnas vamos a utilizar*/
+    gap: 10px;
+    /*Espacios entre columnas*/
+}
+
+/*-----------------------------------------------------------*/
+
+/*Esta media query es para pantalla de tablet y celular*/
+@media (max-width: 992px) {
+
+    .terminos {
+        margin-top: 15px;
+    }
+
+    .derechos{
+        margin-top: 15px;
+    }
+
+}
+
+
+
