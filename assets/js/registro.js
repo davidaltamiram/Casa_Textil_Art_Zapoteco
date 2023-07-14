@@ -219,10 +219,13 @@ botonEnviar.addEventListener("click", e => {
 		.then (response=>{
 			if(response.ok){
 				window.location.href = "./login.html";
+			}else if (response.status === 409){
+				document.querySelector(`#grupo_email .formulario__email-error`).classList.add('formulario__email-error-activo');
+			}else{
+				document.querySelector(`#grupo_password .formulario__input-error`).classList.add('formulario__input-error-activo');
 			}
 		})
 		.catch (e =>{
-
 			console.log("Conexion fallida"+e)
 		})
 		

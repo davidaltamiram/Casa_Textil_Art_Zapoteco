@@ -114,6 +114,16 @@
 */
 
 .invalid-login{
+    display: none;
+    position: absolute; 
+    right: 125px; 
+    color: beige; 
+    font-size: 25px; 
+    top: 85px;
+}
+
+.invalid-login-active{
+    display: block;
     position: absolute; 
     right: 125px; 
     color: beige; 
