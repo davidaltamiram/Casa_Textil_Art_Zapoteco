@@ -2,7 +2,7 @@ const form = document.getElementById('log-form');
 const boton = document.getElementById("boton");
 const email = document.getElementById('floatingInput');
 const password = document.getElementById('floatingPassword');
-const loginfailed = document.getElementById('login-failed');
+var loginfailed = document.getElementById('login-failed');
 const mainPage = document.getElementById("redirect");
 
 class Login {
@@ -29,7 +29,7 @@ function validateUser(loginrequest) {
       if (response.ok) {
         return response.text();
       } else {
-        loginfailed.classList.remove("d-none");
+        throw new Error("Login failed");
       }
     }).then(userId=>{
       localStorage.setItem("usuario", userId);
@@ -37,7 +37,7 @@ function validateUser(loginrequest) {
       window.location.href = "./pagprincipal.html";
     })
     .catch(e => {
-      console.log("Conexion fallida " + e);
+      loginfailed.classList.add('invalid-login-active');
     })
 
 };
@@ -56,11 +56,6 @@ async function checkLogin() {
   validateUser(loginrequest);
 };
 
-function hideLoginError() {
-  loginfailed.classList.add("d-none");
-};
 
-
-window.addEventListener("load", hideLoginError);
 boton.addEventListener("click", checkLogin);
 
