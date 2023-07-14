@@ -5,7 +5,7 @@ const inputs = document.querySelectorAll('#formulario input'); //Con el querySel
 
 const expresiones = {
 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-	password: /^.{4,12}$/, // 4 a 12 digitos.
+	password: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/, // 4 a 12 digitos.
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, //Debe empezar con letra/numero seguido de un @letras/numeros y contener sí o sí un "." con el  \. se logra esto y terminar con letras/numeros
 	telefono: /^\d{7,14}$/ // 7 a 14 numeros.
 }
@@ -15,6 +15,7 @@ const expresiones = {
 const campos = {
 	nombre: false,
 	password: false,
+	password2: false,
 	email: false,
 	telefono: false,
 	emailNuevo: false
@@ -89,10 +90,10 @@ const validarPassword2 = () => {
 
 	if (inputPassword1.value !== inputPassword2.value) {
 		document.querySelector(`#grupo_password2 .formulario__input-error`).classList.add('formulario__input-error-activo');
-		campos['password'] = false;
+		campos['password2'] = false;
 	} else {
 		document.querySelector(`#grupo_password2 .formulario__input-error`).classList.remove('formulario__input-error-activo');
-		campos['password'] = true;
+		campos['password2'] = true;
 	}
 }
 
@@ -111,7 +112,7 @@ formulario.addEventListener('submit', (e) => {
 	var terminos = document.getElementById('gridCheck');
 
 	//Solamente cuando todos los campos estén en true deja enviar el registro
-	if (campos.nombre && campos.password && campos.email && campos.telefono && terminos.checked && campos.emailNuevo) {
+	if (campos.nombre && campos.password && campos.password2 && campos.email && campos.telefono && terminos.checked && campos.emailNuevo) {
 		formulario.reset();
 
 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo'); //Se activa el mensaje de exito
@@ -119,6 +120,25 @@ formulario.addEventListener('submit', (e) => {
 			document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
 		}, 5000); //Y despues de 5 segundos se quita gracias al setTimeout
 
+		// var guardar = guardarUsuario();
+		// fetch("https://artezapotecobackend-production.up.railway.app/user",{
+		// 	method: "POST",
+		// 	headers: {
+		// 		'Content-Type': 'application/json'   // 'Content-Type': 'application/x-www-form-urlencoded',
+		// 	},
+		// 	body: JSON.stringify(guardar)
+		// })
+		// .then (response=>{
+		// 	if(response.ok){
+		// 		window.location.href = "./login.html";
+		// 	}
+		// })
+		// .catch (e =>{
+
+		// 	console.log("Conexion fallida"+e)
+		// })
+
+		
 	} else { //De lo contrario
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo'); //Activa el mensaje de error
 		setTimeout(() => {
@@ -186,7 +206,7 @@ botonEnviar.addEventListener("click", e => {
 	e.preventDefault
 
 	const terminos2 = document.getElementById('gridCheck');
-	if (campos.nombre && campos.password && campos.email && campos.telefono && terminos2.checked && campos.emailNuevo) {
+	if (campos.nombre && campos.password && campos.password2 && campos.email && campos.telefono && terminos2.checked && campos.emailNuevo) {
 
 		var guardar = guardarUsuario();
 		fetch("https://artezapotecobackend-production.up.railway.app/user",{
@@ -199,10 +219,13 @@ botonEnviar.addEventListener("click", e => {
 		.then (response=>{
 			if(response.ok){
 				window.location.href = "./login.html";
+			}else if (response.status === 409){
+				document.querySelector(`#grupo_email .formulario__email-error`).classList.add('formulario__email-error-activo');
+			}else{
+				document.querySelector(`#grupo_password .formulario__input-error`).classList.add('formulario__input-error-activo');
 			}
 		})
 		.catch (e =>{
-
 			console.log("Conexion fallida"+e)
 		})
 		
