@@ -17,16 +17,23 @@ var productosjson = fetch('./assets/js/productos.json')
 /*Inicio de elementos y evento de bton filtro en contenedor de productos*/
 var bton = document.getElementById("bton-filtro");
 var filtro = document.querySelector("#filtro");
+var subfiltro  = document.getElementById("#subfiltro");
 
-bton.addEventListener("click", (e) => {
+document.addEventListener("DOMContentLoaded", function() {
+    filtro.style.display = "none";
+    
+  });
+  
+  bton.addEventListener("click", function(e) {
     e.preventDefault();
-    if (filtro.style.display === "block") {
-        filtro.style.display = "none";
+    
+    if (filtro.style.display === "none") {
+      filtro.style.display = "block";
     } else {
-        filtro.style.display = "block";
+      filtro.style.display = "none";
     }
-});
-
+ 
+  });
 /*Fin de elementos de bton filtro en contenedor de productos*/
 
 
@@ -146,11 +153,12 @@ function addProducto(filtro,arregloProductos) {
             
                                                      <div class="container-fluid " id="button_content_modal">
                                                     
-                                                     <button  id="addCart${indice}" class = "addCartButtons"> Añadir al carrito</button>
-                                            
-                                           
-                                                
+                                                     <button  id="addCart${indice}" class="addCartButtons" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"> Añadir al carrito</button>
+                                                     
                                                  </div>
+
+                                               
+
                                              </div>
                                            
                                                
@@ -162,6 +170,26 @@ function addProducto(filtro,arregloProductos) {
                              </div>
                          </div>
                      </div>
+             </div>
+
+
+             <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                                                       
+                        <div class="modal-body">
+                      <h2>Producto agregado al carrito</h2>
+                        </div>
+
+                        <div class="modal-footer">
+                        <button class="addCartButtons" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Seguir comprando :)</button>
+                        </div>
+
+                    </div>
+                </div>
              </div>
           `;
 
