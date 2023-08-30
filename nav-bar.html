@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -80,8 +81,7 @@
                         <a class="nav-link active" href="./productos.html">Tienda</a>
                     </li>
                     <li class="nav-item navbar-dir-about">
-                        <a class="nav-link active" aria-current="page" href="./acercadenosotros.html"><span>¿Quiénes
-                                somos?</span></a>
+                        <a class="nav-link active" aria-current="page" href="./acercadenosotros.html"><span>¿Quiénes somos?</span></a>
                     </li>
                     <li class="nav-item navbar-dir-contact">
                         <a class="nav-link active" href="./contactanos.html">Contacto</a>
@@ -147,7 +147,7 @@
                             </svg>
                         </a>
 
-                        <a title="Shop" href="./carritocompras.html" class="shop">
+                        <a title="Shop" href="./carritocompras.html" class="shop" id="inactive-car">
                             <svg class="nav-shop-icon" width="27" height="27" viewBox="0 0 27 27" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -160,6 +160,14 @@
                                     d="M7.94434 11V6.00002C7.94434 3.23858 10.4316 1 13.4999 1C16.5681 1 19.0554 3.23858 19.0554 6.00002V10.611"
                                     stroke="#5E412F" stroke-linecap="round" stroke-linejoin="round" />
                             </svg></a>
+                            <!--Carrito activo-->
+                            <a title="Shop" href="./carritocompras.html" class="shop" id="active-car">
+                              <svg class="nav-shop-icon" width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 9.75001C1 8.36929 2.24365 7.25 3.77778 7.25H23.2222C24.7564 7.25 26 8.36929 26 9.75001V23.5001C26 24.8808 24.7564 26.0001 23.2222 26.0001H3.77778C2.24365 26.0001 1 24.8808 1 23.5001V9.75001Z" stroke="#5E412F" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M1 9.75001C1 8.36929 2.24365 7.25 3.77778 7.25H23.2222C24.7564 7.25 26 8.36929 26 9.75001V23.5001C26 24.8808 24.7564 26.0001 23.2222 26.0001H3.77778C2.24365 26.0001 1 24.8808 1 23.5001V9.75001Z" stroke="#5E412F" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M7.94434 11V6.00002C7.94434 3.23858 10.4316 1 13.4999 1C16.5681 1 19.0554 3.23858 19.0554 6.00002V10.611" stroke="#5E412F" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="23.5" cy="21.5" r="6.5" fill="#F0A830"/>
+                                </svg></a>
 
                         <!--Aquí inician modificaciones-->
                         <div class="collapse navbar-collapse nav-user" id="inactive-user">
@@ -257,8 +265,8 @@
 
                                     <ul class="dropdown-menu dropdown-menu-end nav-language-dropdown-list"
                                         aria-labelledby="navbarDarkDropdownMenuLink">
-                                        <li><a class="dropdown-item" href="#">Español</a></li>
-                                        <li><a class="dropdown-item" href="#">Inglés</a></li>
+                                        <li><a class="dropdown-item" id="esp-lang" type="button">Español</a></li>
+                                        <li><a class="dropdown-item" id="engl-lang" type="button">Inglés</a></li>
                                     </ul>
 
                                 </li>
