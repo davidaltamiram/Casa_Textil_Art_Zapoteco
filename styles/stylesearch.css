@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css');
+
+
+
+/*tag body con background */
+
+body{
+    background-color: white;  
+}
+
+.contenedorcategorias{
+    font-family: 'Raleway', sans-serif;
+    background-color: rgb(255, 255, 255);
+    margin: 1px solid black;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+}
+
+h1{
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.containerfiltro{
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    background-color: beige;
+    margin: 1px solid black;
+    color: black;
+}
+
+
+.categoria_producto{
+    margin-left: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+    font-weight: lighter;  
+}
+
+.check{
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+}
+
+#title_check{
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+}
+
+#borde-filtro{
+    margin-top: 0.5rem;
+    margin-right: 0px;
+    border: 1px solid black;
+    width: 190px;
+}
+
+#icon-filtro{
+    width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+
+.filtro-bton{
+    margin: .5rem;
+    border: 1px solid #78C0A8;
+    border-radius: 10px;
+    color: #78C0A8;
+    width: auto;
+    height: auto;
+    background-color: #ffffff;
+}
+ 
+
+
+#card-gallery{
+    margin: 0px;
+    width: 120%; 
+}
+
+hr{
+    margin-top: 3rem;
+    color:#5E412F ;
+}
+
+.card-text{
+    text-align: left;
+    padding: 0%;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.card-body{
+   padding: 2%;
+}
+
+
+.card:hover{
+    box-shadow: 20px 20px 80px -44px;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+
+/*Clases de style de carrusel*/
+#subtituloCarousel{
+    margin-top: 4rem;
+    font-size: 50px;
+    font-family: 'Raleway', sans-serif;
+    font-weight:normal;
+    text-align: center;
+    align-items: center;
+}
+
+p{
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+}
+
+
+#imageButton{
+    width: auto;
+    box-sizing: unset;
+    vertical-align: middle;
+    border: none;
+    background-color: white;
+    height: auto;
+    margin: 2rem;
+}
+
+#button_close_modal{
+    width: auto;
+    height: auto;
+    border: none;
+    background-color: white;
+    padding: 0%;
+    
+   
+}
+
+
+.text_product_modal{
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+}
+
+#text_floater_modal{
+    float: left;
+    height: 50%;
+}
+
+#text_content_modal{
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+}
+
+#addCart{
+    color: black;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    background-color: #78C0A8;
+    border-color: #78C0A8;
+    padding: .5rem;
+    margin: 0 auto;
+    display: block;
+}
+
+
+#cross-icon{
+    width: auto;
+    height: auto;
+    background-color: #ffffff;
+    padding: .5rem;
+
+}
+
+

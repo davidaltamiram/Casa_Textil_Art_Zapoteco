@@ -1,0 +1,196 @@
+
+
+#img {
+    width: 200px;
+    height: 350px;
+    margin-left: 39.84px;
+    margin-right: 39.84px;
+    margin-top: 8px;
+    border-radius: 5px;
+}
+
+
+#carta {
+    margin-left: 75px;
+    width: 218px;
+    height: 365px;
+    background-color: rgba(120, 192, 168, 0.55);
+    align-items: center;
+}
+
+#texto {
+    margin-top: 4.09px;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+    color: #000000;
+
+}
+
+
+#boton {
+    background-color: #5E412F;
+    width: 175px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#icono {
+    width: 40px;
+    height: 40px;
+    margin-top: -30px;
+    margin-left: 40px;
+}
+
+.carousel-control-prev-icon{
+    margin-left: -150px;
+}
+
+.carousel-control-next{
+    margin-right: -90px;
+}
+
+
+
+
+/*Esta media query es para pantalla de tablet*/
+@media (min-width: 768px) and (max-width: 992px) {
+    #img {
+        width: 150px;
+        height: 270px;
+        margin-top: 8px;
+        border-radius: 5px;
+    }
+
+
+    #carta {
+        margin-left: 17px;
+        width: 170px;
+        height: 285px;
+        background-color: rgba(120, 192, 168, 0.55);
+        align-items: center;
+    }
+
+    #texto {
+        margin-top: 4.09px;
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        text-align: center;
+
+        color: #000000;
+
+    }
+
+    .carousel-control-prev-icon{
+        margin-left: -120px;
+    }
+
+    .carousel-control-next{
+        margin-right: -60px;
+    }
+ 
+
+
+    #icono {
+        width: 30px;
+        height: 30px;
+        margin-left: 29px;
+        margin-top: -40px;
+    }
+
+    #boton {
+        background-color: #5E412F;
+        width: 125px;
+        height: 20px;
+        margin-top: -5px;
+        border-radius: 10px;
+        font-size: 12px;
+        font-family: 'Raleway', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    
+}
+
+/*Esta media query es para pantalla de celular*/
+@media (max-width: 767.98px) {
+    #img {
+        width: 117px;
+        height: 214px;
+        margin-left: 40px;
+        margin-top: 5px;
+    }
+
+
+    #carta {
+        margin-left: 20px;
+        width: 130px;
+        height: 220px;
+        background-color: rgba(120, 192, 168, 0.55);
+        align-items: center;
+
+    }
+
+    .carousel-control-prev-icon{
+        margin-left: -30px;
+    }
+
+    .carousel-control-next{
+        margin-right: -15px;
+    }
+
+    #texto {
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 19px;
+        text-align: center;
+
+        color: #000000;
+
+    }
+
+
+    #icono {
+        width: 20px;
+        height: 20px;
+        margin-left: 23px;
+        margin-top: -55px;
+    }
+
+    #boton {
+        background-color: #5E412F;
+        width: 92px;
+        height: 20px;
+        margin-top: -25px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 10px;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    
+
+}
+
+
+
